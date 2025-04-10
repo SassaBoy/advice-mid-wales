@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Advice Mid Wales</title>
     <link rel="stylesheet" href="styles/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Favicons and Manifest (inside 'icons' folder) -->
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+<link rel="manifest" href="icons/site.webmanifest">
 </head>
 <body>
     <header>
@@ -22,9 +32,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Events</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html"  class="active">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <div class="buttons">
@@ -231,24 +241,53 @@
         </div>
     </div>
 </section>
+<footer class="footer-section">
+    <div class="footer-logo">
+        <img src="images/white-logo.png" alt="Footer Logo">
+    </div>
 
-    <footer class="footer-section">
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-              
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Events</a></li>
-            </ul>
-        </nav>
-    
-        <div class="footer-contact">
-            <p><span class="icon">📍</span> The Care Centre, Forge Road, Machynlleth Powys SY20 8EQ</p>
-            <p><span class="icon">📞</span> 01654 700192</p>
-            <p><span class="icon">📧</span> <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white;">enquiries@advicemidwales.org.uk</a></p>
+    <hr class="footer-divider">
+
+    <div class="footer-grid">
+        <!-- Column 1: Reach Us -->
+        <div class="footer-column">
+            <h4>Reach us</h4>
+            <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p>
+            <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>Machynlleth Powys SY20 8EQ</p>
+            <p><img src="images/email-icon.png" alt="Email" class="footer-icon">
+                <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a>
+            </p>
         </div>
-    </footer>
+
+        <!-- Column 2: Company -->
+        <div class="footer-column">
+            <h4>Company</h4>
+            <p><a href="#">Home</a></p>
+            <p><a href="about.html">About Us</a></p>
+            <p><a href="services.html">Services</a></p>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div class="footer-column">
+            <h4>Legal</h4>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms & Services</a></p>
+            <p><a href="#">Terms of Use</a></p>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column">
+            <h4>Join Our Newsletter</h4>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-hint">Join our newsletter for latest news update</p>
+        </div>
+    </div>
+
+    <p class="footer-bottom">Registered Charity No. 1111040).</p>
+</footer>
     
     <script>
         function toggleMenu() {
@@ -321,9 +360,9 @@ questions.forEach(question => {
 });
             });
 
-            // Smooth Page Load Effect
+// Instantly show page content without fade or flash
 document.addEventListener("DOMContentLoaded", function() {
-    document.body.classList.add("loaded");
+    document.body.style.opacity = "1";
 });
 
             </script>

@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services Advice Mid Wales</title>
     <link rel="stylesheet" href="styles/services.css">
+
+        <!-- Favicons and Manifest (inside 'icons' folder) -->
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+<link rel="manifest" href="icons/site.webmanifest">
 </head>
 <body>
     <header>
@@ -21,10 +30,10 @@
             
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <div class="buttons">
@@ -37,7 +46,7 @@
     <main>
         <section class="hero">
             <div class="container1">
-                <h1 style="color: #121111; text-transform: uppercase;"">Services</h1>
+                <h1 style="color: #121111; text-transform: uppercase;">Services</h1>
             </div>
         </section>
 
@@ -53,7 +62,7 @@
                 Rooted in the heart of Mid Wales, we are a proudly independent, volunteer-led organisation 
                 made up of local people who truly understand our community's challenges. Our independence 
                 sets us apart, allowing us to be agile, adaptable and focused entirely on meeting the needs 
-                of the community.<br><br>
+                of the community.
                 
                 We know that every person's situation is unique – there's no "one-size-fits-all" solution. 
                 That's why we take a personal, tailored approach to every enquiry. Our advisers listen with 
@@ -65,7 +74,7 @@
             <p class="about-text">
                 Getting started with Advice Mid Wales is simple – whether it's a quick phone call, an email, 
                 or a visit during our opening hours. Every enquiry is handled with care by our friendly and 
-                dedicated team, who take a client-centred approach to finding solutions.<br><br>
+                dedicated team, who take a client-centred approach to finding solutions.
     
                 We offer advice in person, over the phone, or via video call, and for those unable to visit 
                 us, we may even be able to come to you. All appointments are confidential, impartial, and 
@@ -126,23 +135,55 @@
             </div>
         </div>
     </section>
+   
     <footer class="footer-section">
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-              
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Events</a></li>
-            </ul>
-        </nav>
-    
-        <div class="footer-contact">
-            <p><span class="icon">📍</span> The Care Centre, Forge Road, Machynlleth Powys SY20 8EQ</p>
-            <p><span class="icon">📞</span> 01654 700192</p>
-            <p><span class="icon">📧</span> <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a></p>
+        <div class="footer-logo">
+            <img src="images/white-logo.png" alt="Footer Logo">
         </div>
+    
+        <hr class="footer-divider">
+    
+        <div class="footer-grid">
+            <!-- Column 1: Reach Us -->
+            <div class="footer-column">
+                <h4>Reach us</h4>
+                <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p>
+                <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>Machynlleth Powys SY20 8EQ</p>
+                <p><img src="images/email-icon.png" alt="Email" class="footer-icon">
+                    <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a>
+                </p>
+            </div>
+    
+            <!-- Column 2: Company -->
+            <div class="footer-column">
+                <h4>Company</h4>
+                <p><a href="#">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="services.html">Services</a></p>
+            </div>
+    
+            <!-- Column 3: Legal -->
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms & Services</a></p>
+                <p><a href="#">Terms of Use</a></p>
+            </div>
+    
+            <!-- Column 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Join Our Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter-hint">Join our newsletter for latest news update</p>
+            </div>
+        </div>
+    
+        <p class="footer-bottom">Registered Charity No. 1111040).</p>
     </footer>
+    
     
     <script>
                function toggleMenu() {
@@ -215,9 +256,9 @@ questions.forEach(question => {
 });
             });
 
-            // Smooth Page Load Effect
+ // Instantly show page content without fade or flash
 document.addEventListener("DOMContentLoaded", function() {
-    document.body.classList.add("loaded");
+    document.body.style.opacity = "1";
 });
 
             </script>

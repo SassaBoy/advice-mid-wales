@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citizens Advice Mid Wales</title>
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Favicons and Manifest (inside 'icons' folder) -->
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+<link rel="manifest" href="icons/site.webmanifest">
+
 </head>
 <body>
     <header>
@@ -133,24 +143,24 @@
         <div class="figures-container">
             <div class="figure">
                 <span class="figure-number green">2,500+</span>
-                <p class="figure-description">cases and <br> enquiries handled</p>
+                <p class="figure-description" style="color: #009A7A;">cases and <br> enquiries handled</p>
             </div>
     
             <div class="figure">
                 <span class="figure-number blue">£850,000+</span>
-                <p class="figure-description">contributed to <br> local economy</p>
+                <p class="figure-description" style="color: #007F9E;">contributed to <br> local economy</p>
             </div>
     
             <div class="figure">
                 <span class="figure-number green">2,750+</span>
-                <p class="figure-description">hours of <br> volunteer support delivered</p>
+                <p class="figure-description" style="color: #009A7A;">hours of <br> volunteer support delivered</p>
             </div>
         </div>
     </section>
     
 
     <section class="donation-section">
-        <h2 class="section-title">DONATION</h2>
+        <h2 class="section-title" style="color: #313131;">DONATION</h2>
     
         <p class="donation-text">
             We deeply appreciate the support of our friends, whose regular monthly donations help sustain our services. 
@@ -164,12 +174,16 @@
         </p>
     
         <div class="donation-ways">
-            <ul>
-                <li><strong>Monthly Donations:</strong> Become a regular donor for any amount of your choice by completing 
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li style="color: #121111;">
+                    <strong style="color: #121111;">Monthly Donations:</strong> Become a regular donor for any amount of your choice by completing 
                     <a href="#" class="donation-link">our donation form here.</a>
                 </li>
-                <li><strong>One-Off Donations:</strong> Make a single contribution via our JustGiving page to help make an immediate difference.</li>
+                <li style="color: #121111;">
+                    <strong style="color: #121111;">One-Off Donations:</strong> Make a single contribution via our JustGiving page to help make an immediate difference.
+                </li>
             </ul>
+            
         </div>
     
         <p class="donation-thanks">Thank you for helping us support Mid Wales!</p>
@@ -195,7 +209,7 @@
     
 
     <section class="join-team">
-        <h2 class="section-title" style="color: black;">JOIN OUR TEAM</h2>
+        <h2 class="section-title" style="color: #383838;">JOIN OUR TEAM</h2>
         <p class="team-text">
             Your Time And Support Can Transform Lives. Volunteer With Us And Make A 
             Meaningful Contribution To Your Community.
@@ -207,11 +221,21 @@
                 <p>Contact us via phone or email to discuss opportunities, or pop over to see us at our main offices. 
                     We are willing to work around our volunteers, so all you need is a willingness to help.</p>
     
-                <div class="contact-details">
-                    <p><span class="icon">📧</span> <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white;">enquiries@advicemidwales.org.uk</a></p>
-                    <p><span class="icon">📍</span> The Care Centre, Forge Road, Machynlleth, Powys, SY20 8EQ</p>
-                    <p><span class="icon">📞</span> 01654 700192</p>
-                </div>
+                    <div class="contact-details">
+                        <p>
+                            <img src="images/time-icon.png" alt="Email Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
+                            <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white;">enquiries@advicemidwales.org.uk</a>
+                        </p>
+                        <p>
+                            <img src="images/time-icon.png" alt="Location Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
+                            The Care Centre, Forge Road, Machynlleth, Powys, SY20 8EQ
+                        </p>
+                        <p>
+                            <img src="images/phone-icon.png" alt="Phone Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
+                            01654 700192
+                        </p>
+                    </div>
+                    
             </div>
     
             <div class="volunteer-image">
@@ -251,22 +275,53 @@
     </section>
     
     <footer class="footer-section">
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    
-        <div class="footer-contact">
-            <p><span class="icon">📍</span> The Care Centre, Forge Road, Machynlleth Powys SY20 8EQ</p>
-            <p><span class="icon">📞</span> 01654 700192</p>
-            <p><span class="icon">📧</span> <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a></p>
+        <div class="footer-logo">
+            <img src="images/white-logo.png" alt="Footer Logo">
         </div>
+    
+        <hr class="footer-divider">
+    
+        <div class="footer-grid">
+            <!-- Column 1: Reach Us -->
+            <div class="footer-column">
+                <h4>Reach us</h4>
+                <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p>
+                <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>Machynlleth Powys SY20 8EQ</p>
+                <p><img src="images/email-icon.png" alt="Email" class="footer-icon">
+                    <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a>
+                </p>
+            </div>
+    
+            <!-- Column 2: Company -->
+            <div class="footer-column">
+                <h4>Company</h4>
+                <p><a href="#">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="services.html">Services</a></p>
+            </div>
+    
+            <!-- Column 3: Legal -->
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms & Services</a></p>
+                <p><a href="#">Terms of Use</a></p>
+            </div>
+    
+            <!-- Column 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Join Our Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter-hint">Join our newsletter for latest news update</p>
+            </div>
+        </div>
+    
+        <p class="footer-bottom">Registered Charity No. 1111040).</p>
     </footer>
+    
     
     <script>
         function toggleMenu() {
@@ -308,10 +363,11 @@ document.querySelectorAll('a[href^="#"], a[href]').forEach(anchor => {
     });
 });
 
-// Smooth Page Load Effect
+// Instantly show page content without fade or flash
 document.addEventListener("DOMContentLoaded", function() {
-    document.body.classList.add("loaded");
+    document.body.style.opacity = "1";
 });
+
 
         </script>
         
