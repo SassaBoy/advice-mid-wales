@@ -14,22 +14,27 @@ body {
 
 
 /* HEADER CONTAINER */
+
 .container {
-    max-width: 1200px;
+    max-width: 1400px; /* even wider */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 80px; /* more padding pushes everything right */
     height: 120px;
-    overflow: hidden;
+    overflow: visible;
 }
+
 
 .logo img {
     height: 203px;
     width: 220px;
-    margin-left: -30px;
+    transform: scale(0.65); /* slightly bigger */
+    transform-origin: left; /* anchor to left */
+    margin-left: -30px; /* only a little move left */
 }
+
 
 
 /* NAVIGATION */
@@ -75,8 +80,11 @@ nav ul li a:hover {
 /* BUTTONS */
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 0; /* make sure buttons touch the right edge */
 }
+
 
 .btn {
     padding: 10px 18px;
@@ -148,8 +156,9 @@ nav ul li a:hover {
 
     .logo {
         order: 1;
-        margin-top: -80px;
+        margin-top: -60px;
         margin-bottom: 10px;
+        margin-left: 50px;
     }
 
     .logo img {
@@ -194,11 +203,12 @@ nav ul li a:hover {
         opacity: 0;
     }
     
-
-    nav ul li a.active {
-        color: #009A7A; /* Primary site teal */
-        font-weight: bold;
+    nav ul.active {
+        height: 250px;
+        padding: 10px 0;
+        opacity: 1;
     }
+    
     nav ul li {
         margin: 15px 0;
         padding: 0 20px;
@@ -223,7 +233,6 @@ nav ul li a:hover {
         text-align: left;
         color: #222;
         word-spacing: 2px;
-        margin-top: -10px;
     }
 }
 
@@ -1154,7 +1163,7 @@ nav ul li a:hover {
 .about-list {
     padding-left: 20px;
     font-size: 14px;
-    color: #555;
+    color: #121111;
     line-height: 1.8;
 }
 
@@ -1234,6 +1243,7 @@ nav ul li a:hover {
 .faq-answer {
     background-color: #f9f9f9;
     padding: 15px;
+    padding-bottom: 30px;
     display: none;
     font-size: 14px;
     color: #333;

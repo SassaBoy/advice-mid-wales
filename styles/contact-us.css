@@ -6,8 +6,6 @@
     box-sizing: border-box;
 }
 
-
-/* Smooth Fade-In Effect */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -29,12 +27,13 @@ body {
 
 
 .logo img {
-    height: 203px;
+    height: 197px;
     width: 220px;
     transform: scale(0.65); /* slightly bigger */
     transform-origin: left; /* anchor to left */
-    margin-left: -10px; /* only a little move left */
+    margin-left: -30px; /* only a little move left */
 }
+
 
 /* NAVIGATION */
 nav {
@@ -55,21 +54,20 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #383838;
+    color: #333;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s;
 }
 
 nav ul li a.active {
-    color: #009A7A; /* Primary site teal */
-    font-weight: bold;
+    color: #4CAF50; /* Active link color */
+    font-weight: bold; /* Make it stand out */
 }
 
 nav ul li a:hover {
-    color: #007F9E; /* Secondary site blue */
+    color: #4CAF50;
 }
-
 
 /* Mobile Menu Toggle */
 .menu-icon {
@@ -97,26 +95,24 @@ nav ul li a:hover {
     border: 2px solid;
     transition: all 0.3s;
 }
-
 .volunteer {
     color: #009A7A;
     border-color: #009A7A;
 }
 
 .volunteer:hover {
-    background-color: #007365; /* Darker teal */
+    background-color: #007F9E;
     color: white;
 }
 
 .advice {
     background: linear-gradient(to bottom, #009A7A, #007F9E);
     color: white;
-    border-color: #008D8A;
-
+    border-color: #009A7A;
 }
 
 .advice:hover {
-    background-color: #008D8A;
+    background-color: #009A7A;
 }
 
 /* HERO SECTION */
@@ -126,21 +122,29 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
-    color: #313131;
+    font-size: 28px;
+    color: #121111;
+    max-width: 1200px;
+    margin: 0 auto;
     font-weight: 600;
-    line-height: 1.6;
+    line-height: 52px;
     text-align: center;
+    margin-left: -380px;
+    margin-top: -20px;
 }
 
-
-/* IMAGE SECTION */
 .image-section img {
     width: 100%;
-    height: auto;
+    height: 600px; /* Fixed height */
+    object-fit: cover; /* Maintains aspect ratio, avoids squashing */
     display: block;
 }
+
+
+.hero .container1{
+    height: 10px;
+    margin-left: 15px;
+    }
 
 /* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
@@ -241,13 +245,14 @@ nav ul li a:hover {
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(3, 0.9fr); /* Slightly skinnier cards */
-    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* SERVICE CARD STYLING */
 .service-card {
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -256,22 +261,17 @@ nav ul li a:hover {
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    height: 520px; /* Increased card height */
 }
-
-.service-card img {
-    width: 100%;
-    height: 400px; /* Increased image height */
-    object-fit: cover;
-}
-
-
 
 .service-card:hover {
     transform: translateY(-5px);
 }
 
-
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
 .service-card h3 {
     font-size: 18px;
@@ -305,12 +305,8 @@ nav ul li a:hover {
         grid-template-columns: 1fr;
     }
 
-    .service-card {
-        height: 520px; /* Match desktop card height */
-    }
-
     .service-card img {
-        height: 400px; /* Match visual proportions from large screens */
+        height: 180px;
     }
 
     .service-card h3 {
@@ -334,7 +330,7 @@ nav ul li a:hover {
 
 .info-text {
     font-size: 14px;
-    color: #121111;
+    color: #666;
     line-height: 1.6;
     text-align: center;
     max-width: 900px;
@@ -345,7 +341,7 @@ nav ul li a:hover {
     display: block;
     text-align: center;
     font-size: 14px;
-    color: #036C6E;
+    color: #3498db;
     text-decoration: none;
     margin-top: 8px;
     font-weight: bold;
@@ -353,7 +349,7 @@ nav ul li a:hover {
 }
 
 .info-link:hover {
-    color: #38A3A5;
+    color: #2076b5;
     text-decoration: underline;
 }
 
@@ -387,7 +383,7 @@ nav ul li a:hover {
 
 /* CORE VALUES SECTION */
 .core-values {
-    background: linear-gradient(to bottom, #009A7A, #007F9E);
+    background-color: #D0DFC6; /* Light green background */
     padding: 60px 20px;
     text-align: center;
 }
@@ -407,7 +403,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -426,7 +422,7 @@ nav ul li a:hover {
 }
 
 .value-card img {
-    width: 60%; /* Increased image size */
+    width: 50%; /* Increased image size */
     height: 300px; /* Increased height */
     object-fit: cover;
     border-radius: 8px;
@@ -438,19 +434,17 @@ nav ul li a:hover {
 }
 
 .value-text h3 {
-    font-size: 22px; /* Increased from 16px to 22px */
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 8px; /* Slightly increased margin for better spacing */
+    margin-bottom: 5px;
     text-transform: uppercase;
     color: #222;
-    margin-left: 40px;
 }
 
 .value-text p {
-    font-size: 18px; /* Increased from 14px to 18px */
+    font-size: 14px;
     color: #555;
-    line-height: 1.6; /* Slightly increased line-height for readability */
-    margin-left: 40px;
+    line-height: 1.5;
 }
 
 /* RESPONSIVE DESIGN */
@@ -500,27 +494,23 @@ nav ul li a:hover {
     text-align: center;
     padding: 50px 20px;
     background-color: white;
-    margin-top: 60px;
 }
 
 
 
 .impact-text {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    color: #121111;
-    line-height: 1.6;
-    font-weight: 300; /* Light */
+    font-size: 14px;
+    color: #555;
     max-width: 1200px;
     margin: 0 auto 40px;
+    line-height: 1.6;
 }
-
 
 /* ANNUAL FIGURES */
 .sub-title {
     font-size: 18px;
     font-weight: bold;
-    color: #313131;
+    color: #333;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -540,7 +530,7 @@ nav ul li a:hover {
 }
 
 .figure-number {
-    font-size: 38px;
+    font-size: 24px;
     font-weight: bold;
     display: block;
 }
@@ -554,11 +544,11 @@ nav ul li a:hover {
 
 /* COLORS */
 .green {
-    color: #009A7A; /* Green */
+    color: #2EDC0C; /* Green */
 }
 
 .blue {
-    color: #007F9E; /* Blue */
+    color: #096B96; /* Blue */
 }
 
 /* RESPONSIVE DESIGN */
@@ -590,14 +580,13 @@ nav ul li a:hover {
 
 /* DONATION SECTION */
 .donation-section {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     padding: 50px 20px;
     background-color: white;
     position: relative;
     z-index: 1;
-    margin-top: 60px;
 }
 
 .section-title {
@@ -610,30 +599,26 @@ nav ul li a:hover {
 
 .donation-text {
     font-size: 14px;
-    color: #121111;
-    max-width: 1200px;
+    color: #555;
+    max-width: 800px;
     margin: 0 auto 15px;
     line-height: 1.6;
-    text-align: left;
-    padding: 0 20px;
 }
-
-.donation-ways {
-    text-align: left;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
 
 .donation-link {
-    color: #077C7E;
+    color: #0073b7;
     text-decoration: none;
     font-weight: bold;
 }
 
 .donation-link:hover {
     text-decoration: underline;
+}
+
+.donation-ways {
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 .donation-ways ul {
@@ -657,7 +642,7 @@ nav ul li a:hover {
 
 /* BLUE BACKGROUND STRIP */
 .donation-background {
-    background-color: #007F9E; /* Blue color */
+    background-color: #096B96; /* Blue color */
     height: 200px;
     width: 100%;
     position: absolute;
@@ -696,8 +681,7 @@ nav ul li a:hover {
     font-size: 24px;
     font-weight: bold;
     color: white;
-    background: linear-gradient(to bottom, #009A7A, #007F9E);
-
+    background: #2EDC0C;
     padding: 15px 30px;
     display: inline-block;
     margin-bottom: 15px;
@@ -717,10 +701,10 @@ nav ul li a:hover {
 
 .donation-toggle input {
     width: 90px;
-    height: 20px;
+    height: 30px;
     appearance: none;
-    background: linear-gradient(to right, #009A7A 50%, white 50%);
-    border: 2px solid #009A7A;
+    background: linear-gradient(to right, #2EDC0C 50%, white 50%);
+    border: 2px solid #2EDC0C;
     cursor: pointer;
    
 }
@@ -744,10 +728,10 @@ nav ul li a:hover {
     transition: 0.3s;
     margin-top: 70px;
     height: 60px;
-}
+  }
 
 .donate-btn:hover {
-    background: #009A7A;
+    background: #27AE60;
 }
 
 /* RESPONSIVE DESIGN */
@@ -823,7 +807,7 @@ nav ul li a:hover {
 
 /* VOLUNTEER INFO */
 .volunteer-info {
-    background: linear-gradient(to bottom, #009A7A, #007F9E);
+    background-color: #C6D9B7;
     color: #FFFFFF;
     padding: 30px;
     flex: 1;
@@ -841,7 +825,6 @@ nav ul li a:hover {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 15px;
-    max-width: 300px;  /* Restricts the paragraph width */
 }
 
 /* CONTACT DETAILS */
@@ -873,7 +856,6 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.8) translateX(-2%);
 }
 
 /* RESPONSIVE DESIGN */
@@ -923,10 +905,9 @@ nav ul li a:hover {
 
 /* TESTIMONIAL SECTION */
 .testimonial-section {
-    background: linear-gradient(to bottom, #009A7A, #007F9E);
+    background-color: #096B96; /* Blue background */
     padding: 60px 20px;
     text-align: center;
-    margin-top: 60px;
 }
 
 .testimonial-container {
@@ -1146,7 +1127,6 @@ nav ul li a:hover {
     }
 }
 
-
 /* ABOUT OUR SERVICES SECTION */
 .about-services {
     max-width: 1200px;
@@ -1156,7 +1136,7 @@ nav ul li a:hover {
 }
 
 .about-container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
 }
@@ -1165,7 +1145,7 @@ nav ul li a:hover {
 .about-title {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: #2E2D2D;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
@@ -1195,28 +1175,480 @@ nav ul li a:hover {
     .about-container {
         max-width: 95%;
     }
-
+    
     .about-title {
         font-size: 18px;
         text-align: center;
     }
-
+    
     .about-text {
         font-size: 13px;
         text-align: justify;
     }
-
+    
     .about-list {
         font-size: 13px;
     }
 }
 
+/* FAQ SECTION */
+.faq-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-.donation-bullets {
-    list-style-type: disc;
+.faq-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    margin-bottom: 50px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: #355e20;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: normal;
+    position: relative;
+}
+
+.faq-question::after {
+    content: "▲";
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.collapsed::after {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    background-color: #f9f9f9;
+    padding: 15px;
+    display: none;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 13px;
+        padding: 12px;
+    }
+    
+    .faq-answer {
+        font-size: 13px;
+        padding: 12px;
+    }
+}
+
+/* TIMELINE SECTION */
+.timeline-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+.timeline-container {
+    display: flex;
+    background: linear-gradient(to bottom, #009A7A, #007F9E);
+    position: relative;
+}
+
+.timeline-column {
+    flex: 1;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 110px 0; /* Uniform and slightly tighter spacing */
+}
+
+/* Circles (bubbles) */
+.timeline-circle {
+    width: 130px; /* BIGGER BUBBLES */
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Bubble text */
+.timeline-year {
+    font-size: 28px;
+    font-weight: bold;
+    color: #009A7A; /* Green text */
+}
+
+/* Timeline content (subtext) */
+.timeline-content {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 260px;
+    padding: 0 20px;
+    line-height: 1.8;
+    text-align: justify; /* JUSTIFIED TEXT */
+}
+
+
+
+.timeline-left .timeline-content {
     padding-left: 20px;
 }
 
-.donation-bullets li::marker {
-    color: #121111;
+.timeline-left .timeline-circle {
+    margin-right: 20px;
 }
+
+/* Right column adjustments */
+.timeline-left .timeline-item {
+    justify-content: flex-start;
+    padding-left: 25%; /* Moved left-side items closer to center */
+}
+
+.timeline-right .timeline-item {
+    justify-content: flex-start;
+    padding-left: 20%;
+    margin: 150px 0; /* Pushes them slightly down to sit between left-side bubbles */
+}
+
+
+.timeline-right .timeline-circle {
+    margin-right: 20px; /* Bubble before text */
+}
+
+.timeline-right .timeline-content {
+    padding-left: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+    }
+
+    .timeline-column::before {
+        content: none;
+    }
+
+    .timeline-left .timeline-item,
+    .timeline-right .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 50px 0;
+    }
+
+    .timeline-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .timeline-year {
+        font-size: 20px;
+    }
+
+    .timeline-content {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+}
+
+/* WHO WE ARE SECTION */
+.who-we-are-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.who-we-are-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.who-we-are-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600; /* Semi bold */
+    color: #313131;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+.who-we-are-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300; /* Light */
+    color: #121111;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .who-we-are-title {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .who-we-are-text {
+        font-size: 13px;
+    }
+}
+
+/* WHAT MAKES US DIFFERENT SECTION */
+.difference-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: white;
+   
+}
+
+.difference-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* IMAGE */
+.difference-image {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.difference-image img {
+    width: 100%;
+    max-width: 900px; /* smaller but still high quality */
+    height: auto;
+}
+
+
+/* SECTION TITLE */
+.difference-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #121111;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* DIFFERENCE ITEM */
+.difference-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+/* NUMBER STYLING */
+.difference-number {
+    font-size: 52px; /* Increased from 40px */
+    color: #009A7A;
+    margin-right: 15px;
+    margin-top: -16px;
+}
+
+/* NUMBER STYLING */
+.difference-number {
+    font-size: 64px; /* Significantly larger */
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    color: #009A7A;
+    margin-right: 30px;
+}
+
+/* HEADING */
+.difference-heading {
+    font-size: 28px; /* Bigger for emphasis */
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    color: #009A7A;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .difference-container {
+        max-width: 95%;
+    }
+
+    .difference-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .difference-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .difference-number {
+        font-size: 36px;
+        margin-bottom: 5px;
+    }
+
+    .difference-heading {
+        font-size: 16px;
+    }
+
+    .difference-text {
+        font-size: 13px;
+    }
+}
+
+.contact-section {
+    background: linear-gradient(to bottom right, #009A7A, #007F9E);
+    padding: 60px 20px;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  .contact-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  
+  .contact-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-title p {
+    font-size: 16px;
+    color: #d9f4f4;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info-box {
+    background-color: #008C8C;
+    color: #fff;
+    flex: 1;
+    padding: 40px 30px;
+    min-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .contact-info-box h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .contact-info-box .subtext {
+    color: #b2ebeb;
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+  
+  .icon-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .icon-img {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+  }
+  
+  .icon-text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .icon-text a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .contact-hours-box {
+    flex: 2;
+    padding: 40px 30px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    min-width: 300px;
+  }
+  
+  .contact-hours-box a {
+    color: #007F9E;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-info-box,
+    .contact-hours-box {
+      padding: 30px 20px;
+    }
+  
+    .contact-title h2 {
+      font-size: 26px;
+    }
+  
+    .contact-title p {
+      font-size: 14px;
+    }
+  }
+  

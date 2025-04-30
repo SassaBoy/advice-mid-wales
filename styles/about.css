@@ -14,23 +14,26 @@ body {
 
 
 
-/* HEADER CONTAINER */
 .container {
-    max-width: 1200px;
+    max-width: 1400px; /* even wider */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 80px; /* more padding pushes everything right */
     height: 120px;
-    overflow: hidden;
+    overflow: visible;
 }
+
 
 .logo img {
     height: 203px;
     width: 220px;
-    margin-left: -30px;
+    transform: scale(0.65); /* slightly bigger */
+    transform-origin: left; /* anchor to left */
+    margin-left: -30px; /* only a little move left */
 }
+
 
 /* NAVIGATION */
 nav {
@@ -80,7 +83,9 @@ nav ul li a:hover {
 /* BUTTONS */
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 0; /* make sure buttons touch the right edge */
 }
 
 .btn {
@@ -152,8 +157,9 @@ nav ul li a:hover {
 
     .logo {
         order: 1;
-        margin-top: -80px;
+        margin-top: -60px;
         margin-bottom: 10px;
+        margin-left: 50px;
     }
 
     .logo img {
@@ -210,7 +216,6 @@ nav ul li a:hover {
         text-align: left;
     }
 
-    
     .buttons {
         order: 2;
         width: 100%;
@@ -229,7 +234,6 @@ nav ul li a:hover {
         text-align: left;
         color: #222;
         word-spacing: 2px;
-        margin-top: -10px;
     }
 }
 
@@ -1260,7 +1264,6 @@ nav ul li a:hover {
     }
 }
 
-
 /* TIMELINE SECTION */
 .timeline-section {
     max-width: 1200px;
@@ -1291,119 +1294,105 @@ nav ul li a:hover {
     transform: translateX(-50%);
 }
 
-/* Left column items */
-.timeline-left .timeline-item {
-    position: relative;
-    margin: 80px 0;
+.timeline-item {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: 30%;
-}
-
-/* Right column items - positioned between left items */
-.timeline-right .timeline-item {
     position: relative;
-    margin: 120px 0; /* Adjusted to position between left items */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 30%;
+    margin: 110px 0; /* Uniform and slightly tighter spacing */
 }
 
-/* Adjust first right item to align properly */
-.timeline-right .timeline-item:first-child {
-    margin-top: 160px; /* Positions 1999 between 1983 and 2003 */
-}
-
+/* Circles (bubbles) */
 .timeline-circle {
-    width: 100px;
-    height: 100px;
+    width: 130px; /* BIGGER BUBBLES */
+    height: 130px;
     background-color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     z-index: 2;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Bubble text */
+.timeline-year {
+    font-size: 28px;
+    font-weight: bold;
+    color: #009A7A; /* Green text */
+}
+
+/* Timeline content (subtext) */
+.timeline-content {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 260px;
+    padding: 0 20px;
+    line-height: 1.8;
+    text-align: justify; /* JUSTIFIED TEXT */
+}
+
+
+
+.timeline-left .timeline-content {
+    padding-left: 20px;
 }
 
 .timeline-left .timeline-circle {
-    right: calc(30% - 50px);
+    margin-right: 20px;
 }
+
+/* Right column adjustments */
+.timeline-left .timeline-item {
+    justify-content: flex-start;
+    padding-left: 25%; /* Moved left-side items closer to center */
+}
+
+.timeline-right .timeline-item {
+    justify-content: flex-start;
+    padding-left: 20%;
+    margin: 150px 0; /* Pushes them slightly down to sit between left-side bubbles */
+}
+
 
 .timeline-right .timeline-circle {
-    left: calc(30% - 50px);
-}
-
-.timeline-year {
-    font-size: 24px;
-    font-weight: bold;
-    color: #cd9933;
-}
-
-.timeline-content {
-    max-width: 200px;
-    padding: 0 20px;
-    color: white;
-    font-size: 13px;
-    line-height: 1.4;
-}
-
-.timeline-left .timeline-content {
-    text-align: right;
-    padding-right: 70px;
+    margin-right: 20px; /* Bubble before text */
 }
 
 .timeline-right .timeline-content {
-    text-align: left;
-    padding-left: 70px;
+    padding-left: 20px;
 }
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .timeline-container {
         flex-direction: column;
     }
 
-    /* Remove the ::before pseudo-element on mobile */
     .timeline-column::before {
         content: none;
     }
 
-    /* Adjust timeline items */
     .timeline-left .timeline-item,
     .timeline-right .timeline-item {
-        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 50px 0;
+    }
+
+    .timeline-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .timeline-year {
+        font-size: 20px;
+    }
+
+    .timeline-content {
         padding-left: 0;
         padding-right: 0;
-        margin: 40px 0; /* Reduced margin for better spacing */
-    }
-
-    /* Reset the top margin for the first item */
-    .timeline-right .timeline-item:first-child {
-        margin-top: 40px;
-    }
-
-    /* Adjust timeline circles */
-    .timeline-left .timeline-circle,
-    .timeline-right .timeline-circle {
-        left: 10px;
-        width: 70px; /* Slightly smaller for mobile */
-        height: 70px;
-    }
-
-    /* Adjust year font size */
-    .timeline-year {
-        font-size: 18px; /* Slightly smaller on mobile */
-    }
-
-    /* Adjust content alignment */
-    .timeline-left .timeline-content,
-    .timeline-right .timeline-content {
-        text-align: left;
-        padding-left: 90px; /* Ensure proper spacing */
-        padding-right: 10px;
-        max-width: calc(100% - 100px);
+        max-width: 100%;
     }
 }
 
@@ -1420,19 +1409,25 @@ nav ul li a:hover {
 }
 
 .who-we-are-title {
+    font-family: 'Open Sans', sans-serif;
     font-size: 24px;
-    font-weight: bold;
-    color: #2E2D2D;
+    font-weight: 600; /* Semi bold */
+    color: #313131;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
+
 .who-we-are-text {
-    font-size: 14px;
-    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300; /* Light */
     color: #121111;
+    line-height: 1.8;
     text-align: justify;
 }
+
+
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
@@ -1452,6 +1447,7 @@ nav ul li a:hover {
     margin: 0 auto;
     padding: 50px 20px;
     background-color: white;
+   
 }
 
 .difference-container {
@@ -1463,14 +1459,15 @@ nav ul li a:hover {
 /* IMAGE */
 .difference-image {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
 
 .difference-image img {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px; /* smaller but still high quality */
     height: auto;
 }
+
 
 /* SECTION TITLE */
 .difference-title {
@@ -1493,6 +1490,7 @@ nav ul li a:hover {
     font-size: 52px; /* Increased from 40px */
     color: #009A7A;
     margin-right: 15px;
+    margin-top: -16px;
 }
 
 /* NUMBER STYLING */

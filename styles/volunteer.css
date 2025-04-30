@@ -12,22 +12,27 @@ body {
 }
 
 /* HEADER CONTAINER */
+
 .container {
-    max-width: 1200px;
+    max-width: 1400px; /* even wider */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 80px; /* more padding pushes everything right */
     height: 120px;
-    overflow: hidden;
+    overflow: visible;
 }
+
 
 .logo img {
     height: 203px;
     width: 220px;
-    margin-left: -30px;
+    transform: scale(0.65); /* slightly bigger */
+    transform-origin: left; /* anchor to left */
+    margin-left: -30px; /* only a little move left */
 }
+
 
 /* NAVIGATION */
 nav {
@@ -72,7 +77,9 @@ nav ul li a:hover {
 /* BUTTONS */
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 0; /* make sure buttons touch the right edge */
 }
 
 .btn {
@@ -145,8 +152,9 @@ margin-left: 90px;
 
     .logo {
         order: 1;
-        margin-top: -80px;
+        margin-top: -60px;
         margin-bottom: 10px;
+        margin-left: 50px;
     }
 
     .logo img {
@@ -221,9 +229,9 @@ margin-left: 90px;
         text-align: left;
         color: #222;
         word-spacing: 2px;
-        margin-top: -10px;
     }
 }
+
 
 /* SERVICES SECTION */
 .services {
@@ -1770,7 +1778,7 @@ margin-left: 90px;
 .volunteer-form-title {
     font-size: 22px;
     font-weight: bold;
-    color: #333;
+    color: #121111;
     text-transform: uppercase;
     margin-bottom: 20px;
     text-align: left;
@@ -1781,17 +1789,18 @@ margin-left: 90px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 90px 90px; /* Increased top & bottom padding */
     border: 1px solid #ddd;
 }
 
-/* FORM TEXT */
 .volunteer-form-text {
     font-size: 16px;
-    color: #444;
+    color: #121111;
+    font-weight: 300; /* Lighter text */
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
+
 
 /* BUTTON CONTAINER */
 .volunteer-form-button-container {
