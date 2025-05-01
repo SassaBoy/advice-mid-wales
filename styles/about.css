@@ -27,7 +27,7 @@ body {
 
 
 .logo img {
-    height: 203px;
+    height: 195px;
     width: 220px;
     transform: scale(0.65); /* slightly bigger */
     transform-origin: left; /* anchor to left */
@@ -39,6 +39,7 @@ body {
 nav {
     flex: 1;
     text-align: center;
+  
 }
 
 nav ul {
@@ -54,11 +55,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #383838;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     transition: color 0.3s;
+    padding: 10px 5px;
 }
+
 
 nav ul li a.active {
     color: #4CAF50; /* Active link color */
@@ -1263,7 +1266,6 @@ nav ul li a:hover {
         padding: 12px;
     }
 }
-
 /* TIMELINE SECTION */
 .timeline-section {
     max-width: 1200px;
@@ -1276,6 +1278,15 @@ nav ul li a:hover {
     display: flex;
     background: linear-gradient(to bottom, #009A7A, #007F9E);
     position: relative;
+}
+
+/* Added class for vertical timeline */
+.timeline-vertical {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #009A7A, #007F9E);
+    position: relative;
+    padding: 30px 0;
 }
 
 .timeline-column {
@@ -1298,12 +1309,14 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     position: relative;
-    margin: 110px 0; /* Uniform and slightly tighter spacing */
+    margin: 0;
+    padding: 60px 0; /* Reduced vertical spacing between all bubbles */
 }
+
 
 /* Circles (bubbles) */
 .timeline-circle {
-    width: 130px; /* BIGGER BUBBLES */
+    width: 130px; /* Larger bubbles */
     height: 130px;
     background-color: white;
     border-radius: 50%;
@@ -1327,40 +1340,65 @@ nav ul li a:hover {
     font-size: 16px;
     font-weight: 300;
     max-width: 260px;
-    padding: 0 20px;
     line-height: 1.8;
-    text-align: justify; /* JUSTIFIED TEXT */
+    text-align: justify; /* Justified text */
 }
 
-
-
-.timeline-left .timeline-content {
-    padding-left: 20px;
+/* Left column layout */
+.timeline-left .timeline-item {
+    justify-content: flex-end;
+    padding-right: 60px; /* Consistent spacing from center line */
 }
 
 .timeline-left .timeline-circle {
+    margin-left: 40px; /* Consistent left margin */
     margin-right: 20px;
 }
 
-/* Right column adjustments */
-.timeline-left .timeline-item {
-    justify-content: flex-start;
-    padding-left: 25%; /* Moved left-side items closer to center */
-}
-
+/* Right column layout */
 .timeline-right .timeline-item {
     justify-content: flex-start;
-    padding-left: 20%;
-    margin: 150px 0; /* Pushes them slightly down to sit between left-side bubbles */
+    padding-left: 60px;
+    margin-top: 45px; /* Push right items down slightly to stagger alignment */
 }
 
 
 .timeline-right .timeline-circle {
-    margin-right: 20px; /* Bubble before text */
+    margin-right: 20px;
+    margin-left: 40px; /* Consistent right margin */
 }
 
-.timeline-right .timeline-content {
-    padding-left: 20px;
+.timeline-content {
+    padding: 0 20px;
+}
+
+/* Adding vertical connector lines */
+.timeline-vertical .timeline-item {
+    position: relative;
+}
+
+.timeline-vertical .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 65px; /* Center of the bubble */
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #FF3333; /* Red vertical line */
+    z-index: 1;
+}
+
+.timeline-vertical .timeline-circle {
+    position: relative;
+    z-index: 2; /* Above the line */
+}
+
+.timeline-vertical .timeline-item:first-child::before {
+    top: 50%;
+}
+
+.timeline-vertical .timeline-item:last-child::before {
+    bottom: 50%;
 }
 
 /* RESPONSIVE DESIGN */
@@ -1368,34 +1406,35 @@ nav ul li a:hover {
     .timeline-container {
         flex-direction: column;
     }
-
-    .timeline-column::before {
+    
+    .timeline-container::before {
         content: none;
     }
-
+    
     .timeline-left .timeline-item,
     .timeline-right .timeline-item {
         flex-direction: column;
         align-items: flex-start;
-        margin: 50px 0;
+        margin: 0;
+        padding: 50px 20px;
     }
-
+    
     .timeline-circle {
         width: 80px;
         height: 80px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
-
+    
     .timeline-year {
         font-size: 20px;
     }
-
+    
     .timeline-content {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 20px 0;
         max-width: 100%;
     }
 }
-
 /* WHO WE ARE SECTION */
 .who-we-are-section {
     max-width: 1200px;

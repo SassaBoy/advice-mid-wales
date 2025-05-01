@@ -40,6 +40,7 @@ body {
 nav {
     flex: 1;
     text-align: center;
+    
 }
 
 nav ul {
@@ -57,9 +58,11 @@ nav ul li a {
     text-decoration: none;
     color: #383838;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     transition: color 0.3s;
+    padding: 10px 5px;
 }
+
 
 nav ul li a.active {
     color: #009A7A; /* Primary site teal */
@@ -864,6 +867,22 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.address-container {
+    position: relative;
+    padding-left: 24px;
+    margin: 0;
+}
+
+.address-icon {
+    width: 16px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.address-line {
+    display: block;
+}
 /* VOLUNTEER IMAGE */
 .volunteer-image {
     flex: 1;
