@@ -15,13 +15,30 @@
 <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
 <link rel="manifest" href="icons/site.webmanifest">
 
+<style>
+  @media (max-width: 768px) {
+    #empathy-img {
+      width: 100% !important;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+</style>
+<style>
+  @media (max-width: 768px) {
+    p[style*="display: flex"] {
+      justify-content: center;
+    }
+  }
+</style>
+
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/new-logo.png" alt="Citizens Advice Mid Wales Logo">
+                    <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
                 </a>
             </div>
             
@@ -35,7 +52,7 @@
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="buttons">
@@ -95,7 +112,7 @@
     
     <section class="info-section">
         <p class="info-text">
-            We’re Based In Machynlleth And Provide Flexible Drop-In Sessions, Appointments And Outreach Services In Tywyn And Aberystwyth. Contact Us Today To Get Started.
+            We’re based in Machynlleth and provide flexible drop-in sessions, appointments and outreach services in Tywyn And Aberystwyth. Contact us today to get started.
         </p>
         <a href="#" class="info-link" style="margin-top: 30px; margin-bottom: 20px;">CLICK TO FIND OUT MORE</a>
 
@@ -105,19 +122,20 @@
         <h2 class="section-title" style="color: white; margin-top: -40px; margin-bottom: 20px;">CORE VALUES</h2>
     
         <div class="values-container">
-            <div class="value-card">
-                <img src="images/empathy.png" alt="Empathy" style="width: 67%;">
-                <div class="value-text">
-                    <h3 style="color: #383838;">EMPATHY</h3>
-                    <p style="color: #121111;">We listen without judgment, supporting people through their challenges.</p>
-                </div>
-            </div>
+          <div class="value-card">
+    <img src="images/empathy.png" alt="Empathy" id="empathy-img" style="width: 67%;">
+    <div class="value-text">
+        <h3 style="color: #383838;">EMPATHY</h3>
+        <p style="color: #121111;">We listen without judgment, supporting people through their challenges.</p>
+    </div>
+</div>
+
     
             <div class="value-card">
                 <img src="images/confidentiality.png" alt="Confidentiality">
                 <div class="value-text">
                     <h3 style="color: #383838;">CONFIDENTIALITY</h3>
-                    <p style="color: #121111;">We listen without judgment, supporting people through their challenges.</p>
+                    <p style="color: #121111;">We provide tools, resources, and guidance, empowering people to help themselves.</p>
                 </div>
             </div>
     
@@ -134,11 +152,12 @@
 
     <section class="impact-section">
         <h2 class="section-title" style="color: #313131;">OUR IMPACT</h2>
-        <p class="impact-text">
-            Advice Mid Wales supports the community by providing essential advice and assistance, 
-            helping people navigate challenges and improve their circumstances. Our work makes a 
-            meaningful difference to our clients, volunteers, and the local community.
-        </p>
+   <p class="impact-text" style="font-size: 14px; color: #555; line-height: 1.6; font-weight: normal;">
+    Advice Mid Wales supports the community by providing essential advice and assistance, 
+    helping people navigate challenges and improve their circumstances. Our work makes a 
+    meaningful difference to our clients, volunteers, and the local community.
+</p>
+
     
         <h3 class="sub-title">ANNUAL FIGURES</h3>
     
@@ -164,7 +183,7 @@
     <section class="donation-section">
         <h2 class="section-title" style="color: #313131;">DONATION</h2>
     
-        <p class="donation-text">
+        <p class="donation-text" style="font-size: 14px; color: #555; line-height: 1.6; font-weight: normal;">
             We deeply appreciate the support of our friends, whose regular monthly donations help sustain our services. 
             You can join them by downloading and completing 
             <a href="#" class="donation-link">our donation form here.</a>
@@ -197,7 +216,8 @@
             <h3 class="donation-title">MAKE A DONATION</h3>
             <p class="donation-subtext">I wish to make a donation of</p>
     
-            <div class="donation-amount">$15.00</div>
+         <div class="donation-amount">£15.00</div>
+
     
             <div class="donation-toggle">
                 <span>monthly donation</span>
@@ -209,43 +229,43 @@
         </div>
     </section>
     
+<section class="join-team">
+    <h2 class="section-title" style="color: #383838;">JOIN OUR TEAM</h2>
+    <p class="team-text" >
+        Your time and support can transform lives. Volunteer with us and make a
+        meaningful contribution to your community.
+    </p>
 
-    <section class="join-team">
-        <h2 class="section-title" style="color: #383838;">JOIN OUR TEAM</h2>
-        <p class="team-text">
-            Your Time And Support Can Transform Lives. Volunteer With Us And Make A 
-            Meaningful Contribution To Your Community.
-        </p>
-    
-        <div class="volunteer-container">
-            <div class="volunteer-info">
-                <h3>VOLUNTEER WITH US</h3>
-                <p>Contact us via phone or email to discuss opportunities, or pop over to see us at our main offices. 
-                    We are willing to work around our volunteers, so all you need is a willingness to help.</p>
-    
-                    <div class="contact-details">
-                        <p>
-                            <img src="images/email-icon1.png" alt="Email Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
-                            <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white;">enquiries@advicemidwales.org.uk</a>
-                        </p>
-                        <p>
-                            <img src="images/location-icon1.png" alt="Location Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
-                            The Care Centre, Forge Road, Machynlleth, Powys, SY20 8EQ
-                        </p>
-                  
-                        <p>
-                            <img src="images/phone-icon1.png" alt="Phone Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
-                            01654 700192
-                        </p>
-                    </div>
-                    
-            </div>
-    
-            <div class="volunteer-image">
-                <img src="images/volunteer-image.png" alt="Volunteer Meeting">
+    <div class="volunteer-container">
+        <div class="volunteer-info">
+            <h3>VOLUNTEER WITH US</h3>
+            <p>Contact us via phone or email to discuss opportunities, or pop over to see us at our main offices. 
+                We are willing to work around our volunteers, so all you need is a willingness to help.</p>
+
+            <div class="contact-details">
+                <p>
+                    <img src="images/email-icon1.png" alt="Email Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
+                    <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white;">enquiries@advicemidwales.org.uk</a>
+                </p>
+                <p style="display: flex; align-items: flex-start;">
+                    <img src="images/location-icon1.png" alt="Location Icon" style="width: 16px; vertical-align: top; margin-right: 8px; margin-top: 2px;">
+                    <span style="display: inline-block; max-width: 220px;">
+                        The Care Centre, Forge Road,<br>Machynlleth, Powys, SY20 8EQ
+                    </span>
+                </p>
+                <p>
+                    <img src="images/phone-icon1.png" alt="Phone Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
+                    01654 700192
+                </p>
             </div>
         </div>
-    </section>
+
+        <div class="volunteer-image">
+            <img src="images/volunteer-image.png" alt="Volunteer Meeting">
+        </div>
+    </div>
+</section>
+
     
 
     <section class="testimonial-section">
@@ -291,9 +311,13 @@
                 <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p> 
                 <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
                 <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span></p> 
-                <p><img src="images/email-icon.png" alt="Email" class="footer-icon"> 
-                    <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a> 
-                </p> 
+                <p style="display: flex; align-items: center;">
+    <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
+    <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
+        enquiries@advicemidwales.org.uk
+    </a>
+</p>
+
             </div>
     
             <!-- Column 2: Company -->

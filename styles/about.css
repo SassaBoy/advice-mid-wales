@@ -63,15 +63,17 @@ nav ul li a {
 }
 
 
+
 nav ul li a.active {
-    color: #4CAF50; /* Active link color */
-    font-weight: bold; /* Make it stand out */
+    color: #007F9E; /* Primary site teal */
+    font-weight: bold;
 }
+
+
 
 nav ul li a:hover {
-    color: #4CAF50;
+    color: #009A7A; /* Secondary site blue */
 }
-
 /* Mobile Menu Toggle */
 .menu-icon {
     display: none;
@@ -158,18 +160,19 @@ nav ul li a:hover {
         padding: 15px 20px;
     }
 
-    .logo {
-        order: 1;
-        margin-top: -60px;
-        margin-bottom: 10px;
-        margin-left: 50px;
-    }
+ .logo {
+    order: 1;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    align-self: flex-start;
+}
 
-    .logo img {
-        height: 300px;
-        width: 300px;
-    }
-
+.logo img {
+    height: 200px;
+    width: auto;
+    max-width: 100%;
+}
     nav {
         order: 3;
         width: 100%;
@@ -1199,17 +1202,19 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    margin-top: -50px;
 }
 
 .faq-image {
     width: 100%;
-    max-height: 300px;
+    max-height: 500px;
     object-fit: cover;
     margin-bottom: 20px;
 }
 
 .faq-container {
     margin-bottom: 50px;
+    margin-top: 60px;
 }
 
 .faq-item {
@@ -1219,15 +1224,15 @@ nav ul li a:hover {
 }
 
 .faq-question {
-    background-color: #355e20;
+    background: linear-gradient(to bottom, #009A7A, #007F9E);
     color: white;
     padding: 15px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 22px;
+    font-weight: bold;
     position: relative;
 }
 
@@ -1244,6 +1249,7 @@ nav ul li a:hover {
 .faq-answer {
     background-color: #f9f9f9;
     padding: 15px;
+    padding-bottom: 30px;
     display: none;
     font-size: 14px;
     color: #333;
@@ -1266,175 +1272,73 @@ nav ul li a:hover {
         padding: 12px;
     }
 }
-/* TIMELINE SECTION */
-.timeline-section {
+
+
+.timeline-faq-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
-    position: relative;
+    padding: 20px;
 }
 
-.timeline-container {
-    display: flex;
+.timeline-faq-container {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.timeline-faq-container .faq-item {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.timeline-faq-container .faq-question {
     background: linear-gradient(to bottom, #009A7A, #007F9E);
-    position: relative;
-}
-
-/* Added class for vertical timeline */
-.timeline-vertical {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to bottom, #009A7A, #007F9E);
-    position: relative;
-    padding: 30px 0;
-}
-
-.timeline-column {
-    flex: 1;
-    position: relative;
-}
-
-.timeline-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: #fff;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.timeline-item {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 0;
-    padding: 60px 0; /* Reduced vertical spacing between all bubbles */
-}
-
-
-/* Circles (bubbles) */
-.timeline-circle {
-    width: 130px; /* Larger bubbles */
-    height: 130px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    flex-shrink: 0; /* Prevents shrinking */
-}
-
-/* Bubble text */
-.timeline-year {
-    font-size: 28px;
-    font-weight: bold;
-    color: #009A7A; /* Green text */
-}
-
-/* Timeline content (subtext) */
-.timeline-content {
     color: white;
-    font-size: 16px;
-    font-weight: 300;
-    max-width: 260px;
-    line-height: 1.8;
-    text-align: justify; /* Justified text */
-}
-
-/* Left column layout */
-.timeline-left .timeline-item {
-    justify-content: flex-end;
-    padding-right: 60px; /* Consistent spacing from center line */
-}
-
-.timeline-left .timeline-circle {
-    margin-left: 40px; /* Consistent left margin */
-    margin-right: 20px;
-}
-
-/* Right column layout */
-.timeline-right .timeline-item {
-    justify-content: flex-start;
-    padding-left: 60px;
-    margin-top: 45px; /* Push right items down slightly to stagger alignment */
-}
-
-
-.timeline-right .timeline-circle {
-    margin-right: 20px;
-    margin-left: 40px; /* Consistent right margin */
-}
-
-.timeline-content {
-    padding: 0 20px;
-}
-
-/* Adding vertical connector lines */
-.timeline-vertical .timeline-item {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: normal;
     position: relative;
 }
 
-.timeline-vertical .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: 65px; /* Center of the bubble */
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: #FF3333; /* Red vertical line */
-    z-index: 1;
+.timeline-faq-container .faq-question::after {
+    content: "▲";
+    font-size: 12px;
+    transition: transform 0.3s ease;
 }
 
-.timeline-vertical .timeline-circle {
-    position: relative;
-    z-index: 2; /* Above the line */
+.timeline-faq-container .faq-question.collapsed::after {
+    transform: rotate(180deg);
 }
 
-.timeline-vertical .timeline-item:first-child::before {
-    top: 50%;
+.timeline-faq-container .faq-answer {
+    background-color: #f9f9f9;
+    padding: 15px;
+    padding-bottom: 30px;
+    display: none;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
 }
 
-.timeline-vertical .timeline-item:last-child::before {
-    bottom: 50%;
+.timeline-faq-container .faq-answer.show {
+    display: block;
 }
 
-/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-    .timeline-container {
-        flex-direction: column;
+    .timeline-faq-container .faq-question {
+        font-size: 13px;
+        padding: 12px;
     }
-    
-    .timeline-container::before {
-        content: none;
-    }
-    
-    .timeline-left .timeline-item,
-    .timeline-right .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0;
-        padding: 50px 20px;
-    }
-    
-    .timeline-circle {
-        width: 80px;
-        height: 80px;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    
-    .timeline-year {
-        font-size: 20px;
-    }
-    
-    .timeline-content {
-        padding: 20px 0;
-        max-width: 100%;
+
+    .timeline-faq-container .faq-answer {
+        font-size: 13px;
+        padding: 12px;
     }
 }
+
 /* WHO WE ARE SECTION */
 .who-we-are-section {
     max-width: 1200px;

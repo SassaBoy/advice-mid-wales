@@ -15,13 +15,21 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
 <link rel="manifest" href="icons/site.webmanifest">
+
+<style>
+  @media (max-width: 768px) {
+    p[style*="display: flex"] {
+      justify-content: center;
+    }
+  }
+</style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/new-logo.png" alt="Citizens Advice Mid Wales Logo">
+                    <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
                 </a>
             </div>
             <div class="menu-icon" onclick="toggleMenu()">
@@ -34,7 +42,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html"  class="active">About Us</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="buttons">
@@ -75,114 +83,53 @@
         </div>
     </section>
     
-    <section class="timeline-section">
-        <div class="timeline-container">
-            <div class="timeline-column timeline-left">
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">1983</div>
-                    </div>
-                    <div class="timeline-content">
-                        First established as the Machynlleth branch of Citizens Advice Bureau (C.A.B.)
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2003</div>
-                    </div>
-                    <div class="timeline-content">
-                        Broke away from Powys CAB in order to protect the local service from the threat of closure and became members of AdviceUK
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2008</div>
-                    </div>
-                    <div class="timeline-content">
-                        We became one of the first advice centres in the UK to adopt Advice Pro, which is now the industry-standard case management software system in the independent advice sector
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2013</div>
-                    </div>
-                    <div class="timeline-content">
-                        Adopted the operating name of "Advice Mid Wales"
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2023</div>
-                    </div>
-                    <div class="timeline-content">
-                        Launched our outreach services in Cardigan
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2025</div>
-                    </div>
-                    <div class="timeline-content">
-                        Celebrating 25 years since becoming a fully registered incorporated Charity
-                    </div>
-                </div>
-            </div>
-    
-            <div class="timeline-column timeline-right">
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">1999</div>
-                    </div>
-                    <div class="timeline-content">
-                        Moved to our current base of operations in the Cite Centre, Machynlleth
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2005</div>
-                    </div>
-                    <div class="timeline-content">
-                        Became a fully independent registered charity, under the name "Canolfan Cynghori Bro Ddyfi Advice Centre"
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2011</div>
-                    </div>
-                    <div class="timeline-content">
-                        Won the High Sheriff's Award for "An involvement which benefits the local initiative" for partnership work with CAMAD and Machynlleth Police
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2022</div>
-                    </div>
-                    <div class="timeline-content">
-                        Launched our outreach service in Tywyn
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-circle">
-                        <div class="timeline-year">2023</div>
-                    </div>
-                    <div class="timeline-content">
-                        Celebrated 40 years of advice and support across Mid Wales
-                    </div>
-                </div>
-            </div>
+  <section class="faq-section">
+
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">1983</div>
+            <div class="faq-answer">First established as the Machynlleth branch of Citizens Advice Bureau (C.A.B.)</div>
         </div>
-    </section>
-    
-    
+        <div class="faq-item">
+            <div class="faq-question">1999</div>
+            <div class="faq-answer">Moved to our current base of operations in The Care Centre, Machynlleth.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2003</div>
+            <div class="faq-answer">Broke away from Powys CAB in order to protect the Advice Centre from threat of closure and became members of Advice UK.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2005</div>
+            <div class="faq-answer">Became a fully independent registered charity under the name “Canolfan Cynghori Bro Ddyfi Advice Centre”.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2008</div>
+            <div class="faq-answer">Adopted AdvicePro — now the leading case management software in the independent advice sector.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2011</div>
+            <div class="faq-answer">Won the High Sheriff’s Award for our involvement with the “Problem Solving Initiative”.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2013</div>
+            <div class="faq-answer">Launched our outreach services in Ceredigion.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2022</div>
+            <div class="faq-answer">Launched our outreach services in Tywyn.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2023</div>
+            <div class="faq-answer">Celebrated 40 years of advice and support across Mid Wales.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2025</div>
+            <div class="faq-answer">Celebrating 25 years since becoming a fully registered independent Charity.</div>
+        </div>
+    </div>
+</section>
+
    
 
 <section class="difference-section">
@@ -255,9 +202,13 @@
             <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p> 
             <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
             <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span></p> 
-            <p><img src="images/email-icon.png" alt="Email" class="footer-icon"> 
-                <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a> 
-            </p> 
+           <p style="display: flex; align-items: center;">
+    <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
+    <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
+        enquiries@advicemidwales.org.uk
+    </a>
+</p>
+
         </div>
 
 
@@ -371,6 +322,9 @@ questions.forEach(question => {
 document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
+
+
+
 
             </script>
 </body>

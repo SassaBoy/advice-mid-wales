@@ -68,6 +68,17 @@ nav ul li a:hover {
     color: #4CAF50;
 }
 
+
+nav ul li a.active {
+    color: #007F9E; /* Primary site teal */
+    font-weight: bold;
+}
+
+
+
+nav ul li a:hover {
+    color: #009A7A; /* Secondary site blue */
+}
 /* Mobile Menu Toggle */
 .menu-icon {
     display: none;
@@ -141,6 +152,12 @@ nav ul li a:hover {
     display: block;
 }
 
+@media (max-width: 768px) {
+    .image-section img {
+        height: 470px; /* Crop height for mobile */
+        object-position: top; /* Focus on the top part of the image */
+    }
+}
 
 .hero .container1{
     height: 10px;
@@ -156,18 +173,19 @@ nav ul li a:hover {
         padding: 15px 20px;
     }
 
-    .logo {
-        order: 1;
-        margin-top: -60px;
-        margin-bottom: 10px;
-        margin-left: 50px;
-    }
+     .logo {
+    order: 1;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    align-self: flex-start;
+}
 
-    .logo img {
-        height: 300px;
-        width: 300px;
-    }
-
+.logo img {
+    height: 200px;
+    width: auto;
+    max-width: 100%;
+}
     nav {
         order: 3;
         width: 100%;
@@ -205,18 +223,19 @@ nav ul li a:hover {
         opacity: 0;
     }
     
-    nav ul.active {
-        height: 250px;
-        padding: 10px 0;
-        opacity: 1;
-    }
-    
-    nav ul li {
-        margin: 15px 0;
-        padding: 0 20px;
-        text-align: left;
-    }
+   
 
+
+nav ul li a.active {
+    color: #007F9E; /* Primary site teal */
+    font-weight: bold;
+}
+
+
+
+nav ul li a:hover {
+    color: #009A7A; /* Secondary site blue */
+}
     .buttons {
         order: 2;
         width: 100%;

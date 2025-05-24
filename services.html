@@ -14,13 +14,21 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
 <link rel="manifest" href="icons/site.webmanifest">
+
+<style>
+  @media (max-width: 768px) {
+    p[style*="display: flex"] {
+      justify-content: center;
+    }
+  }
+</style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/new-logo.png" alt="Citizens Advice Mid Wales Logo">
+                    <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
                 </a>
             </div>
             <div class="menu-icon" onclick="toggleMenu()">
@@ -33,7 +41,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact-us.html">Contact</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="buttons">
@@ -70,7 +78,7 @@
                 specific needs.
             </p>
     
-            <h2 class="about-title">HOW WE WORK</h2>
+            <h2 class="about-title" style="margin-top: 50px;">HOW WE WORK</h2>
             <p class="about-text">
                 Getting started with Advice Mid Wales is simple – whether it's a quick phone call, an email, 
                 or a visit during our opening hours. Every enquiry is handled with care by our friendly and 
@@ -82,7 +90,7 @@
                 through our strong network of referrals and signposting.
             </p>
     
-            <h2 class="about-title">HOW WE CAN HELP YOU</h2>
+            <h2 class="about-title" style="margin-top: 50px;">HOW WE CAN HELP YOU</h2>
             <p class="about-text">
                 We provide a Generalist Advice Service for a wide variety of problems:
             </p>
@@ -101,8 +109,12 @@
     </section>
     
     <section class="faq-section">
+   
+
         <img src="images/advice-center.png" alt="Advice center consultation" class="faq-image">
-        
+             <h3 style="text-transform: uppercase; color: #313131; margin-top: 30px; margin-bottom: -50px;">
+    FREQUENTLY ASKED QUESTIONS
+</h3>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">Q. As I'm working during the week, can I see an adviser outside of drop-in hours?</div>
@@ -166,9 +178,13 @@
                 <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p> 
                 <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
                 <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span></p> 
-                <p><img src="images/email-icon.png" alt="Email" class="footer-icon"> 
-                    <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a> 
-                </p> 
+               <p style="display: flex; align-items: center;">
+    <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
+    <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
+        enquiries@advicemidwales.org.uk
+    </a>
+</p>
+
             </div>
     
     

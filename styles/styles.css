@@ -29,12 +29,13 @@ body {
 
 
 .logo img {
-    height: 203px;
-    width: 220px;
-    transform: scale(0.65); /* slightly bigger */
-    transform-origin: left; /* anchor to left */
-    margin-left: -10px; /* only a little move left */
+    height: 220px;
+    width: 240px;
+    transform: scale(0.72); /* slightly bigger */
+    transform-origin: left;
+    margin-left: -10px;
 }
+
 
 /* NAVIGATION */
 nav {
@@ -65,12 +66,14 @@ nav ul li a {
 
 
 nav ul li a.active {
-    color: #009A7A; /* Primary site teal */
+    color: #007F9E; /* Primary site teal */
     font-weight: bold;
 }
 
+
+
 nav ul li a:hover {
-    color: #007F9E; /* Secondary site blue */
+    color: #009A7A; /* Secondary site blue */
 }
 
 
@@ -154,17 +157,19 @@ nav ul li a:hover {
         padding: 15px 20px;
     }
 
-    .logo {
-        order: 1;
-        margin-top: -60px;
-        margin-bottom: 10px;
-        margin-left: 50px;
-    }
+   .logo {
+    order: 1;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    align-self: flex-start;
+}
 
-    .logo img {
-        height: 300px;
-        width: 300px;
-    }
+.logo img {
+    height: 200px;
+    width: auto;
+    max-width: 100%;
+}
 
     nav {
         order: 3;
@@ -470,18 +475,25 @@ nav ul li a:hover {
     }
 
     .value-card img {
-        width: 90%; /* Adjusted width to make it slightly smaller than full width */
-        height: 160px; /* Increased height for better visibility */
-        border-radius: 8px 8px 0 0;
+        width: 100%;
+        height: 200px;
         object-fit: cover;
-        margin: 0 auto; /* Centers the image */
+        border-radius: 8px 8px 0 0;
     }
-    
 
     .value-text {
         padding: 15px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .value-text h3,
+    .value-text p {
+        margin-left: 0;
+        text-align: center;
     }
 }
+
 
 @media (max-width: 480px) {
     .section-title {
@@ -593,6 +605,7 @@ nav ul li a:hover {
 
 /* DONATION SECTION */
 .donation-section {
+    font-family: Arial, sans-serif; /* 👈 Ensures font matches the rest */
     max-width: 1300px;
     margin: 0 auto;
     text-align: center;
@@ -601,6 +614,21 @@ nav ul li a:hover {
     position: relative;
     z-index: 1;
     margin-top: 60px;
+}
+
+.donation-section,
+.donation-section * {
+    font-family: Arial, sans-serif !important;
+    font-size: 14px;
+    color: #121111;
+}
+
+.donation-text,
+.donation-ways li {
+    font-family: Arial, sans-serif !important;
+    font-size: 14px;
+    color: #121111 !important;
+    font-weight: normal;
 }
 
 .section-title {
@@ -612,6 +640,7 @@ nav ul li a:hover {
 }
 
 .donation-text {
+    font-family: Arial, sans-serif; /* 👈 Explicit font assignment */
     font-size: 14px;
     color: #121111;
     max-width: 1200px;
@@ -620,6 +649,8 @@ nav ul li a:hover {
     text-align: left;
     padding: 0 20px;
 }
+
+
 
 .donation-ways {
     text-align: left;
@@ -792,7 +823,7 @@ nav ul li a:hover {
 
 /* JOIN OUR TEAM SECTION */
 .join-team {
-    max-width: 1250px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
     padding: 50px 20px;
@@ -844,8 +875,88 @@ nav ul li a:hover {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 15px;
-    max-width: 300px;  /* Restricts the paragraph width */
+    max-width: 300px;
 }
+
+/* CONTACT DETAILS */
+.contact-details {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.contact-details a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* VOLUNTEER IMAGE */
+.volunteer-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volunteer-image img {
+    width: 55%;              /* Reduce width */
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;          /* Centers the image */
+    transform: scale(1);     /* No unnecessary scaling */
+    margin-right: 110px;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .volunteer-container {
+        flex-direction: column;
+    }
+
+    .volunteer-info {
+        padding: 25px;
+        text-align: left;
+    }
+
+    .volunteer-info h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .volunteer-info p {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 90%;
+        margin: 0 auto 15px;
+        text-align: left;
+    }
+
+    .contact-details {
+        text-align: left;
+    }
+
+    .contact-details p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .volunteer-image img {
+        width: 100%;
+        height: auto;
+        transform: scale(1.05); /* Less zoom on smaller screens */
+        margin-top: 100px;
+    }
+}
+
 
 /* CONTACT DETAILS */
 .contact-details {
