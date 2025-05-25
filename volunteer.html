@@ -26,31 +26,33 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
-                </a>
-            </div>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <span id="menu-open">☰</span>
-                <span id="menu-close" style="display: none;">✖</span>
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="buttons">
-                <a href="#" class="btn volunteer">VOLUNTEER</a>
-                <a href="#" class="btn advice">GET ADVICE</a>
-            </div>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
+            </a>
         </div>
-    </header>
+        
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span id="menu-open">☰</span>
+            <span id="menu-close" style="display: none;">✖</span>
+        </div>
+        
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" data-en="Home" data-cy="Cartref">Home</a></li>
+                <li><a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a></li>
+                <li><a href="about.html"  data-en="About Us" data-cy="Amdanom Ni">About Us</a></li>
+                <li><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></li>
+                <li><a href="volunteer.html"class="active" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></li>
+            </ul>
+        </nav>
+      <div class="buttons">
+    <a href="#" class="btn" id="welsh-btn" style="width: 120px;" onclick="switchToWelsh()">WELSH</a>
+    <a href="#" class="btn" id="english-btn" style="width: 120px;" onclick="switchToEnglish()">ENGLISH</a>
+</div>
+    </div>
+</header>
 
     <main>
         <!-- <section class="hero">
@@ -63,129 +65,161 @@
             <img src="images/volunteer-image1.png" alt="Stone bridge with autumn trees and houses">
         </section>
     </main>
+<section class="volunteer-steps-section">
+    <div class="volunteer-steps-container">
+        <h2 class="volunteer-steps-title"
+            data-en="BECOMING A VOLUNTEER"
+            data-cy="DOD YN WIRFODDOLWR">
+            BECOMING A VOLUNTEER
+        </h2>
 
-    <section class="volunteer-steps-section">
-        <div class="volunteer-steps-container">
-            <h2 class="volunteer-steps-title">BECOMING A VOLUNTEER</h2>
-            <p class="volunteer-steps-description">
-                To help us better understand your suitability and ensure that volunteering with us will be a mutually 
-                beneficial experience, we have a few steps we like to follow. Please rest assured that all of these 
-                stages are meant to be informal and relaxed.
-            </p>
-    
-            <div class="volunteer-steps-item">
-                <span class="volunteer-steps-number">1</span>
-                <div class="volunteer-steps-content">
-                    <h3 class="volunteer-steps-heading">Application Form</h3>
-                    <p class="volunteer-steps-text">
-                        This is your chance to give us a comprehensive picture of your background, interests, and motivations 
-                        for volunteering. The more detail you provide, the better we’ll be able to determine whether we should 
-                        proceed with an informal chat. This helps ensure we’re only moving forward if we feel there’s a good 
-                        potential fit for both you and us.
-                    </p>
-                </div>
-            </div>
-    
-            <div class="volunteer-steps-arrow">
-                <img src="images/arrow-down.png" alt="Down Arrow" style="width: 50px; height: 50px;">
-            </div>
-            
-            
-    
-            <div class="volunteer-steps-item">
-                <span class="volunteer-steps-number">2</span>
-                <div class="volunteer-steps-content">
-                    <h3 class="volunteer-steps-heading">Initial Chat</h3>
-                    <p class="volunteer-steps-text">
-                        If your application is shortlisted, we will invite you to an initial virtual chat. This will usually be 
-                        a short video call, and having your camera on is important to help us verify your identity. It’s a great 
-                        opportunity for us to get to know each other and for you to learn more about us.
-                    </p>
-                </div>
-            </div>
-    
-            <div class="volunteer-steps-arrow">
-                <img src="images/arrow-down.png" alt="Down Arrow" style="width: 50px; height: 50px;">
-            </div>
-            
-            
-    
-            <div class="volunteer-steps-item">
-                <span class="volunteer-steps-number">3</span>
-                <div class="volunteer-steps-content">
-                    <h3 class="volunteer-steps-heading">Informal Interview</h3>
-                    <p class="volunteer-steps-text">
-                        If the informal chat goes well and it feels like a good fit, you may then be invited to a follow-up 
-                        interview involving a senior member of our team and/or the Project Manager. This step allows us to 
-                        discuss the role in greater detail and ensure the position aligns with both our needs and your 
-                        expectations. If successful, we’ll provide you with more information on the next steps, including 
-                        formal registration, DBS check, induction, and training.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="volunteer-benefits-section">
-        <div class="volunteer-benefits-container">
-            <h2 class="volunteer-benefits-title">BENEFITS OF VOLUNTEERING WITH US</h2>
-    
-            <div class="volunteer-benefits-grid">
-                <div class="volunteer-benefit-item">
-                    <div class="volunteer-benefit-icon">
-                        <img src="images/head-icon.png" alt="Impactful Experience Icon" style="width: 150px; height: 150px;">
-                    </div>
-                    <h3 class="volunteer-benefit-heading">IMPACTFUL EXPERIENCE</h3>
-                    <p class="volunteer-benefit-text">
-                        Make a real difference by supporting those in need, building empathy and contributing to your community.
-                    </p>
-                </div>
-    
-                <div class="volunteer-benefit-item">
-                    <div class="volunteer-benefit-icon">
-                        <img src="images/cv-icon.png" alt="CV Building Icon"style="width: 150px; height: 150px;">
-                    </div>
-                    <h3 class="volunteer-benefit-heading">CV BUILDING</h3>
-                    <p class="volunteer-benefit-text">
-                        Gain valuable, hands-on experience that enhances employability, particularly in fields like 
-                        social work, counselling and legal services.
-                    </p>
-                </div>
-    
-                <div class="volunteer-benefit-item">
-                    <div class="volunteer-benefit-icon">
-                        <img src="images/career-icon.png" alt="Career Exploration Icon" style="width: 150px; height: 150px;">
-                    </div>
-                    <h3 class="volunteer-benefit-heading">CAREER EXPLORATION</h3>
-                    <p class="volunteer-benefit-text">
-                        Gain clarity about your future career path through practical, trial-and-learn experiences in our 
-                        supportive environment.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <section class="volunteer-form-section">
-        <div class="volunteer-form-container">
-            <h2 class="volunteer-form-title">VOLUNTEER FORM</h2>
-            <div class="volunteer-form-box">
-                <p class="volunteer-form-text" style="color: #121111;">
-                    Your time and support can make a real difference in the lives of older adults.
-                    Volunteer with us today to help enhance the well-being of seniors in our community.
-                    Every action counts in providing care, companionship, and comfort.
-                    Thank you for making a positive impact!
+        <p class="volunteer-steps-description"
+           data-en="To help us better understand your suitability and ensure that volunteering with us will be a mutually beneficial experience, we have a few steps we like to follow. Please rest assured that all of these stages are meant to be informal and relaxed."
+           data-cy="Er mwyn ein helpu i ddeall eich addasrwydd yn well ac i sicrhau bod gwirfoddoli gyda ni'n brofiad buddiol i'r ddwy ochr, mae gennym ychydig o gamau rydym yn hoffi eu dilyn. Cofiwch fod y camau hyn i gyd yn anffurfiol ac ymlaciol.">
+            To help us better understand your suitability and ensure that volunteering with us will be a mutually 
+            beneficial experience, we have a few steps we like to follow. Please rest assured that all of these 
+            stages are meant to be informal and relaxed.
+        </p>
+
+        <div class="volunteer-steps-item">
+            <span class="volunteer-steps-number">1</span>
+            <div class="volunteer-steps-content">
+                <h3 class="volunteer-steps-heading"
+                    data-en="Application Form"
+                    data-cy="Ffurflen Gais">
+                    Application Form
+                </h3>
+                <p class="volunteer-steps-text"
+                   data-en="This is your chance to give us a comprehensive picture of your background, interests, and motivations for volunteering. The more detail you provide, the better we’ll be able to determine whether we should proceed with an informal chat. This helps ensure we’re only moving forward if we feel there’s a good potential fit for both you and us."
+                   data-cy="Dyma eich cyfle i roi darlun cynhwysfawr i ni o’ch cefndir, eich diddordebau, a’ch cymhellion dros wirfoddoli. Po fwyaf o fanylion a roddwch, y mwyaf y gallwn benderfynu a ddylem fynd ati i gynnal sgwrs anffurfiol. Mae hyn yn sicrhau ein bod ond yn symud ymlaen os ydym yn teimlo bod ffit potensial da i'r ddwy ochr.">
+                    This is your chance to give us a comprehensive picture of your background, interests, and motivations 
+                    for volunteering. The more detail you provide, the better we’ll be able to determine whether we should 
+                    proceed with an informal chat. This helps ensure we’re only moving forward if we feel there’s a good 
+                    potential fit for both you and us.
                 </p>
-                <div class="volunteer-form-button-container">
-                    <a href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZ__syA2HBUQzIzVzE3TDdUTFZYMVlSSENTRTBHOUxRSy4u&route=shorturl"
-                       target="_blank" class="volunteer-form-button">
-                        GO TO FORM
-                    </a>
-             
-                </div>
             </div>
         </div>
-    </section>
+
+        <div class="volunteer-steps-arrow">
+            <img src="images/arrow-down.png" alt="Down Arrow" style="width: 50px; height: 50px;">
+        </div>
+
+        <div class="volunteer-steps-item">
+            <span class="volunteer-steps-number">2</span>
+            <div class="volunteer-steps-content">
+                <h3 class="volunteer-steps-heading"
+                    data-en="Initial Chat"
+                    data-cy="Sgwrs Cychwynnol">
+                    Initial Chat
+                </h3>
+                <p class="volunteer-steps-text"
+                   data-en="If your application is shortlisted, we will invite you to an initial virtual chat. This will usually be a short video call, and having your camera on is important to help us verify your identity. It’s a great opportunity for us to get to know each other and for you to learn more about us."
+                   data-cy="Os bydd eich cais yn cael ei roi ar y rhestr fer, byddwn yn eich gwahodd i sgwrs gychwynnol rithwir. Fel arfer, bydd hon yn alwad fideo fer, ac mae’n bwysig cael eich camera ymlaen i’n helpu i wirio eich hunaniaeth. Mae hefyd yn gyfle gwych i ni adnabod ein gilydd ac i chi ddysgu mwy amdanom ni.">
+                    If your application is shortlisted, we will invite you to an initial virtual chat. This will usually be 
+                    a short video call, and having your camera on is important to help us verify your identity. It’s a great 
+                    opportunity for us to get to know each other and for you to learn more about us.
+                </p>
+            </div>
+        </div>
+
+        <div class="volunteer-steps-arrow">
+            <img src="images/arrow-down.png" alt="Down Arrow" style="width: 50px; height: 50px;">
+        </div>
+
+        <div class="volunteer-steps-item">
+            <span class="volunteer-steps-number">3</span>
+            <div class="volunteer-steps-content">
+                <h3 class="volunteer-steps-heading"
+                    data-en="Informal Interview"
+                    data-cy="Cyfweliad Anffurfiol">
+                    Informal Interview
+                </h3>
+                <p class="volunteer-steps-text"
+                   data-en="If the informal chat goes well and it feels like a good fit, you may then be invited to a follow-up interview involving a senior member of our team and/or the Project Manager. This step allows us to discuss the role in greater detail and ensure the position aligns with both our needs and your expectations. If successful, we’ll provide you with more information on the next steps, including formal registration, DBS check, induction, and training."
+                   data-cy="Os bydd y sgwrs anffurfiol yn mynd yn dda ac yn teimlo fel ffit da, efallai y cewch eich gwahodd i gyfweliad dilynol gyda aelod uwch o'n tîm a/neu Reolwr y Prosiect. Mae'r cam hwn yn ein galluogi i drafod y rôl yn fwy manwl ac i sicrhau bod y rôl yn cyd-fynd â'n hanghenion ni a'ch disgwyliadau chi. Os byddwch yn llwyddiannus, byddwn yn rhoi mwy o wybodaeth i chi am y camau nesaf, gan gynnwys cofrestru ffurfiol, gwiriad DBS, cyflwyniad, a hyfforddiant.">
+                    If the informal chat goes well and it feels like a good fit, you may then be invited to a follow-up 
+                    interview involving a senior member of our team and/or the Project Manager. This step allows us to 
+                    discuss the role in greater detail and ensure the position aligns with both our needs and your 
+                    expectations. If successful, we’ll provide you with more information on the next steps, including 
+                    formal registration, DBS check, induction, and training.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="volunteer-benefits-section">
+    <div class="volunteer-benefits-container">
+        <h2 class="volunteer-benefits-title" data-en="BENEFITS OF VOLUNTEERING WITH US" data-cy="Manteision Gwirfoddoli Gyda Ni">
+            BENEFITS OF VOLUNTEERING WITH US
+        </h2>
+
+        <div class="volunteer-benefits-grid">
+            <div class="volunteer-benefit-item">
+                <div class="volunteer-benefit-icon">
+                    <img src="images/head-icon.png" alt="Impactful Experience Icon" style="width: 150px; height: 150px;">
+                </div>
+                <h3 class="volunteer-benefit-heading" data-en="IMPACTFUL EXPERIENCE" data-cy="Profiad Effeithiol">IMPACTFUL EXPERIENCE</h3>
+                <p class="volunteer-benefit-text"
+                    data-en="Make a real difference by supporting those in need, building empathy and contributing to your community."
+                    data-cy="Gwnewch wahaniaeth gwirioneddol drwy gefnogi'r rhai mewn angen, meithrin empathi a chyfrannu at eich cymuned.">
+                    Make a real difference by supporting those in need, building empathy and contributing to your community.
+                </p>
+            </div>
+
+            <div class="volunteer-benefit-item">
+                <div class="volunteer-benefit-icon">
+                    <img src="images/cv-icon.png" alt="CV Building Icon" style="width: 150px; height: 150px;">
+                </div>
+                <h3 class="volunteer-benefit-heading" data-en="CV BUILDING" data-cy="Adeiladu CV">CV BUILDING</h3>
+                <p class="volunteer-benefit-text"
+                    data-en="Gain valuable, hands-on experience that enhances employability, particularly in fields like social work, counselling and legal services."
+                    data-cy="Ennillwch brofiad ymarferol gwerthfawr sy'n gwella cyflogadwyedd, yn enwedig mewn meysydd fel gwaith cymdeithasol, cwnsela a gwasanaethau cyfreithiol.">
+                    Gain valuable, hands-on experience that enhances employability, particularly in fields like 
+                    social work, counselling and legal services.
+                </p>
+            </div>
+
+            <div class="volunteer-benefit-item">
+                <div class="volunteer-benefit-icon">
+                    <img src="images/career-icon.png" alt="Career Exploration Icon" style="width: 150px; height: 150px;">
+                </div>
+                <h3 class="volunteer-benefit-heading" data-en="CAREER EXPLORATION" data-cy="Archwilio Gyrfa">CAREER EXPLORATION</h3>
+                <p class="volunteer-benefit-text"
+                    data-en="Gain clarity about your future career path through practical, trial-and-learn experiences in our supportive environment."
+                    data-cy="Cael eglurder am eich llwybr gyrfa yn y dyfodol drwy brofiadau ymarferol a chefnogol yn ein hamgylchedd croesawgar.">
+                    Gain clarity about your future career path through practical, trial-and-learn experiences in our 
+                    supportive environment.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="volunteer-form-section">
+    <div class="volunteer-form-container">
+        <h2 class="volunteer-form-title" data-en="VOLUNTEER FORM" data-cy="FFURFLEN WIRFODDOLI">VOLUNTEER FORM</h2>
+        <div class="volunteer-form-box">
+            <p class="volunteer-form-text" style="color: #121111;"
+               data-en="Your time and support can make a real difference in the lives of older adults. Volunteer with us today to help enhance the well-being of seniors in our community. Every action counts in providing care, companionship, and comfort. Thank you for making a positive impact!"
+               data-cy="Gall eich amser a'ch cefnogaeth wneud gwahaniaeth gwirioneddol i fywydau oedolion hŷn. Gwirfoddolwch gyda ni heddiw i helpu i wella lles pobl hŷn yn ein cymuned. Mae pob gweithred yn cyfrif wrth ddarparu gofal, cwmnïaeth a chysur. Diolch i chi am greu effaith gadarnhaol!">
+                Your time and support can make a real difference in the lives of older adults.
+                Volunteer with us today to help enhance the well-being of seniors in our community.
+                Every action counts in providing care, companionship, and comfort.
+                Thank you for making a positive impact!
+            </p>
+            <div class="volunteer-form-button-container">
+                <a href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZ__syA2HBUQzIzVzE3TDdUTFZYMVlSSENTRTBHOUxRSy4u&route=shorturl"
+                   target="_blank"
+                   class="volunteer-form-button"
+                   data-en="GO TO FORM"
+                   data-cy="EWCH I'R FFURFLEN">
+                    GO TO FORM
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section class="responsive-image-section">
         <div class="image-container">
@@ -193,100 +227,107 @@
         </div>
     </section>
     
-    
     <section class="testimonials-section">
-        <h2 class="testimonials-title" style="text-align: left;">TESTIMONIALS</h2>
-        <div class="testimonials-container">
-    
-            <div class="testimonial-box left-align">
-                <p class="testimonial-quote" style="color: #E3E3E3B2;">❝</p>
-                <p class="testimonial-text">
-                    "Volunteering with Advice Mid Wales has been really important to me. It keeps my mind active 
-                    and challenges me in ways I didn’t expect. I’ve learned a lot, picked up new skills, and gained 
-                    more confidence, which has given me a real sense of purpose. But what I value most is probably 
-                    the chance to meet other volunteers and form some great friendships along the way."
-                </p>
-                <p class="testimonial-quote-right" style="color: #E3E3E3B2;">❞</p>
-            </div>
-    
-            <div class="testimonial-box right-align">
-                <p class="testimonial-quote" style="color: #E3E3E3B2;">❝</p>
-                <p class="testimonial-text">
-                    "I’ve been volunteering at AMW for five years now, and it’s been a really rewarding experience. 
-                    I helped with a huge variety of cases over the years, everything from benefits and fuel issues 
-                    to consumer rights and problems with local authorities. I don’t always have the answers straight away, 
-                    but we do our best to find a solution as a team. When we succeed, it genuinely feels amazing, 
-                    not just for the client but for us as volunteers as well."
-                </p>
-                <p class="testimonial-quote-right" style="color: #E3E3E3B2;">❞</p>
-            </div>
-    
-            <div class="testimonial-box left-align">
-                <p class="testimonial-quote" style="color: #E3E3E3B2;">❝</p>
-                <p class="testimonial-text">
-                    "What I love most about volunteering here is that, after nearly 30 years, the goal hasn’t changed! 
-                    I am still helping people in the community help themselves. These days, a lot of older people feel 
-                    overwhelmed by the system, especially as everything seems to be online now. But when I see the relief 
-                    on someone’s face after a successful appeal or application, that’s what makes volunteering worth it 
-                    for me. It’s moments like that that keep me coming back. And of course, I couldn’t do it without 
-                    the incredible team atmosphere we have!"
-                </p>
-                <p class="testimonial-quote-right" style="color: #E3E3E3B2;">❞</p>
-            </div>
-    
+    <h2 class="testimonials-title" data-en="TESTIMONIALS" data-cy="TYSTEBEION">TESTIMONIALS</h2>
+    <div class="testimonials-container">
+
+        <div class="testimonial-box left-align">
+            <p class="testimonial-quote" style="color: #E3E3E3B2;">❝</p>
+            <p class="testimonial-text"
+               data-en="Volunteering with Advice Mid Wales has been really important to me. It keeps my mind active and challenges me in ways I didn’t expect. I’ve learned a lot, picked up new skills, and gained more confidence, which has given me a real sense of purpose. But what I value most is probably the chance to meet other volunteers and form some great friendships along the way."
+               data-cy="Mae gwirfoddoli gyda Advice Mid Wales wedi bod yn bwysig iawn i mi. Mae'n cadw fy meddwl yn effro ac yn fy herio mewn ffyrdd na feddyliais amdanynt. Rwyf wedi dysgu llawer, meistroli sgiliau newydd, ac ennill mwy o hyder, sydd wedi rhoi ymdeimlad cryf o bwrpas i mi. Ond yr hyn rwy'n ei werthfawrogi fwyaf yw'r cyfle i gwrdd ag eraill sy'n gwirfoddoli a ffurfio cyfeillgarwch gwych ar hyd y ffordd.">
+                Volunteering with Advice Mid Wales has been really important to me. It keeps my mind active 
+                and challenges me in ways I didn’t expect. I’ve learned a lot, picked up new skills, and gained 
+                more confidence, which has given me a real sense of purpose. But what I value most is probably 
+                the chance to meet other volunteers and form some great friendships along the way.
+            </p>
+            <p class="testimonial-quote-right" style="color: #E3E3E3B2;">❞</p>
         </div>
-    </section>
-    
+
+        <div class="testimonial-box right-align">
+            <p class="testimonial-quote" style="color: #E3E3E3B2;">❝</p>
+            <p class="testimonial-text"
+               data-en="I’ve been volunteering at AMW for five years now, and it’s been a really rewarding experience. I helped with a huge variety of cases over the years, everything from benefits and fuel issues to consumer rights and problems with local authorities. I don’t always have the answers straight away, but we do our best to find a solution as a team. When we succeed, it genuinely feels amazing, not just for the client but for us as volunteers as well."
+               data-cy="Rwyf wedi bod yn gwirfoddoli gyda AMW ers pum mlynedd bellach, ac mae wedi bod yn brofiad hynod werth chweil. Rwyf wedi helpu gyda llu o achosion dros y blynyddoedd, gan gynnwys budd-daliadau, problemau tanwydd, hawliau defnyddwyr a materion gyda'r awdurdodau lleol. Nid wyf bob amser yn gwybod yr ateb ar unwaith, ond rydym yn gwneud ein gorau i ddod o hyd i ateb fel tîm. Pan fyddwn yn llwyddo, mae'n deimlad anhygoel – nid yn unig i'r cleient ond hefyd i ni fel gwirfoddolwyr.">
+                I’ve been volunteering at AMW for five years now, and it’s been a really rewarding experience. 
+                I helped with a huge variety of cases over the years, everything from benefits and fuel issues 
+                to consumer rights and problems with local authorities. I don’t always have the answers straight away, 
+                but we do our best to find a solution as a team. When we succeed, it genuinely feels amazing, 
+                not just for the client but for us as volunteers as well.
+            </p>
+            <p class="testimonial-quote-right" style="color: #E3E3E3B2;">❞</p>
+        </div>
+
+        <div class="testimonial-box left-align">
+            <p class="testimonial-quote" style="color: #E3E3E3B2;">❝</p>
+            <p class="testimonial-text"
+               data-en="What I love most about volunteering here is that, after nearly 30 years, the goal hasn’t changed! I am still helping people in the community help themselves. These days, a lot of older people feel overwhelmed by the system, especially as everything seems to be online now. But when I see the relief on someone’s face after a successful appeal or application, that’s what makes volunteering worth it for me. It’s moments like that that keep me coming back. And of course, I couldn’t do it without the incredible team atmosphere we have!"
+               data-cy="Yr hyn rwy'n ei garu fwyaf am wirfoddoli yma yw bod, bron i 30 mlynedd yn ddiweddarach, y nod heb newid! Rwy'n dal i helpu pobl yn y gymuned i helpu eu hunain. Y dyddiau hyn, mae llawer o bobl hŷn yn teimlo'n llethu gan y system, yn enwedig gan fod popeth bron ar-lein erbyn hyn. Ond pan welaf y rhyddhad ar wyneb rhywun ar ôl apêl neu gais llwyddiannus, dyna sy'n gwneud gwirfoddoli'n werth chweil i mi. Dyna'r eiliadau sy'n fy ysgogi i ddod yn ôl tro ar ôl tro. Wrth gwrs, ni allwn wneud hyn heb awyrgylch tîm anhygoel sydd gennym yma!">
+                What I love most about volunteering here is that, after nearly 30 years, the goal hasn’t changed! 
+                I am still helping people in the community help themselves. These days, a lot of older people feel 
+                overwhelmed by the system, especially as everything seems to be online now. But when I see the relief 
+                on someone’s face after a successful appeal or application, that’s what makes volunteering worth it 
+                for me. It’s moments like that that keep me coming back. And of course, I couldn’t do it without 
+                the incredible team atmosphere we have!
+            </p>
+            <p class="testimonial-quote-right" style="color: #E3E3E3B2;">❞</p>
+        </div>
+
+    </div>
+</section>
+
     
     <footer class="footer-section">
-        <!-- <div class="footer-logo">
-            <img src="images/white-logo.png" alt="Footer Logo">
-        </div> -->
-    
-        <hr class="footer-divider">
-    
-        <div class="footer-grid">
-            <!-- Column 1: Reach Us -->
-            <div class="footer-column"> 
-                <h4>Reach us</h4> 
-                <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p> 
-                <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
-                <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span></p> 
-              <p style="display: flex; align-items: center;">
-    <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
-    <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
-        enquiries@advicemidwales.org.uk
-    </a>
-</p>
- 
-            </div>
-    
-    
-            <!-- Column 2: Company -->
-            <div class="footer-column">
-                <h4>Company</h4>
-                <p><a href="#">Home</a></p>
-                <p><a href="about.html">About Us</a></p>
-                <p><a href="services.html">Services</a></p>
-            </div>
-    
-            <!-- Column 3: Legal -->
-            <div class="footer-column">
-                <h4>Legal</h4>
-                <p><a href="https://www.advicemidwales.org.uk/privacy.php">Privacy Policy</a></p>
-                <p><a href="#">Terms & Services</a></p>
-                <p><a href="#">Terms of Use</a></p>
-            </div>
-    
-            <!-- Column 4: Newsletter -->
-            <div class="footer-column">
-                <h4>How We Help</h4>
-                <p>Free, confidential advice when you need it most — from benefits and housing to debt and employment.</p>
-            </div>
+    <hr class="footer-divider">
+
+    <div class="footer-grid">
+        <!-- Column 1: Reach Us -->
+        <div class="footer-column">
+            <h4 data-en="Reach Us" data-cy="Cysylltwch â Ni">Reach Us</h4>
+            <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p>
+            <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
+                <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span>
+            </p>
+            <p style="display: flex; align-items: center;">
+                <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
+                <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
+                    enquiries@advicemidwales.org.uk
+                </a>
+            </p>
         </div>
+
+        <!-- Column 2: Company -->
+        <div class="footer-column">
+            <h4 data-en="Company" data-cy="Cwmni">Company</h4>
+            <p><a href="#" data-en="Home" data-cy="Cartref">Home</a></p>
+            <p><a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a></p>
+            <p><a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a></p>
+            <p><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></p>
+            <p><a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></p>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div class="footer-column">
+            <h4 data-en="Legal" data-cy="Cyfreithiol">Legal</h4>
+            <p><a href="https://www.advicemidwales.org.uk/privacy.php" data-en="Privacy Policy" data-cy="Polisi Preifatrwydd">Privacy Policy</a></p>
+            <p><a href="#" data-en="Terms & Services" data-cy="Telerau a Gwasanaethau">Terms & Services</a></p>
+            <p><a href="#" data-en="Terms of Use" data-cy="Telerau Defnyddio">Terms of Use</a></p>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column">
+            <h4 data-en="Join Our Newsletter" data-cy="Ymunwch â’n Cylchlythyr">Join Our Newsletter</h4>
+            <p data-en="Join our newsletter for latest news update" data-cy="Ymunwch â’n cylchlythyr i gael y newyddion diweddaraf">Join our newsletter for latest news update</p>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Email">
+                <button type="submit" data-en="Subscribe" data-cy="Tanysgrifio">Subscribe</button>
+            </form>
+            <p class="newsletter-hint" data-en="Registered Charity No. 1111040" data-cy="Rhif Elusen Gofrestredig: 1111040">Registered Charity No. 1111040</p>
+        </div>
+    </div>
+</footer>
+
     
-        <p class="footer-bottom">Registered Charity (No. 1111040).</p>
-    </footer>
     
     
     <script>
@@ -364,6 +405,161 @@ questions.forEach(question => {
 document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
+function switchToWelsh() {
+    document.body.classList.add('welsh-active');
+
+    // Update navigation text to Welsh
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+        link.textContent = link.getAttribute('data-cy');
+    });
+
+    // Update button text
+    document.getElementById('welsh-btn').textContent = 'CYMRAEG';
+    document.getElementById('english-btn').textContent = 'SAESNEG';
+
+    // Volunteer Steps Section
+    const volunteerTitle = document.querySelector('.volunteer-steps-title');
+    if (volunteerTitle) volunteerTitle.textContent = volunteerTitle.getAttribute('data-cy');
+
+    const volunteerDesc = document.querySelector('.volunteer-steps-description');
+    if (volunteerDesc) volunteerDesc.textContent = volunteerDesc.getAttribute('data-cy');
+
+    document.querySelectorAll('.volunteer-steps-heading').forEach(h => {
+        h.textContent = h.getAttribute('data-cy');
+    });
+
+    document.querySelectorAll('.volunteer-steps-text').forEach(p => {
+        p.textContent = p.getAttribute('data-cy');
+    });
+
+    // Volunteer Benefits Section
+    const benefitsTitle = document.querySelector('.volunteer-benefits-title');
+    if (benefitsTitle) benefitsTitle.textContent = benefitsTitle.getAttribute('data-cy');
+
+    document.querySelectorAll('.volunteer-benefit-heading').forEach(h => {
+        h.textContent = h.getAttribute('data-cy');
+    });
+
+    document.querySelectorAll('.volunteer-benefit-text').forEach(p => {
+        p.textContent = p.getAttribute('data-cy');
+    });
+
+    // Volunteer Form Section
+    const formTitle = document.querySelector('.volunteer-form-title');
+    if (formTitle) formTitle.textContent = formTitle.getAttribute('data-cy');
+
+    const formText = document.querySelector('.volunteer-form-text');
+    if (formText) formText.textContent = formText.getAttribute('data-cy');
+
+    const formButton = document.querySelector('.volunteer-form-button');
+    if (formButton) formButton.textContent = formButton.getAttribute('data-cy');
+
+    // Testimonials Section
+    const testimonialsTitle = document.querySelector('.testimonials-title');
+    if (testimonialsTitle) testimonialsTitle.textContent = testimonialsTitle.getAttribute('data-cy');
+
+    document.querySelectorAll('.testimonial-text').forEach(p => {
+        p.textContent = p.getAttribute('data-cy');
+    });
+
+    // Footer Section
+    document.querySelectorAll('.footer-column h4').forEach(el => {
+        el.textContent = el.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.footer-column a, .footer-column p, .newsletter-form button, .newsletter-hint').forEach(el => {
+        if (el.hasAttribute('data-cy')) {
+            el.textContent = el.getAttribute('data-cy');
+        }
+    });
+}
+
+function switchToEnglish() {
+    document.body.classList.remove('welsh-active');
+
+    // Update navigation text to English
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+        link.textContent = link.getAttribute('data-en');
+    });
+
+    // Update button text
+    document.getElementById('welsh-btn').textContent = 'WELSH';
+    document.getElementById('english-btn').textContent = 'ENGLISH';
+
+    // Volunteer Steps Section
+    const volunteerTitle = document.querySelector('.volunteer-steps-title');
+    if (volunteerTitle) volunteerTitle.textContent = volunteerTitle.getAttribute('data-en');
+
+    const volunteerDesc = document.querySelector('.volunteer-steps-description');
+    if (volunteerDesc) volunteerDesc.textContent = volunteerDesc.getAttribute('data-en');
+
+    document.querySelectorAll('.volunteer-steps-heading').forEach(h => {
+        h.textContent = h.getAttribute('data-en');
+    });
+
+    document.querySelectorAll('.volunteer-steps-text').forEach(p => {
+        p.textContent = p.getAttribute('data-en');
+    });
+
+    // Volunteer Benefits Section
+    const benefitsTitle = document.querySelector('.volunteer-benefits-title');
+    if (benefitsTitle) benefitsTitle.textContent = benefitsTitle.getAttribute('data-en');
+
+    document.querySelectorAll('.volunteer-benefit-heading').forEach(h => {
+        h.textContent = h.getAttribute('data-en');
+    });
+
+    document.querySelectorAll('.volunteer-benefit-text').forEach(p => {
+        p.textContent = p.getAttribute('data-en');
+    });
+
+    // Volunteer Form Section
+    const formTitle = document.querySelector('.volunteer-form-title');
+    if (formTitle) formTitle.textContent = formTitle.getAttribute('data-en');
+
+    const formText = document.querySelector('.volunteer-form-text');
+    if (formText) formText.textContent = formText.getAttribute('data-en');
+
+    const formButton = document.querySelector('.volunteer-form-button');
+    if (formButton) formButton.textContent = formButton.getAttribute('data-en');
+
+    // Testimonials Section
+    const testimonialsTitle = document.querySelector('.testimonials-title');
+    if (testimonialsTitle) testimonialsTitle.textContent = testimonialsTitle.getAttribute('data-en');
+
+    document.querySelectorAll('.testimonial-text').forEach(p => {
+        p.textContent = p.getAttribute('data-en');
+    });
+
+    // Footer Section
+    document.querySelectorAll('.footer-column h4').forEach(el => {
+        el.textContent = el.getAttribute('data-en');
+    });
+    document.querySelectorAll('.footer-column a, .footer-column p, .newsletter-form button, .newsletter-hint').forEach(el => {
+        if (el.hasAttribute('data-en')) {
+            el.textContent = el.getAttribute('data-en');
+        }
+    });
+}
+
+
+function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+    
+    navMenu.classList.toggle('active');
+    
+    if (navMenu.classList.contains('active')) {
+        menuOpen.style.display = 'none';
+        menuClose.style.display = 'inline';
+    } else {
+        menuOpen.style.display = 'inline';
+        menuClose.style.display = 'none';
+    }
+}
+
 
             </script>
 </body>

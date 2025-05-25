@@ -13,33 +13,29 @@ body {
 }
 
 
-
 .container {
-    max-width: 1400px; /* even wider */
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 80px; /* more padding pushes everything right */
+    padding: 10px 80px;
     height: 120px;
     overflow: visible;
 }
 
-
 .logo img {
-    height: 195px;
-    width: 220px;
-    transform: scale(0.65); /* slightly bigger */
-    transform-origin: left; /* anchor to left */
-    margin-left: -30px; /* only a little move left */
+    height: 220px;
+    width: 240px;
+    transform: scale(0.72);
+    transform-origin: left;
+    margin-left: -10px;
 }
-
 
 /* NAVIGATION */
 nav {
     flex: 1;
     text-align: center;
-  
 }
 
 nav ul {
@@ -62,18 +58,15 @@ nav ul li a {
     padding: 10px 5px;
 }
 
-
-
 nav ul li a.active {
-    color: #007F9E; /* Primary site teal */
+    color: #007F9E;
     font-weight: bold;
 }
 
-
-
 nav ul li a:hover {
-    color: #009A7A; /* Secondary site blue */
+    color: #009A7A;
 }
+
 /* Mobile Menu Toggle */
 .menu-icon {
     display: none;
@@ -90,7 +83,8 @@ nav ul li a:hover {
     display: flex;
     gap: 12px;
     margin-left: auto;
-    margin-right: 0; /* make sure buttons touch the right edge */
+    margin-right: 0;
+    
 }
 
 .btn {
@@ -99,58 +93,63 @@ nav ul li a:hover {
     font-weight: bold;
     border: 2px solid;
     transition: all 0.3s;
+    min-width: 90px;
+    text-align: center;
 }
-.volunteer {
+
+/* Default state - English active */
+#welsh-btn {
     color: #009A7A;
     border-color: #009A7A;
+    background: transparent;
 }
 
-.volunteer:hover {
-    background-color: #007F9E;
+#welsh-btn:hover {
+    background-color: #007365;
     color: white;
 }
 
-.advice {
+#english-btn {
     background: linear-gradient(to bottom, #009A7A, #007F9E);
     color: white;
+    border-color: #008D8A;
+}
+
+#english-btn:hover {
+    background-color: #008D8A;
+}
+
+/* Welsh active state */
+.welsh-active #welsh-btn {
+    background: linear-gradient(to bottom, #009A7A, #007F9E);
+    color: white;
+    border-color: #008D8A;
+}
+
+.welsh-active #welsh-btn:hover {
+    background-color: #008D8A;
+}
+
+.welsh-active #english-btn {
+    color: #009A7A;
     border-color: #009A7A;
+    background: transparent;
 }
 
-.advice:hover {
-    background-color: #009A7A;
+.welsh-active #english-btn:hover {
+    background-color: #007365;
+    color: white;
 }
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 30px 20px;
+/* Welsh mode - smaller font size for navigation */
+.welsh-active nav ul li a {
+    font-size: 16px;
 }
-
-.hero h1 {
-    font-size: 28px;
-    color: #121111;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-weight: 600;
-    line-height: 52px;
-    text-align: center;
-    margin-left: -380px;
-    margin-top: -20px;
-}
-
 .image-section img {
     width: 100%;
     height: 600px; /* Fixed height */
     object-fit: cover; /* Maintains aspect ratio, avoids squashing */
     display: block;
 }
-
-
-.hero .container1{
-    height: 10px;
-    margin-left: 15px;
-    }
-
 /* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
     .container {
@@ -160,11 +159,11 @@ nav ul li a:hover {
         padding: 15px 20px;
     }
 
- .logo {
+   .logo {
     order: 1;
     margin-top: -20px;
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 0;
     align-self: flex-start;
 }
 
@@ -173,6 +172,7 @@ nav ul li a:hover {
     width: auto;
     max-width: 100%;
 }
+
     nav {
         order: 3;
         width: 100%;
@@ -210,11 +210,13 @@ nav ul li a:hover {
         opacity: 0;
     }
     
-    nav ul.active {
-        height: 250px;
-        padding: 10px 0;
-        opacity: 1;
-    }
+  nav ul.active {
+    height: auto;
+    padding: 5px 0;
+    opacity: 1;
+    line-height: 1.2; /* reduces spacing between nav links */
+}
+
     
     nav ul li {
         margin: 15px 0;
@@ -242,7 +244,6 @@ nav ul li a:hover {
         word-spacing: 2px;
     }
 }
-
 /* SERVICES SECTION */
 .services {
     padding: 100px 0 80px;

@@ -26,32 +26,33 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
-                </a>
-            </div>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <span id="menu-open">☰</span>
-                <span id="menu-close" style="display: none;">✖</span>
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html"  class="active">About Us</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="buttons">
-                <a href="volunteer.html" class="btn volunteer">VOLUNTEER</a>
-                <a href="#" class="btn advice">GET ADVICE</a>
-            </div>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
+            </a>
         </div>
-    </header>
-
+        
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span id="menu-open">☰</span>
+            <span id="menu-close" style="display: none;">✖</span>
+        </div>
+        
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" data-en="Home" data-cy="Cartref">Home</a></li>
+                <li><a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a></li>
+                <li><a href="about.html" class="active"  data-en="About Us" data-cy="Amdanom Ni">About Us</a></li>
+                <li><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></li>
+                <li><a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></li>
+            </ul>
+        </nav>
+      <div class="buttons">
+    <a href="#" class="btn" id="welsh-btn" style="width: 120px;" onclick="switchToWelsh()">WELSH</a>
+    <a href="#" class="btn" id="english-btn" style="width: 120px;" onclick="switchToEnglish()">ENGLISH</a>
+</div>
+    </div>
+</header>
     <main>
         <!-- <section class="hero">
             <div class="container1">
@@ -64,73 +65,114 @@
         </section>
     </main>
 
-    <section class="who-we-are-section">
-        <div class="who-we-are-container">
-            <h2 class="who-we-are-title">WHO WE ARE</h2>
-            <p class="who-we-are-text">
-                Established in the market town of Machynlleth in 1983, Advice Mid Wales was originally part of the 
-                Citizens Advice network. We became an independent registered charity in 2005 so that we could best 
-                continue to meet the needs of our local community (Registered Charity No. 1117040).
-            </p>
-            <p class="who-we-are-text">
-                We are members of Advice UK, the country's largest professional body representing the independent 
-                advice sector. Over the last 40 years we have developed strong ties within our community and have 
-                become widely known for the quality of the services we offer. Our dedicated team of staff and 
-                volunteers are professional, knowledgeable and approachable. We also have a board of Trustees 
-                made up of representatives from the wider community. Each year we handle an increasing number of 
-                cases and enquiries, and no matter what the problem, we strive to provide a helping hand.
-            </p>
-        </div>
-    </section>
-    
-  <section class="faq-section">
+   <section class="who-we-are-section">
+    <div class="who-we-are-container">
+        <h2 class="who-we-are-title" data-en="WHO WE ARE" data-cy="Pwy Ydym Ni">WHO WE ARE</h2>
 
+        <p class="who-we-are-text"
+           data-en="Established in the market town of Machynlleth in 1983, Advice Mid Wales was originally part of the Citizens Advice network. We became an independent registered charity in 2005 so that we could best continue to meet the needs of our local community (Registered Charity No. 1111040)."
+           data-cy="Sefydlwyd Cyngor Canolbarth Cymru yn nhref farchnad Machynlleth yn 1983, ac roedd yn rhan o rwydwaith Cyngor ar Bopeth i ddechrau. Daethom yn elusen gofrestredig annibynnol yn 2005 er mwyn parhau i ddiwallu anghenion ein cymuned leol yn y ffordd orau bosibl (Rhif Elusen Gofrestredig: 1111040).">
+            Established in the market town of Machynlleth in 1983, Advice Mid Wales was originally part of the 
+            Citizens Advice network. We became an independent registered charity in 2005 so that we could best 
+            continue to meet the needs of our local community (Registered Charity No. 1111040).
+        </p>
 
+        <p class="who-we-are-text"
+           data-en="We are members of Advice UK, the country's largest professional body representing the independent advice sector. Over the last 40 years we have developed strong ties within our community and have become widely known for the quality of the services we offer. Our dedicated team of staff and volunteers are professional, knowledgeable and approachable. We also have a board of Trustees made up of representatives from the wider community. Each year we handle an increasing number of cases and enquiries, and no matter what the problem, we strive to provide a helping hand."
+           data-cy="Rydym yn aelodau o Advice UK, corff proffesiynol mwyaf y wlad sy'n cynrychioli’r sector cyngor annibynnol. Dros y 40 mlynedd diwethaf, rydym wedi datblygu cysylltiadau cryf o fewn ein cymuned ac wedi dod yn enwog am ansawdd y gwasanaethau a gynigiwn. Mae ein tîm ymroddedig o staff a gwirfoddolwyr yn broffesiynol, yn wybodus ac yn hawdd mynd atynt. Mae gennym hefyd fwrdd Ymddiriedolwyr sy'n cynnwys cynrychiolwyr o’r gymuned ehangach. Bob blwyddyn rydym yn trin nifer gynyddol o achosion ac ymholiadau, ac ni waeth beth fo’r broblem, rydym yn ymdrechu i ddarparu help llaw.">
+            We are members of Advice UK, the country's largest professional body representing the independent 
+            advice sector. Over the last 40 years we have developed strong ties within our community and have 
+            become widely known for the quality of the services we offer. Our dedicated team of staff and 
+            volunteers are professional, knowledgeable and approachable. We also have a board of Trustees 
+            made up of representatives from the wider community. Each year we handle an increasing number of 
+            cases and enquiries, and no matter what the problem, we strive to provide a helping hand.
+        </p>
+    </div>
+</section>
+<section class="faq-section">
     <div class="faq-container">
         <div class="faq-item">
-            <div class="faq-question">1983</div>
-            <div class="faq-answer">First established as the Machynlleth branch of Citizens Advice Bureau (C.A.B.)</div>
+            <div class="faq-question" data-en="1983" data-cy="1983">1983</div>
+            <div class="faq-answer"
+                data-en="First established as the Machynlleth branch of Citizens Advice Bureau (C.A.B.)"
+                data-cy="Sefydlwyd gyntaf fel cangen Machynlleth o Gyngor ar Bopeth (C.A.B.)">
+                First established as the Machynlleth branch of Citizens Advice Bureau (C.A.B.)
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">1999</div>
-            <div class="faq-answer">Moved to our current base of operations in The Care Centre, Machynlleth.</div>
+            <div class="faq-question" data-en="1999" data-cy="1999">1999</div>
+            <div class="faq-answer"
+                data-en="Moved to our current base of operations in The Care Centre, Machynlleth."
+                data-cy="Symudwyd i'n canolfan weithredu bresennol yn y Ganolfan Gofal, Machynlleth.">
+                Moved to our current base of operations in The Care Centre, Machynlleth.
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">2003</div>
-            <div class="faq-answer">Broke away from Powys CAB in order to protect the Advice Centre from threat of closure and became members of Advice UK.</div>
+            <div class="faq-question" data-en="2003" data-cy="2003">2003</div>
+            <div class="faq-answer"
+                data-en="Broke away from Powys CAB in order to protect the Advice Centre from threat of closure and became members of Advice UK."
+                data-cy="Ymadawyd â CAB Powys i amddiffyn y gwasanaeth lleol rhag y bygythiad o gau, ac ymunwyd ag AdviceUK.">
+                Broke away from Powys CAB in order to protect the Advice Centre from threat of closure and became members of Advice UK.
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">2005</div>
-            <div class="faq-answer">Became a fully independent registered charity under the name “Canolfan Cynghori Bro Ddyfi Advice Centre”.</div>
+            <div class="faq-question" data-en="2005" data-cy="2005">2005</div>
+            <div class="faq-answer"
+                data-en="Became a fully independent registered charity under the name “Canolfan Cynghori Bro Ddyfi Advice Centre”."
+                data-cy="Daethom yn elusen gofrestredig annibynnol llawn, dan yr enw “Canolfan Cynghori Bro Ddyfi Advice Centre”.">
+                Became a fully independent registered charity under the name “Canolfan Cynghori Bro Ddyfi Advice Centre”.
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">2008</div>
-            <div class="faq-answer">Adopted AdvicePro — now the leading case management software in the independent advice sector.</div>
+            <div class="faq-question" data-en="2008" data-cy="2008">2008</div>
+            <div class="faq-answer"
+                data-en="Adopted AdvicePro — now the leading case management software in the independent advice sector."
+                data-cy="Daethom yn un o'r canolfannau cynghori cyntaf yn y DU i fabwysiadu AdvicePro, sef y safon diwydiannol ar gyfer rheoli achosion yn y sector cyngor annibynnol.">
+                Adopted AdvicePro — now the leading case management software in the independent advice sector.
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">2011</div>
-            <div class="faq-answer">Won the High Sheriff’s Award for our involvement with the “Problem Solving Initiative”.</div>
+            <div class="faq-question" data-en="2011" data-cy="2011">2011</div>
+            <div class="faq-answer"
+                data-en="Won the High Sheriff’s Award for our involvement with the “Problem Solving Initiative”."
+                data-cy="Enillwyd Wobr Uchel Siryf Powys am ein hymwneud â'r 'Fenter Datrys Problemau' mewn partneriaeth â Gwasanaeth Llysoedd a Thribiwnlysoedd Ei Mawrhydi.">
+                Won the High Sheriff’s Award for our involvement with the “Problem Solving Initiative”.
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">2013</div>
-            <div class="faq-answer">Launched our outreach services in Ceredigion.</div>
+            <div class="faq-question" data-en="2013" data-cy="2013">2013</div>
+            <div class="faq-answer"
+                data-en="Launched our outreach services in Ceredigion."
+                data-cy="Lansiwyd ein gwasanaethau allgymorth yng Ngheredigion.">
+                Launched our outreach services in Ceredigion.
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">2022</div>
-            <div class="faq-answer">Launched our outreach services in Tywyn.</div>
+            <div class="faq-question" data-en="2022" data-cy="2022">2022</div>
+            <div class="faq-answer"
+                data-en="Launched our outreach services in Tywyn."
+                data-cy="Lansiwyd ein gwasanaeth allgymorth yn Nhywyn.">
+                Launched our outreach services in Tywyn.
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">2023</div>
-            <div class="faq-answer">Celebrated 40 years of advice and support across Mid Wales.</div>
+            <div class="faq-question" data-en="2023" data-cy="2023">2023</div>
+            <div class="faq-answer"
+                data-en="Celebrated 40 years of advice and support across Mid Wales."
+                data-cy="Dathlwyd 40 mlynedd o gyngor a chefnogaeth ledled Canolbarth Cymru.">
+                Celebrated 40 years of advice and support across Mid Wales.
+            </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">2025</div>
-            <div class="faq-answer">Celebrating 25 years since becoming a fully registered independent Charity.</div>
+            <div class="faq-question" data-en="2025" data-cy="2025">2025</div>
+            <div class="faq-answer"
+                data-en="Celebrating 25 years since becoming a fully registered independent Charity."
+                data-cy="Dathlu 25 mlynedd ers dod yn elusen gofrestredig hollol annibynol.">
+                Celebrating 25 years since becoming a fully registered independent Charity.
+            </div>
         </div>
     </div>
 </section>
-
-   
 
 <section class="difference-section">
     <div class="difference-container">
@@ -138,16 +180,20 @@
             <img src="images/town-clock.png" alt="Town Clock">
         </div>
 
-        <h2 class="difference-title">WHAT MAKES US DIFFERENT</h2>
+        <h2 class="difference-title"
+            data-en="WHAT MAKES US DIFFERENT"
+            data-cy="BETH SY’N EIN GWAHANIAETHU">WHAT MAKES US DIFFERENT</h2>
 
         <div class="difference-item">
             <span class="difference-number">1</span>
             <div class="difference-content">
-                <h3 class="difference-heading">Independent & Local Expertise</h3>
-                <p class="difference-text">
-                    With over 40 years of experience, we are an independent charity firmly rooted in the local 
-                    community. Our local knowledge and dedication allow us to respond swiftly and effectively to 
-                    the individual needs of the people we serve.
+                <h3 class="difference-heading"
+                    data-en="Independent & Local Expertise"
+                    data-cy="Arbenigedd Annibynnol a Lleol">Independent & Local Expertise</h3>
+                <p class="difference-text"
+                   data-en="With over 40 years of experience, we are an independent charity firmly rooted in the local community. Our local knowledge and dedication allow us to respond swiftly and effectively to the individual needs of the people we serve."
+                   data-cy="Gyda dros 40 mlynedd o brofiad, rydym yn elusen annibynnol wedi’i gwreiddio’n gadarn yn y gymuned leol. Mae ein gwybodaeth leol a’n hymroddiad yn ein galluogi i ymateb yn gyflym ac yn effeithiol i anghenion unigol pobl rydym yn eu gwasanaethu.">
+                    With over 40 years of experience, we are an independent charity firmly rooted in the local community. Our local knowledge and dedication allow us to respond swiftly and effectively to the individual needs of the people we serve.
                 </p>
             </div>
         </div>
@@ -155,11 +201,13 @@
         <div class="difference-item">
             <span class="difference-number">2</span>
             <div class="difference-content">
-                <h3 class="difference-heading">Tailored & Holistic Support</h3>
-                <p class="difference-text">
-                    We provide personalised, flexible services tailored to each individual. Whether through 
-                    in-person appointments, outreach services or home visits for those unable to travel, we ensure 
-                    our support meets the specific needs of each person we assist.
+                <h3 class="difference-heading"
+                    data-en="Tailored & Holistic Support"
+                    data-cy="Cefnogaeth wedi’i Theilwra ac yn Holistaidd">Tailored & Holistic Support</h3>
+                <p class="difference-text"
+                   data-en="We provide personalised, flexible services tailored to each individual. Whether through in-person appointments, outreach services or home visits for those unable to travel, we ensure our support meets the specific needs of each person we assist."
+                   data-cy="Rydym yn darparu gwasanaethau personol a hyblyg wedi’u teilwra i bob unigolyn. Boed hynny drwy apwyntiadau wyneb yn wyneb, gwasanaethau allgymorth neu ymweliadau cartref i’r rhai na allant deithio, rydym yn sicrhau bod ein cefnogaeth yn ateb anghenion penodol pob unigolyn a gynorthwywn.">
+                    We provide personalised, flexible services tailored to each individual. Whether through in-person appointments, outreach services or home visits for those unable to travel, we ensure our support meets the specific needs of each person we assist.
                 </p>
             </div>
         </div>
@@ -167,11 +215,13 @@
         <div class="difference-item">
             <span class="difference-number">3</span>
             <div class="difference-content">
-                <h3 class="difference-heading">Community Collaboration & Networking</h3>
-                <p class="difference-text">
-                    We work closely with local organisations such as the Bro Ddyfi Food Bank, CAMAD and the Taj 
-                    Mahal Community Hub. This collaborative approach strengthens our impact and deepens our 
-                    connection to the community.
+                <h3 class="difference-heading"
+                    data-en="Community Collaboration & Networking"
+                    data-cy="Cydweithio a Rhwydweithio Cymunedol">Community Collaboration & Networking</h3>
+                <p class="difference-text"
+                   data-en="We work closely with local organisations such as the Bro Ddyfi Food Bank, CAMAD and the Taj Mahal Community Hub. This collaborative approach strengthens our impact and deepens our connection to the community."
+                   data-cy="Rydym yn gweithio’n agos gyda sefydliadau lleol megis Banc Bwyd Bro Ddyfi, CAMAD a Hwb Cymunedol Taj Mahal. Mae’r dull cydweithredol hwn yn cryfhau ein heffaith ac yn dyfnhau ein cysylltiad â’r gymuned.">
+                    We work closely with local organisations such as the Bro Ddyfi Food Bank, CAMAD and the Taj Mahal Community Hub. This collaborative approach strengthens our impact and deepens our connection to the community.
                 </p>
             </div>
         </div>
@@ -179,73 +229,68 @@
         <div class="difference-item">
             <span class="difference-number">4</span>
             <div class="difference-content">
-                <h3 class="difference-heading">Regulated Advice & Representation</h3>
-                <p class="difference-text">
-                    Our team provides professional, regulated advice across a range of areas. We are also the 
-                    only centre in the area offering representation at first-tier tribunals, ensuring clients 
-                    receive expert support.
+                <h3 class="difference-heading"
+                    data-en="Regulated Advice & Representation"
+                    data-cy="Cyngor a Chynrychiolaeth Reoledig">Regulated Advice & Representation</h3>
+                <p class="difference-text"
+                   data-en="Our team provides professional, regulated advice across a range of areas. We are also the only centre in the area offering representation at first-tier tribunals, ensuring clients receive expert support."
+                   data-cy="Mae ein tîm yn darparu cyngor proffesiynol a rheoledig ar draws amrywiaeth o feysydd. Rydym hefyd yn ganolfan unigryw yn yr ardal sy’n cynnig cynrychiolaeth mewn tribiwnlysoedd haen gyntaf, gan sicrhau bod cleientiaid yn derbyn cefnogaeth arbenigol.">
+                    Our team provides professional, regulated advice across a range of areas. We are also the only centre in the area offering representation at first-tier tribunals, ensuring clients receive expert support.
                 </p>
             </div>
         </div>
     </div>
 </section>
-<footer class="footer-section">
-    <!-- <div class="footer-logo">
-        <img src="images/white-logo.png" alt="Footer Logo">
-    </div> -->
-
+  <footer class="footer-section">
     <hr class="footer-divider">
 
     <div class="footer-grid">
-        <div class="footer-column"> 
-            <h4>Reach us</h4> 
-            <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p> 
+        <!-- Column 1: Reach Us -->
+        <div class="footer-column">
+            <h4 data-en="Reach Us" data-cy="Cysylltwch â Ni">Reach Us</h4>
+            <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p>
             <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
-            <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span></p> 
-           <p style="display: flex; align-items: center;">
-    <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
-    <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
-        enquiries@advicemidwales.org.uk
-    </a>
-</p>
-
+                <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span>
+            </p>
+            <p style="display: flex; align-items: center;">
+                <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
+                <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
+                    enquiries@advicemidwales.org.uk
+                </a>
+            </p>
         </div>
-
 
         <!-- Column 2: Company -->
         <div class="footer-column">
-            <h4>Company</h4>
-            <p><a href="#">Home</a></p>
-            <p><a href="about.html">About Us</a></p>
-            <p><a href="services.html">Services</a></p>
+            <h4 data-en="Company" data-cy="Cwmni">Company</h4>
+            <p><a href="#" data-en="Home" data-cy="Cartref">Home</a></p>
+            <p><a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a></p>
+            <p><a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a></p>
+            <p><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></p>
+            <p><a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></p>
         </div>
 
         <!-- Column 3: Legal -->
         <div class="footer-column">
-            <h4>Legal</h4>
-            <p><a href="https://www.advicemidwales.org.uk/privacy.php">Privacy Policy</a></p>
-            <p><a href="#">Terms & Services</a></p>
-            <p><a href="#">Terms of Use</a></p>
+            <h4 data-en="Legal" data-cy="Cyfreithiol">Legal</h4>
+            <p><a href="https://www.advicemidwales.org.uk/privacy.php" data-en="Privacy Policy" data-cy="Polisi Preifatrwydd">Privacy Policy</a></p>
+            <p><a href="#" data-en="Terms & Services" data-cy="Telerau a Gwasanaethau">Terms & Services</a></p>
+            <p><a href="#" data-en="Terms of Use" data-cy="Telerau Defnyddio">Terms of Use</a></p>
         </div>
 
         <!-- Column 4: Newsletter -->
-        <!-- <div class="footer-column">
-            <h4>Join Our Newsletter</h4>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address">
-                <button type="submit">Subscribe</button>
-            </form>
-            <p class="newsletter-hint">Join our newsletter for latest news update</p>
-        </div> -->
-
         <div class="footer-column">
-            <h4>How We Help</h4>
-            <p>Free, confidential advice when you need it most — from benefits and housing to debt and employment.</p>
+            <h4 data-en="Join Our Newsletter" data-cy="Ymunwch â’n Cylchlythyr">Join Our Newsletter</h4>
+            <p data-en="Join our newsletter for latest news update" data-cy="Ymunwch â’n cylchlythyr i gael y newyddion diweddaraf">Join our newsletter for latest news update</p>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Email">
+                <button type="submit" data-en="Subscribe" data-cy="Tanysgrifio">Subscribe</button>
+            </form>
+            <p class="newsletter-hint" data-en="Registered Charity No. 1111040" data-cy="Rhif Elusen Gofrestredig: 1111040">Registered Charity No. 1111040</p>
         </div>
     </div>
-
-    <p class="footer-bottom">Registered Charity (No. 1111040)</p>
 </footer>
+
     
     <script>
         function toggleMenu() {
@@ -323,7 +368,145 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
 
+function switchToWelsh() {
+    document.body.classList.add('welsh-active');
 
+    // Update navigation text to Welsh
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+        link.textContent = link.getAttribute('data-cy');
+    });
+
+    // Update button text
+    document.getElementById('welsh-btn').textContent = 'CYMRAEG';
+    document.getElementById('english-btn').textContent = 'SAESNEG';
+
+    // About Services Section
+    document.querySelectorAll('.about-title').forEach(title => {
+        title.textContent = title.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.about-text').forEach(text => {
+        text.textContent = text.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.about-list li').forEach(item => {
+        item.textContent = item.getAttribute('data-cy');
+    });
+
+    // Footer Section
+    document.querySelectorAll('.footer-column h4').forEach(el => {
+        el.textContent = el.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.footer-column a, .footer-column p, .newsletter-form button, .newsletter-hint').forEach(el => {
+        if (el.hasAttribute('data-cy')) {
+            el.textContent = el.getAttribute('data-cy');
+        }
+    });
+
+    // Who We Are Section
+    const whoWeAreTitle = document.querySelector('.who-we-are-title');
+    if (whoWeAreTitle) whoWeAreTitle.textContent = whoWeAreTitle.getAttribute('data-cy');
+    document.querySelectorAll('.who-we-are-text').forEach(p => {
+        p.textContent = p.getAttribute('data-cy');
+    });
+
+    // Timeline Section
+    document.querySelectorAll('.faq-item .faq-question').forEach(q => {
+        q.textContent = q.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.faq-item .faq-answer').forEach(a => {
+        a.textContent = a.getAttribute('data-cy');
+    });
+
+    // What Makes Us Different Section
+    const diffTitle = document.querySelector('.difference-title');
+    if (diffTitle) diffTitle.textContent = diffTitle.getAttribute('data-cy');
+    document.querySelectorAll('.difference-heading').forEach(h => {
+        h.textContent = h.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.difference-text').forEach(p => {
+        p.textContent = p.getAttribute('data-cy');
+    });
+}
+
+function switchToEnglish() {
+    document.body.classList.remove('welsh-active');
+
+    // Update navigation text to English
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+        link.textContent = link.getAttribute('data-en');
+    });
+
+    // Update button text
+    document.getElementById('welsh-btn').textContent = 'WELSH';
+    document.getElementById('english-btn').textContent = 'ENGLISH';
+
+    // About Services Section
+    document.querySelectorAll('.about-title').forEach(title => {
+        title.textContent = title.getAttribute('data-en');
+    });
+    document.querySelectorAll('.about-text').forEach(text => {
+        text.textContent = text.getAttribute('data-en');
+    });
+    document.querySelectorAll('.about-list li').forEach(item => {
+        item.textContent = item.getAttribute('data-en');
+    });
+
+    // Footer Section
+    document.querySelectorAll('.footer-column h4').forEach(el => {
+        el.textContent = el.getAttribute('data-en');
+    });
+    document.querySelectorAll('.footer-column a, .footer-column p, .newsletter-form button, .newsletter-hint').forEach(el => {
+        if (el.hasAttribute('data-en')) {
+            el.textContent = el.getAttribute('data-en');
+        }
+    });
+
+    // Who We Are Section
+    const whoWeAreTitle = document.querySelector('.who-we-are-title');
+    if (whoWeAreTitle) whoWeAreTitle.textContent = whoWeAreTitle.getAttribute('data-en');
+    document.querySelectorAll('.who-we-are-text').forEach(p => {
+        p.textContent = p.getAttribute('data-en');
+    });
+
+    // Timeline Section
+    document.querySelectorAll('.faq-item .faq-question').forEach(q => {
+        q.textContent = q.getAttribute('data-en');
+    });
+    document.querySelectorAll('.faq-item .faq-answer').forEach(a => {
+        a.textContent = a.getAttribute('data-en');
+    });
+
+    // What Makes Us Different Section
+    const diffTitle = document.querySelector('.difference-title');
+    if (diffTitle) diffTitle.textContent = diffTitle.getAttribute('data-en');
+    document.querySelectorAll('.difference-heading').forEach(h => {
+        h.textContent = h.getAttribute('data-en');
+    });
+    document.querySelectorAll('.difference-text').forEach(p => {
+        p.textContent = p.getAttribute('data-en');
+    });
+}
+
+
+function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+    
+    navMenu.classList.toggle('active');
+    
+    if (navMenu.classList.contains('active')) {
+        menuOpen.style.display = 'none';
+        menuClose.style.display = 'inline';
+    } else {
+        menuOpen.style.display = 'inline';
+        menuClose.style.display = 'none';
+    }
+}
+
+        </script>
+        
 
 
             </script>

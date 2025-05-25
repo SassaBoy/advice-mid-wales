@@ -23,6 +23,17 @@
       margin: 0 auto;
     }
   }
+@media (max-width: 768px) {
+  .contact-details p {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .contact-details p:nth-child(2) span {
+    margin-left: 0; /* Reset negative margin if previously set */
+  }
+}
+
 </style>
 <style>
   @media (max-width: 768px) {
@@ -34,34 +45,34 @@
 
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
-                </a>
-            </div>
-            
-            <div class="menu-icon" onclick="toggleMenu()">
-                <span id="menu-open">☰</span>
-                <span id="menu-close" style="display: none;">✖</span>
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="buttons">
-                <a href="volunteer.html" class="btn volunteer">VOLUNTEER</a>
-                <a href="#" class="btn advice">GET ADVICE</a>
-            </div>
+   <header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
+            </a>
         </div>
         
-    </header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span id="menu-open">☰</span>
+            <span id="menu-close" style="display: none;">✖</span>
+        </div>
+        
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active" data-en="Home" data-cy="Cartref">Home</a></li>
+                <li><a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a></li>
+                <li><a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a></li>
+                <li><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></li>
+                <li><a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></li>
+            </ul>
+        </nav>
+      <div class="buttons">
+    <a href="#" class="btn" id="welsh-btn" style="width: 120px;" onclick="switchToWelsh()">WELSH</a>
+    <a href="#" class="btn" id="english-btn" style="width: 120px;" onclick="switchToEnglish()">ENGLISH</a>
+</div>
+    </div>
+</header>
 
     <main>
         <!-- <section class="hero">
@@ -74,188 +85,251 @@
             <img src="images/bridge.png" alt="Stone bridge with autumn trees and houses">
         </section>
     </main>
-
-    <section class="services">
-        <div class="services-container">
-            <div class="service-card">
-                <img src="images/debt.png" alt="Debt">
-                <h3>DEBT</h3>
-                <p>Find lasting solutions to your financial challenges with qualified and regulated debt advice.</p>
-            </div>
-            <div class="service-card">
-                <img src="images/welfare.png" alt="Welfare Benefits and Pension">
-                <h3>WELFARE BENEFITS AND PENSION</h3>
-                <p>Check your eligibility and claim the support you're entitled to.</p>
-            </div>
-            <div class="service-card">
-                <img src="images/housing.png" alt="Housing">
-                <h3>HOUSING</h3>
-                <p>Identify your housing rights, resolve landlord disputes, and manage council tax.</p>
-            </div>
-            <div class="service-card">
-                <img src="images/employment.png" alt="Employment">
-                <h3>EMPLOYMENT</h3>
-                <p>Understand your rights as an employee and resolve workplace disputes.</p>
-            </div>
-            <div class="service-card">
-                <img src="images/utilities.png" alt="Utilities">
-                <h3>UTILITIES</h3>
-                <p>Manage your bills, talk to providers, and understand your consumer rights.</p>
-            </div>
-            <div class="service-card">
-                <img src="images/consumer.png" alt="Consumer Rights">
-                <h3>CONSUMER RIGHTS</h3>
-                <p>Understand your protections, assert your rights, and resolve disputes effectively.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="info-section">
-        <p class="info-text">
-            We’re based in Machynlleth and provide flexible drop-in sessions, appointments and outreach services in Tywyn And Aberystwyth. Contact us today to get started.
-        </p>
-        <a href="#" class="info-link" style="margin-top: 30px; margin-bottom: 20px;">CLICK TO FIND OUT MORE</a>
-
-    </section>
-    
-    <section class="core-values">
-        <h2 class="section-title" style="color: white; margin-top: -40px; margin-bottom: 20px;">CORE VALUES</h2>
-    
-        <div class="values-container">
-          <div class="value-card">
-    <img src="images/empathy.png" alt="Empathy" id="empathy-img" style="width: 67%;">
-    <div class="value-text">
-        <h3 style="color: #383838;">EMPATHY</h3>
-        <p style="color: #121111;">We listen without judgment, supporting people through their challenges.</p>
+<section class="services">
+  <div class="services-container">
+    <div class="service-card">
+      <img src="images/debt.png" alt="Debt">
+      <h3 data-en="DEBT" data-cy="Dyled">DEBT</h3>
+      <p data-en="Find lasting solutions to your financial challenges with qualified and regulated debt advice."
+         data-cy="Dewch o hyd i atebion parhaol i’ch heriau ariannol gyda chyngor dyled cymwys a rheoledig.">
+         Find lasting solutions to your financial challenges with qualified and regulated debt advice.
+      </p>
     </div>
-</div>
+
+    <div class="service-card">
+      <img src="images/welfare.png" alt="Welfare Benefits and Pension">
+      <h3 data-en="WELFARE BENEFITS AND PENSION" data-cy="Budd-daliadau Lles a Phensiwn">WELFARE BENEFITS AND PENSION</h3>
+      <p data-en="Check your eligibility and claim the support you're entitled to."
+         data-cy="Gwiriwch eich cymhwyster a hawliwch y cymorth y mae gennych hawl iddo.">
+         Check your eligibility and claim the support you're entitled to.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/housing.png" alt="Housing">
+      <h3 data-en="HOUSING" data-cy="Tai">HOUSING</h3>
+      <p data-en="Identify your housing rights, resolve landlord disputes, and manage council tax."
+         data-cy="Nodwch eich hawliau tai, datryswch anghydfodau â landlordiaid, a rheolwch dreth y cyngor.">
+         Identify your housing rights, resolve landlord disputes, and manage council tax.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/employment.png" alt="Employment">
+      <h3 data-en="EMPLOYMENT" data-cy="Cyflogaeth">EMPLOYMENT</h3>
+      <p data-en="Understand your rights as an employee and resolve workplace disputes."
+         data-cy="Deallwch eich hawliau fel gweithiwr/wraig a datryswch anghydfodau yn y gweithle.">
+         Understand your rights as an employee and resolve workplace disputes.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/utilities.png" alt="Utilities">
+      <h3 data-en="UTILITIES" data-cy="Cyfleustodau">UTILITIES</h3>
+      <p data-en="Manage your bills, talk to providers, and understand your consumer rights."
+         data-cy="Rheolwch eich biliau, siaradwch â darparwyr, a deallwch eich hawliau fel defnyddiwr.">
+         Manage your bills, talk to providers, and understand your consumer rights.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/consumer.png" alt="Consumer Rights">
+      <h3 data-en="CONSUMER RIGHTS" data-cy="Hawliau Defnyddwyr">CONSUMER RIGHTS</h3>
+      <p data-en="Understand your protections, assert your rights, and resolve disputes effectively."
+         data-cy="Deallwch eich amddiffyniadau, amlygwch eich hawliau, a datryswch anghydfodau yn effeithiol.">
+         Understand your protections, assert your rights, and resolve disputes effectively.
+      </p>
+    </div>
+  </div>
+</section>
 
     
-            <div class="value-card">
-                <img src="images/confidentiality.png" alt="Confidentiality">
-                <div class="value-text">
-                    <h3 style="color: #383838;">CONFIDENTIALITY</h3>
-                    <p style="color: #121111;">We provide tools, resources, and guidance, empowering people to help themselves.</p>
-                </div>
-            </div>
-    
-            <div class="value-card">
-                <img src="images/resilience.png" alt="Resilience">
-                <div class="value-text">
-                    <h3 style="color: #383838;">RESILIENCE</h3>
-                    <p style="color: #121111;">We provide tools, resources, and guidance, empowering people to help themselves.</p>
-                </div>
+  <section class="info-section">
+  <p class="info-text"
+     data-en="We’re based in Machynlleth and provide flexible drop-in sessions, appointments and outreach services in Tywyn And Aberystwyth. Contact us today to get started."
+     data-cy="Fe'n lleolir ym Machynlleth ac yn cynnig sesiynau galw heibio hyblyg, apwyntiadau a gwasanaethau allgymorth yn Nhŷwyn ac Aberystwyth. Cysylltwch â ni heddiw i ddechrau.">
+     We’re based in Machynlleth and provide flexible drop-in sessions, appointments and outreach services in Tywyn And Aberystwyth. Contact us today to get started.
+  </p>
+  <a href="#" class="info-link"
+     data-en="CLICK TO FIND OUT MORE"
+     data-cy="Cliciwch i ddarganfod mwy"
+     style="margin-top: 30px; margin-bottom: 20px;">
+     CLICK TO FIND OUT MORE
+  </a>
+</section>
+
+    <section class="core-values">
+    <h2 class="section-title"
+        data-en="CORE VALUES"
+        data-cy="GWERTHOEDD CRAIDD"
+        style="color: white; margin-top: -40px; margin-bottom: 20px;">
+        CORE VALUES
+    </h2>
+
+    <div class="values-container">
+        <div class="value-card">
+            <img src="images/empathy.png" alt="Empathy" id="empathy-img" style="width: 67%;">
+            <div class="value-text">
+                <h3 style="color: #383838;" data-en="EMPATHY" data-cy="Empathi">EMPATHY</h3>
+                <p style="color: #121111;"
+                   data-en="We listen without judgment, supporting people through their challenges."
+                   data-cy="Rydym yn gwrando heb farnu, gan gefnogi pobl drwy eu heriau.">
+                   We listen without judgment, supporting people through their challenges.
+                </p>
             </div>
         </div>
-    </section>
-    
 
-    <section class="impact-section">
-        <h2 class="section-title" style="color: #313131;">OUR IMPACT</h2>
-   <p class="impact-text" style="font-size: 14px; color: #555; line-height: 1.6; font-weight: normal;">
-    Advice Mid Wales supports the community by providing essential advice and assistance, 
-    helping people navigate challenges and improve their circumstances. Our work makes a 
-    meaningful difference to our clients, volunteers, and the local community.
+        <div class="value-card">
+            <img src="images/confidentiality.png" alt="Confidentiality">
+            <div class="value-text">
+                <h3 style="color: #383838;" data-en="CONFIDENTIALITY" data-cy="Cyfrinachedd">CONFIDENTIALITY</h3>
+             <p style="color: #121111;"
+   data-en="We prioritise trust, ensuring all discussions remain private and confidential."
+   data-cy="Rydym yn blaenoriaethu ymddiriedaeth, gan sicrhau bod pob trafodaeth yn breifat ac yn gyfrinachol.">
+  We prioritise trust, ensuring all discussions remain private and confidential.
 </p>
 
-    
-        <h3 class="sub-title">ANNUAL FIGURES</h3>
-    
-        <div class="figures-container">
-            <div class="figure">
-                <span class="figure-number green">2,500+</span>
-                <p class="figure-description" style="color: #009A7A;">cases and <br> enquiries handled</p>
-            </div>
-    
-            <div class="figure">
-                <span class="figure-number blue">£850,000+</span>
-                <p class="figure-description" style="color: #007F9E;">contributed to <br> local economy</p>
-            </div>
-    
-            <div class="figure">
-                <span class="figure-number green">2,750+</span>
-                <p class="figure-description" style="color: #009A7A;">hours of <br> volunteer support delivered</p>
             </div>
         </div>
-    </section>
-    
 
-    <section class="donation-section">
-        <h2 class="section-title" style="color: #313131;">DONATION</h2>
-    
-        <p class="donation-text" style="font-size: 14px; color: #555; line-height: 1.6; font-weight: normal;">
-            We deeply appreciate the support of our friends, whose regular monthly donations help sustain our services. 
-            You can join them by downloading and completing 
-            <a href="#" class="donation-link">our donation form here.</a>
-        </p>
-    
-        <p class="donation-text">
-            In these challenging times, with rising prices and an increasing cost of living, our work is more critical than ever. 
-            Your contribution, no matter the amount, helps us assist those in our community who need it most.
-        </p>
-    
-        <div class="donation-ways">
-            <ul style="list-style-type: disc; padding-left: 20px;">
-                <li style="color: #121111;">
-                    <strong style="color: #121111;">Monthly Donations:</strong> Become a regular donor for any amount of your choice by completing 
-                    <a href="#" class="donation-link">our donation form here.</a>
-                </li>
-                <li style="color: #121111;">
-                    <strong style="color: #121111;">One-Off Donations:</strong> Make a single contribution via our JustGiving page to help make an immediate difference.
-                </li>
-            </ul>
-            
-        </div>
-    
-        <p class="donation-thanks">Thank you for helping us support Mid Wales!</p>
-    
-        <!-- Blue Background Strip -->
-        <div class="donation-background"></div>
-    
-        <div class="donation-card">
-            <h3 class="donation-title">MAKE A DONATION</h3>
-            <p class="donation-subtext">I wish to make a donation of</p>
-    
-         <div class="donation-amount">£15.00</div>
-
-    
-            <div class="donation-toggle">
-                <span>monthly donation</span>
-                <input type="range" min="0" max="1" step="1">
-                <span>one-off donation</span>
+        <div class="value-card">
+            <img src="images/resilience.png" alt="Resilience">
+            <div class="value-text">
+                <h3 style="color: #383838;" data-en="RESILIENCE" data-cy="Gwydnwch">RESILIENCE</h3>
+                <p style="color: #121111;"
+                   data-en="We provide tools, resources, and guidance, empowering people to help themselves."
+                   data-cy="Rydym yn darparu offer, adnoddau a chanllawiau, gan alluogi pobl i helpu eu hunain.">
+                   We provide tools, resources and guidance, empowering people to help themselves.
+                </p>
             </div>
-    
-            <button class="donate-btn" onclick="window.location.href='https://donate.justgiving.com/charity/advicemidwales/donation-amount'">DONATE NOW</button>
         </div>
-    </section>
-    
+    </div>
+</section>
+
+<section class="impact-section">
+  <h2 class="section-title" data-en="Our Impact" data-cy="Ein Effaith">OUR IMPACT</h2>
+  <p class="impact-text" style="font-family: Arial, sans-serif; font-size: 14px; color: #121111; font-weight: normal;"
+     data-en="Advice Mid Wales supports the community by providing essential advice and assistance, helping people navigate challenges and improve their circumstances. Our work makes a meaningful difference to our clients, volunteers, and the local community."
+     data-cy="Mae Cyngor Canolbarth Cymru yn cefnogi'r gymuned drwy ddarparu cyngor a chymorth hanfodol, gan helpu pobl i lywio heriau a gwella eu hamgylchiadau. Mae ein gwaith yn gwneud gwahaniaeth ystyrlon i'n cleientiaid, gwirfoddolwyr a'r gymuned leol.">
+    Advice Mid Wales supports the community by providing essential advice and assistance, helping people navigate challenges and improve their circumstances. Our work makes a meaningful difference to our clients, volunteers, and the local community.
+  </p>
+
+  <h3 class="sub-title" data-en="Annual Figures" data-cy="Ffigurau Blynyddol">ANNUAL FIGURES</h3>
+
+  <div class="figures-container">
+    <div class="figure">
+      <span class="figure-number green">2,500+</span>
+      <p class="figure-description" data-en="cases and enquiries handled" data-cy="achosion a ymholiadau wedi’u trin">cases and enquiries handled</p>
+    </div>
+
+    <div class="figure">
+      <span class="figure-number blue">£850,000+</span>
+      <p class="figure-description" data-en="contributed to local economy" data-cy="wedi’u cyfrannu at economi leol">contributed to local economy</p>
+    </div>
+
+    <div class="figure">
+      <span class="figure-number green">2,750+</span>
+      <p class="figure-description" data-en="hours of volunteer support delivered" data-cy="awr o gefnogaeth gwirfoddol wedi’u darparu">hours of volunteer support delivered</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="donation-section">
+  <h2 class="section-title" data-en="Donation" data-cy="Rhoddi">DONATION</h2>
+
+  <p class="donation-text" data-en="We deeply appreciate the support of our friends, whose regular monthly donations help sustain our services. You can join them by downloading and completing our donation form here."
+     data-cy="Rydym yn ddiolchgar iawn am gefnogaeth ein ffrindiau, ac mae eu rhoddion misol rheolaidd yn helpu i gynnal ein gwasanaethau. Gallwch ymuno â nhw trwy lawrlwytho a chwblhau ein ffurflen roddi fan hyn.">
+    We deeply appreciate the support of our friends, whose regular monthly donations help sustain our services. You can join them by downloading and completing <a href="#" class="donation-link">our donation form here.</a>
+  </p>
+
+  <p class="donation-text" data-en="In these challenging times, with rising prices and an increasing cost of living, our work is more critical than ever. Your contribution, no matter the amount, helps us assist those in our community who need it most."
+     data-cy="Yn ystod yr amseroedd heriol hyn, gyda phrisiau’n codi a chynydd yn y gost byw, mae ein gwaith yn fwy hanfodol nag erioed. Mae eich cyfraniad, pa faint bynnag, yn ein helpu i gynorthwyo’r rhai yn ein cymuned sydd ei angen fwyaf.">
+    In these challenging times, with rising prices and an increasing cost of living, our work is more critical than ever. Your contribution, no matter the amount, helps us assist those in our community who need it most.
+  </p>
+
+  <div class="donation-ways">
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li style="color: #121111;" 
+          data-en="Monthly Donations: Become a regular donor for any amount of your choice by completing our donation form here."
+          data-cy="Rhoddion Misol: Byddwch yn rhoddwr rheolaidd am unrhyw faint o’ch dewis, trwy gwblhau ein ffurflen roddi fan hyn.">
+        <strong>Monthly Donations:</strong> Become a regular donor for any amount of your choice by completing <a href="#" class="donation-link">our donation form here.</a>
+      </li>
+      <li style="color: #121111;" 
+          data-en="One-Off Donations: Make a single contribution via our JustGiving page to help make an immediate difference."
+          data-cy="Rhoddion Un-Amser: Gwnewch gyfraniad sengl ar ein tudalen JustGiving i wneud gwahaniaeth ar unwaith.">
+        <strong>One-Off Donations:</strong> Make a single contribution via our JustGiving page to help make an immediate difference.
+      </li>
+    </ul>
+  </div>
+
+  <p class="donation-thanks" data-en="Thank you for helping us support Mid Wales!" data-cy="Diolch am helpu ni i gefnogi Canolbarth Cymru!">Thank you for helping us support Mid Wales!</p>
+
+  <div class="donation-background"></div>
+
+  <div class="donation-card">
+    <h3 class="donation-title" data-en="Make a Donation" data-cy="Gwnewch Rhodd">MAKE A DONATION</h3>
+    <p class="donation-subtext" data-en="I wish to make a donation of" data-cy="Hoffwn wneud rhodd o">I wish to make a donation of</p>
+
+    <div class="donation-amount">£15.00</div>
+
+    <div class="donation-toggle">
+      <span data-en="monthly donation" data-cy="Rhodd Misol">monthly donation</span>
+      <input type="range" min="0" max="1" step="1">
+      <span data-en="one-off donation" data-cy="Rhodd Un-tro">one-off donation</span>
+    </div>
+
+    <button class="donate-btn" 
+            data-en="Donate Now" 
+            data-cy="Rhoddwch Nawr"
+            onclick="window.location.href='https://donate.justgiving.com/charity/advicemidwales/donation-amount'">DONATE NOW</button>
+  </div>
+</section>
 <section class="join-team">
-    <h2 class="section-title" style="color: #383838;">JOIN OUR TEAM</h2>
-    <p class="team-text" >
-        Your time and support can transform lives. Volunteer with us and make a
-        meaningful contribution to your community.
+    <h2 class="section-title" style="color: #383838;" 
+        data-en="JOIN OUR TEAM" 
+        data-cy="Ymunwch â’n Tîm">
+        JOIN OUR TEAM
+    </h2>
+
+    <p class="team-text" 
+       data-en="Your time and support can transform lives. Volunteer with us and make a meaningful contribution to your community." 
+       data-cy="Gall eich amser a’ch cefnogaeth drawsnewid bywydau. Gwirfoddolwch gyda ni a gwnewch gyfraniad ystyrlon i’ch cymuned.">
+        Your time and support can transform lives. Volunteer with us and make a meaningful contribution to your community.
     </p>
 
     <div class="volunteer-container">
         <div class="volunteer-info">
-            <h3>VOLUNTEER WITH US</h3>
-            <p>Contact us via phone or email to discuss opportunities, or pop over to see us at our main offices. 
-                We are willing to work around our volunteers, so all you need is a willingness to help.</p>
+            <h3 
+                data-en="VOLUNTEER WITH US" 
+                data-cy="Gwirfoddolwch Gyda Ni">
+                VOLUNTEER WITH US
+            </h3>
+
+            <p data-en="Contact us via phone or email to discuss opportunities, or pop over to see us at our main offices. We are willing to work around our volunteers, so all you need is a willingness to help." 
+               data-cy="Cysylltwch â ni dros y ffôn neu drwy e-bost i drafod cyfleoedd, neu galwch heibio i’n prif swyddfeydd i’n gweld. Rydym yn barod i weithio o amgylch ein gwirfoddolwyr, felly’r unig beth sydd ei angen yw ewyllys i helpu.">
+                Contact us via phone or email to discuss opportunities, or pop over to see us at our main offices. 
+                We are willing to work around our volunteers, so all you need is a willingness to help.
+            </p>
 
             <div class="contact-details">
                 <p>
                     <img src="images/email-icon1.png" alt="Email Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
+                    <span data-en="Email" data-cy="E-bost">Email</span>: 
                     <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white;">enquiries@advicemidwales.org.uk</a>
                 </p>
-                <p style="display: flex; align-items: flex-start;">
-                    <img src="images/location-icon1.png" alt="Location Icon" style="width: 16px; vertical-align: top; margin-right: 8px; margin-top: 2px;">
-                    <span style="display: inline-block; max-width: 220px;">
-                        The Care Centre, Forge Road,<br>Machynlleth, Powys, SY20 8EQ
-                    </span>
-                </p>
+
+             <p style="display: flex; align-items: flex-start; margin-left:-2px;">
+  <img src="images/location-icon1.png" alt="Location Icon" style="width: 16px; vertical-align: top; margin-right: 6px; margin-top: 2px;">
+  <span style="display: inline-block; max-width: 220px;">
+    <strong data-en="Office" data-cy="Swyddfa" style="margin-left: 3px;">Office</strong>: The Care Centre, Forge Road, Machynlleth, Powys, SY20 8EQ
+  </span>
+</p>
+
+
                 <p>
                     <img src="images/phone-icon1.png" alt="Phone Icon" style="width: 16px; vertical-align: middle; margin-right: 8px;">
-                    01654 700192
+                    <span data-en="Phone" data-cy="Ffôn">Phone</span>: 01654 700192
                 </p>
             </div>
         </div>
@@ -266,87 +340,107 @@
     </div>
 </section>
 
-    
 
-    <section class="testimonial-section">
-        <div class="testimonial-container">
-            <span class="quote-icon left-quote">❝</span>
-            <p class="testimonial-text">
-                “I cannot speak highly enough of Advice Mid Wales and the exceptional service they provide. 
-                From start to finish, they have been nothing short of amazing. Their dedication, professionalism, 
-                and genuine care for their clients are truly remarkable. <br><br>
-                
-                A special thank you to the entire team for all the invaluable support they have given me. 
-                They have gone above and beyond to ensure I was fully supported, and nothing was ever too much trouble for them. <br><br>
-                
-                The level of expertise and compassion they bring to their work is unmatched, and I wholeheartedly recommend their services 
-                to anyone in need of advice or support. This is a team that truly makes a difference, and I will absolutely continue 
-                to use their wonderful service in the future. <br><br>
-                
-                Thank you again, Advice Mid Wales – you are simply amazing!”
-                <br><br>
-                <span class="client-signature">– Client</span>
-            </p>
-            <span class="quote-icon right-quote">❞</span>
-        </div>
-    </section>
     
+<section class="testimonial-section">
+    <div class="testimonial-container">
+        <span class="quote-icon left-quote">❝</span>
+        <p class="testimonial-text" 
+           data-en='“I cannot speak highly enough of Advice Mid Wales and the exceptional service they provide. 
+From start to finish, they have been nothing short of amazing. Their dedication, professionalism, 
+and genuine care for their clients are truly remarkable. 
+
+A special thank you to the entire team for all the invaluable support they have given me. 
+They have gone above and beyond to ensure I was fully supported, and nothing was ever too much trouble for them. 
+
+The level of expertise and compassion they bring to their work is unmatched, and I wholeheartedly recommend their services 
+to anyone in need of advice or support. This is a team that truly makes a difference, and I will absolutely continue 
+to use their wonderful service in the future. 
+
+Thank you again, Advice Mid Wales – you are simply amazing!”
+– Client' 
+           data-cy='“Ni allaf ganmol Advice Mid Wales a’r gwasanaeth eithriadol y maent yn ei ddarparu yn ddigon uchel. O’r dechrau i’r diwedd, maent wedi bod yn anhygoel. Mae eu hymroddiad, eu proffesiynoldeb a’u gofal gwirioneddol am eu cleientiaid yn wirioneddol ryfeddol. 
+
+Diolch arbennig i’r tîm cyfan am yr holl gymorth amhrisiadwy a roddwyd i mi. Maent wedi mynd y tu hwnt i’r disgwyl i sicrhau fy mod yn cael fy nghefnogi’n llawn, ac nid oedd dim byth yn ormod o drafferth iddynt. 
+
+Nid oes unrhyw gymhariaeth â’r arbenigedd a’r tosturi y maent yn eu dwyn i’w gwaith, ac rwy’n argymell eu gwasanaethau yn ddiffuant i unrhyw un sydd angen cyngor neu gymorth. Dyma dîm sy’n gwneud gwahaniaeth, ac rwy’n siŵr o barhau i ddefnyddio eu gwasanaeth gwych yn y dyfodol. 
+
+Diolch eto, Advice Mid Wales – rydych chi’n syml wych!”
+– Cleient'>
+            “I cannot speak highly enough of Advice Mid Wales and the exceptional service they provide. 
+            From start to finish, they have been nothing short of amazing. Their dedication, professionalism, 
+            and genuine care for their clients are truly remarkable. <br><br>
+
+            A special thank you to the entire team for all the invaluable support they have given me. 
+            They have gone above and beyond to ensure I was fully supported, and nothing was ever too much trouble for them. <br><br>
+
+            The level of expertise and compassion they bring to their work is unmatched, and I wholeheartedly recommend their services 
+            to anyone in need of advice or support. This is a team that truly makes a difference, and I will absolutely continue 
+            to use their wonderful service in the future. <br><br>
+
+            Thank you again, Advice Mid Wales – you are simply amazing!”
+            <br><br>
+            <span class="client-signature">– Client</span>
+        </p>
+        <span class="quote-icon right-quote">❞</span>
+    </div>
+</section>
+
     <section class="partner-section">
         <div class="partner-container">
             <img src="images/partners.png" alt="Partner Logo">
         </div>
     </section>
-    
-    <footer class="footer-section">
-        <!-- <div class="footer-logo">
-            <img src="images/white-logo.png" alt="Footer Logo">
-        </div> -->
-    
-        <hr class="footer-divider">
-    
-        <div class="footer-grid">
-            <!-- Column 1: Reach Us -->
-            <div class="footer-column"> 
-                <h4>Reach us</h4> 
-                <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p> 
-                <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
-                <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span></p> 
-                <p style="display: flex; align-items: center;">
-    <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
-    <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
-        enquiries@advicemidwales.org.uk
-    </a>
-</p>
+   <footer class="footer-section">
+    <hr class="footer-divider">
 
-            </div>
-    
-            <!-- Column 2: Company -->
-            <div class="footer-column">
-                <h4>Company</h4>
-                <p><a href="#">Home</a></p>
-                <p><a href="about.html">About Us</a></p>
-                <p><a href="services.html">Services</a></p>
-            </div>
-    
-            <!-- Column 3: Legal -->
-            <div class="footer-column">
-                <h4>Legal</h4>
-                <p><a href="https://www.advicemidwales.org.uk/privacy.php">Privacy Policy</a></p>
-                <p><a href="#">Terms & Services</a></p>
-                <p><a href="#">Terms of Use</a></p>
-            </div>
-    
-            <!-- Column 4: Newsletter -->
-       <!-- Column 4: How We Help -->
-<div class="footer-column">
-    <h4>How We Help</h4>
-    <p>Free, confidential advice when you need it most — from benefits and housing to debt and employment.</p>
-</div>
-
+    <div class="footer-grid">
+        <!-- Column 1: Reach Us -->
+        <div class="footer-column">
+            <h4 data-en="Reach Us" data-cy="Cysylltwch â Ni">Reach Us</h4>
+            <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p>
+            <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
+                <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span>
+            </p>
+            <p style="display: flex; align-items: center;">
+                <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
+                <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
+                    enquiries@advicemidwales.org.uk
+                </a>
+            </p>
         </div>
-    
-        <p class="footer-bottom">Registered Charity (No. 1111040)</p>
-    </footer>
+
+        <!-- Column 2: Company -->
+        <div class="footer-column">
+            <h4 data-en="Company" data-cy="Cwmni">Company</h4>
+            <p><a href="#" data-en="Home" data-cy="Cartref">Home</a></p>
+            <p><a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a></p>
+            <p><a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a></p>
+            <p><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></p>
+            <p><a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></p>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div class="footer-column">
+            <h4 data-en="Legal" data-cy="Cyfreithiol">Legal</h4>
+            <p><a href="https://www.advicemidwales.org.uk/privacy.php" data-en="Privacy Policy" data-cy="Polisi Preifatrwydd">Privacy Policy</a></p>
+            <p><a href="#" data-en="Terms & Services" data-cy="Telerau a Gwasanaethau">Terms & Services</a></p>
+            <p><a href="#" data-en="Terms of Use" data-cy="Telerau Defnyddio">Terms of Use</a></p>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column">
+            <h4 data-en="Join Our Newsletter" data-cy="Ymunwch â’n Cylchlythyr">Join Our Newsletter</h4>
+            <p data-en="Join our newsletter for latest news update" data-cy="Ymunwch â’n cylchlythyr i gael y newyddion diweddaraf">Join our newsletter for latest news update</p>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Email">
+                <button type="submit" data-en="Subscribe" data-cy="Tanysgrifio">Subscribe</button>
+            </form>
+            <p class="newsletter-hint" data-en="Registered Charity No. 1111040" data-cy="Rhif Elusen Gofrestredig: 1111040">Registered Charity No. 1111040</p>
+        </div>
+    </div>
+</footer>
+
     
     
     <script>
@@ -393,7 +487,239 @@ document.querySelectorAll('a[href^="#"], a[href]').forEach(anchor => {
 document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
+function switchToWelsh() {
+    document.body.classList.add('welsh-active');
 
+    // Navigation
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.textContent = link.getAttribute('data-cy');
+    });
+
+    // Buttons
+    document.getElementById('welsh-btn').textContent = 'CYMRAEG';
+    document.getElementById('english-btn').textContent = 'SAESNEG';
+
+    // Services
+    document.querySelectorAll('.service-card h3').forEach(h => {
+        h.textContent = h.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.service-card p').forEach(p => {
+        p.textContent = p.getAttribute('data-cy');
+    });
+
+    // Info section
+    const infoText = document.querySelector('.info-text');
+    const infoLink = document.querySelector('.info-link');
+    if (infoText) infoText.textContent = infoText.getAttribute('data-cy');
+    if (infoLink) infoLink.textContent = infoLink.getAttribute('data-cy');
+
+    // Core Values section
+    document.querySelectorAll('.core-values .section-title').forEach(el => {
+        el.textContent = el.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.core-values h3').forEach(h => {
+        h.textContent = h.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.core-values p').forEach(p => {
+        p.textContent = p.getAttribute('data-cy');
+    });
+
+    // Impact section
+    const impactTitle = document.querySelector('.impact-section .section-title');
+    const impactText = document.querySelector('.impact-text');
+    if (impactTitle) impactTitle.textContent = impactTitle.getAttribute('data-cy');
+    if (impactText) impactText.textContent = impactText.getAttribute('data-cy');
+    document.querySelectorAll('.impact-section .sub-title').forEach(el => {
+        el.textContent = el.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.impact-section .figure-description').forEach(el => {
+        el.textContent = el.getAttribute('data-cy');
+    });
+
+    // Donation section
+    document.querySelectorAll('.donation-section .section-title').forEach(el => {
+        el.textContent = el.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.donation-text').forEach(el => {
+        el.textContent = el.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.donation-ways li').forEach(el => {
+        el.innerHTML = el.getAttribute('data-cy'); // includes <strong>
+    });
+    const thanks = document.querySelector('.donation-thanks');
+    if (thanks) thanks.textContent = thanks.getAttribute('data-cy');
+    const cardTitle = document.querySelector('.donation-title');
+    const cardSubtext = document.querySelector('.donation-subtext');
+    if (cardTitle) cardTitle.textContent = cardTitle.getAttribute('data-cy');
+    if (cardSubtext) cardSubtext.textContent = cardSubtext.getAttribute('data-cy');
+    document.querySelectorAll('.donation-toggle span').forEach(span => {
+        span.textContent = span.getAttribute('data-cy');
+    });
+    const donateBtn = document.querySelector('.donate-btn');
+    if (donateBtn) donateBtn.textContent = donateBtn.getAttribute('data-cy');
+
+    // Join Our Team section
+    const joinTitle = document.querySelector('.join-team .section-title');
+    const joinText = document.querySelector('.join-team .team-text');
+    if (joinTitle) joinTitle.textContent = joinTitle.getAttribute('data-cy');
+    if (joinText) joinText.textContent = joinText.getAttribute('data-cy');
+    document.querySelectorAll('.volunteer-info h3').forEach(h => {
+        h.textContent = h.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.volunteer-info p').forEach(p => {
+        if (p.hasAttribute('data-cy')) {
+            p.textContent = p.getAttribute('data-cy');
+        }
+    });
+
+    // Testimonial section
+    const testimonialText = document.querySelector('.testimonial-text');
+    if (testimonialText) {
+        testimonialText.innerHTML = testimonialText.getAttribute('data-cy');
+    }
+
+    // Footer
+    document.querySelectorAll('.footer-column h4').forEach(h => {
+        h.textContent = h.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.footer-column p').forEach(p => {
+        if (p.hasAttribute('data-cy')) {
+            p.textContent = p.getAttribute('data-cy');
+        }
+    });
+    document.querySelectorAll('.footer-column a').forEach(a => {
+        if (a.hasAttribute('data-cy')) {
+            a.textContent = a.getAttribute('data-cy');
+        }
+    });
+    const subscribeBtn = document.querySelector('.newsletter-form button');
+    if (subscribeBtn) subscribeBtn.textContent = subscribeBtn.getAttribute('data-cy');
+}
+
+function switchToEnglish() {
+    document.body.classList.remove('welsh-active');
+
+    // Navigation
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.textContent = link.getAttribute('data-en');
+    });
+
+    // Buttons
+    document.getElementById('welsh-btn').textContent = 'WELSH';
+    document.getElementById('english-btn').textContent = 'ENGLISH';
+
+    // Services
+    document.querySelectorAll('.service-card h3').forEach(h => {
+        h.textContent = h.getAttribute('data-en');
+    });
+    document.querySelectorAll('.service-card p').forEach(p => {
+        p.textContent = p.getAttribute('data-en');
+    });
+
+    // Info section
+    const infoText = document.querySelector('.info-text');
+    const infoLink = document.querySelector('.info-link');
+    if (infoText) infoText.textContent = infoText.getAttribute('data-en');
+    if (infoLink) infoLink.textContent = infoLink.getAttribute('data-en');
+
+    // Core Values section
+    document.querySelectorAll('.core-values .section-title').forEach(el => {
+        el.textContent = el.getAttribute('data-en');
+    });
+    document.querySelectorAll('.core-values h3').forEach(h => {
+        h.textContent = h.getAttribute('data-en');
+    });
+    document.querySelectorAll('.core-values p').forEach(p => {
+        p.textContent = p.getAttribute('data-en');
+    });
+
+    // Impact section
+    const impactTitle = document.querySelector('.impact-section .section-title');
+    const impactText = document.querySelector('.impact-text');
+    if (impactTitle) impactTitle.textContent = impactTitle.getAttribute('data-en');
+    if (impactText) impactText.textContent = impactText.getAttribute('data-en');
+    document.querySelectorAll('.impact-section .sub-title').forEach(el => {
+        el.textContent = el.getAttribute('data-en');
+    });
+    document.querySelectorAll('.impact-section .figure-description').forEach(el => {
+        el.textContent = el.getAttribute('data-en');
+    });
+
+    // Donation section
+    document.querySelectorAll('.donation-section .section-title').forEach(el => {
+        el.textContent = el.getAttribute('data-en');
+    });
+    document.querySelectorAll('.donation-text').forEach(el => {
+        el.textContent = el.getAttribute('data-en');
+    });
+    document.querySelectorAll('.donation-ways li').forEach(el => {
+        el.innerHTML = el.getAttribute('data-en');
+    });
+    const thanks = document.querySelector('.donation-thanks');
+    if (thanks) thanks.textContent = thanks.getAttribute('data-en');
+    const cardTitle = document.querySelector('.donation-title');
+    const cardSubtext = document.querySelector('.donation-subtext');
+    if (cardTitle) cardTitle.textContent = cardTitle.getAttribute('data-en');
+    if (cardSubtext) cardSubtext.textContent = cardSubtext.getAttribute('data-en');
+    document.querySelectorAll('.donation-toggle span').forEach(span => {
+        span.textContent = span.getAttribute('data-en');
+    });
+    const donateBtn = document.querySelector('.donate-btn');
+    if (donateBtn) donateBtn.textContent = donateBtn.getAttribute('data-en');
+
+    // Join Our Team section
+    const joinTitle = document.querySelector('.join-team .section-title');
+    const joinText = document.querySelector('.join-team .team-text');
+    if (joinTitle) joinTitle.textContent = joinTitle.getAttribute('data-en');
+    if (joinText) joinText.textContent = joinText.getAttribute('data-en');
+    document.querySelectorAll('.volunteer-info h3').forEach(h => {
+        h.textContent = h.getAttribute('data-en');
+    });
+    document.querySelectorAll('.volunteer-info p').forEach(p => {
+        if (p.hasAttribute('data-en')) {
+            p.textContent = p.getAttribute('data-en');
+        }
+    });
+
+    // Testimonial section
+    const testimonialText = document.querySelector('.testimonial-text');
+    if (testimonialText) {
+        testimonialText.innerHTML = testimonialText.getAttribute('data-en');
+    }
+
+    // Footer
+    document.querySelectorAll('.footer-column h4').forEach(h => {
+        h.textContent = h.getAttribute('data-en');
+    });
+    document.querySelectorAll('.footer-column p').forEach(p => {
+        if (p.hasAttribute('data-en')) {
+            p.textContent = p.getAttribute('data-en');
+        }
+    });
+    document.querySelectorAll('.footer-column a').forEach(a => {
+        if (a.hasAttribute('data-en')) {
+            a.textContent = a.getAttribute('data-en');
+        }
+    });
+    const subscribeBtn = document.querySelector('.newsletter-form button');
+    if (subscribeBtn) subscribeBtn.textContent = subscribeBtn.getAttribute('data-en');
+}
+
+function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+    
+    navMenu.classList.toggle('active');
+    
+    if (navMenu.classList.contains('active')) {
+        menuOpen.style.display = 'none';
+        menuClose.style.display = 'inline';
+    } else {
+        menuOpen.style.display = 'inline';
+        menuClose.style.display = 'none';
+    }
+}
 
         </script>
         

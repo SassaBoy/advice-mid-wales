@@ -24,32 +24,34 @@
 </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
-                </a>
-            </div>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <span id="menu-open">☰</span>
-                <span id="menu-close" style="display: none;">✖</span>
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="buttons">
-                <a href="volunteer.html" class="btn volunteer">VOLUNTEER</a>
-                <a href="#" class="btn advice">GET ADVICE</a>
-            </div>
+      <header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/newest_logo.png" alt="Citizens Advice Mid Wales Logo">
+            </a>
         </div>
-    </header>
+        
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span id="menu-open">☰</span>
+            <span id="menu-close" style="display: none;">✖</span>
+        </div>
+        
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" data-en="Home" data-cy="Cartref">Home</a></li>
+                <li><a href="services.html" class="active" data-en="Services" data-cy="Gwasanaethau">Services</a></li>
+                <li><a href="about.html"  data-en="About Us" data-cy="Amdanom Ni">About Us</a></li>
+                <li><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></li>
+                <li><a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></li>
+            </ul>
+        </nav>
+      <div class="buttons">
+    <a href="#" class="btn" id="welsh-btn" style="width: 120px;" onclick="switchToWelsh()">WELSH</a>
+    <a href="#" class="btn" id="english-btn" style="width: 120px;" onclick="switchToEnglish()">ENGLISH</a>
+</div>
+    </div>
+</header>
 
     <main>
         <!-- <section class="hero">
@@ -62,157 +64,153 @@
             <img src="images/services1.png" alt="Stone bridge with autumn trees and houses">
         </section>
     </main>
+<section class="about-services">
+  <div class="about-container">
+    <h2 class="about-title" data-en="ABOUT OUR SERVICES" data-cy="Ein Gwasanaethau">ABOUT OUR SERVICES</h2>
+    <p class="about-text" data-en="Rooted in the heart of Mid Wales, we are a proudly independent, volunteer-led organisation made up of local people who truly understand our community's challenges. Our independence sets us apart, allowing us to be agile, adaptable and focused entirely on meeting the needs of the community. We know that every person's situation is unique – there's no &quot;one-size-fits-all&quot; solution. That's why we take a personal, tailored approach to every enquiry. Our advisers listen with care, empathy and expertise, ensuring that the support we provide meets each individual's specific needs." data-cy="Wedi’n gwreiddio yng nghanolbarth Cymru, rydym yn sefydliad annibynnol balch a arweinir gan wirfoddolwyr, yn cynnwys pobl leol sy’n deall yn wirioneddol heriau ein cymuned. Mae ein hannibyniaeth yn ein gosod ar wahân, gan ein galluogi i fod yn hyblyg, yn addasol ac yn canolbwyntio’n llwyr ar ddiwallu anghenion y gymuned. Gwyddom fod sefyllfa pawb yn unigryw – nid oes ateb &quot;un maint i bawb&quot;. Dyna pam rydym yn mabwysiadu dull personol ac wedi’i deilwra at bob ymholiad. Mae ein cynghorwyr yn gwrando gyda gofal, empathi ac arbenigedd, gan sicrhau bod y cymorth a ddarparwn yn diwallu anghenion penodol pob unigolyn.">
+      Rooted in the heart of Mid Wales, we are a proudly independent, volunteer-led organisation 
+      made up of local people who truly understand our community's challenges. Our independence 
+      sets us apart, allowing us to be agile, adaptable and focused entirely on meeting the needs 
+      of the community.
+      <br><br>
+      We know that every person's situation is unique – there's no "one-size-fits-all" solution. 
+      That's why we take a personal, tailored approach to every enquiry. Our advisers listen with 
+      care, empathy and expertise, ensuring that the support we provide meets each individual's 
+      specific needs.
+    </p>
 
-    <section class="about-services">
-        <div class="about-container">
-            <h2 class="about-title">ABOUT OUR SERVICES</h2>
-            <p class="about-text">
-                Rooted in the heart of Mid Wales, we are a proudly independent, volunteer-led organisation 
-                made up of local people who truly understand our community's challenges. Our independence 
-                sets us apart, allowing us to be agile, adaptable and focused entirely on meeting the needs 
-                of the community.
-                
-                We know that every person's situation is unique – there's no "one-size-fits-all" solution. 
-                That's why we take a personal, tailored approach to every enquiry. Our advisers listen with 
-                care, empathy and expertise, ensuring that the support we provide meets each individual's 
-                specific needs.
-            </p>
-    
-            <h2 class="about-title" style="margin-top: 50px;">HOW WE WORK</h2>
-            <p class="about-text">
-                Getting started with Advice Mid Wales is simple – whether it's a quick phone call, an email, 
-                or a visit during our opening hours. Every enquiry is handled with care by our friendly and 
-                dedicated team, who take a client-centred approach to finding solutions.
-    
-                We offer advice in person, over the phone, or via video call, and for those unable to visit 
-                us, we may even be able to come to you. All appointments are confidential, impartial, and 
-                non-judgemental. If we're unable to assist directly, we can connect you with trusted partners 
-                through our strong network of referrals and signposting.
-            </p>
-    
-            <h2 class="about-title" style="margin-top: 50px;">HOW WE CAN HELP YOU</h2>
-            <p class="about-text">
-                We provide a Generalist Advice Service for a wide variety of problems:
-            </p>
-            <ul class="about-list">
-                <li>Our Specialist Money Advice Caseworkers are members of the Institute of Money Advisers® and are Accredited Intermediaries for Debt Relief Orders (DROs).</li>
-                <li>We hold three drop-in advice sessions each week, plus flexible pre-booked appointments, which means you can get help when you need it.</li>
-                <li>We are the only advice service in Mid-Wales to offer home visits, and even hospital visits when possible.</li>
-                <li>We offer outreach services, including Tywyn Library.</li>
-                <li>We are the only advice centre in the area to represent our clients at First Tier Tribunals.</li>
-                <li>We are an alternative office of The DWP's Pension Service, meaning you can bring in any forms and documents The Pension Service has asked you to provide.</li>
-                <li>We can provide emergency fuel vouchers in partnership with the Fuel Bank Foundation (subject to eligibility).</li>
-                <li>We work in partnership with the Bro Ddyfi Foodbank.</li>
-                <li>We provide volunteering and training opportunities.</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section class="faq-section">
-   
+    <h2 class="about-title" style="margin-top: 50px;" data-en="HOW WE WORK" data-cy="Sut Rydym yn Gweithio">HOW WE WORK</h2>
+    <p class="about-text" data-en="Getting started with Advice Mid Wales is simple – whether it's a quick phone call, an email, or a visit during our opening hours. Every enquiry is handled with care by our friendly and dedicated team, who take a client-centred approach to finding solutions. We offer advice in person, over the phone, or via video call, and for those unable to visit us, we may even be able to come to you. All appointments are confidential, impartial, and non-judgemental. If we're unable to assist directly, we can connect you with trusted partners through our strong network of referrals and signposting." data-cy="Mae dechrau gyda Advice Mid Wales yn syml – boed hynny drwy alwad ffôn gyflym, e-bost neu ymweliad yn ystod ein horiau agor. Caiff pob ymholiad ei drin gyda gofal gan ein tîm cyfeillgar ac ymroddedig, sy’n cymryd dull sy’n canolbwyntio ar y cleient i ddod o hyd i atebion. Rydym yn cynnig cyngor wyneb yn wyneb, dros y ffôn neu drwy alwad fideo, ac i’r rhai na all ymweld â ni, gallwn hyd yn oed ddod atoch chi. Mae pob apwyntiad yn gyfrinachol, yn ddiduedd ac yn rhydd o unrhyw farn. Os na allwn eich helpu’n uniongyrchol, gallwn eich cysylltu â phartneriaid dibynadwy drwy ein rhwydwaith cryf o gyfeirio ac arwyddion cymorth.">
+      Getting started with Advice Mid Wales is simple – whether it's a quick phone call, an email, 
+      or a visit during our opening hours. Every enquiry is handled with care by our friendly and 
+      dedicated team, who take a client-centred approach to finding solutions.
+      <br><br>
+      We offer advice in person, over the phone, or via video call, and for those unable to visit 
+      us, we may even be able to come to you. All appointments are confidential, impartial, and 
+      non-judgemental. If we're unable to assist directly, we can connect you with trusted partners 
+      through our strong network of referrals and signposting.
+    </p>
 
-        <img src="images/advice-center.png" alt="Advice center consultation" class="faq-image">
-             <h3 style="text-transform: uppercase; color: #313131; margin-top: 30px; margin-bottom: -50px;">
-    FREQUENTLY ASKED QUESTIONS
-</h3>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">Q. As I'm working during the week, can I see an adviser outside of drop-in hours?</div>
-                <div class="faq-answer">A. Yes. Please phone or email us and an adviser will make an appointment to see you at a time convenient to both.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. I would prefer to speak to an adviser in Welsh if possible?</div>
-                <div class="faq-answer">A. Wherever possible we aim to provide a fully bilingual service.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. I would like to apply for a Debt Relief Order, can you help?</div>
-                <div class="faq-answer">A. Absolutely, as well as discussing the other options of help available to you.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. I have some forms that I need to fill in but I can't understand them. Can you help me?</div>
-                <div class="faq-answer">A. Yes, we can indeed. We'll also explain them to you so you fully understand them.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. I have a disability and find it difficult to leave my house. Can you make home visits?</div>
-                <div class="faq-answer">A. We can. We also make hospital visits when necessary.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. I would like to apply for Personal Independence Payment (PIP) but don't know if I qualify, can you help?</div>
-                <div class="faq-answer">A. Absolutely, and if you have mobility issues then please just give us a call.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. We live in a small town and I don't want everyone to know my business.</div>
-                <div class="faq-answer">A. Our service is strictly confidential and our Confidentiality Statement is available to all members of the public.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. I have a problem with my neighbour and need your advice. What happens if he comes to you wanting advice as well?</div>
-                <div class="faq-answer">A. We can only advise and/or represent one party in a dispute and that is the person who came to us first.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Q. Do I have to declare and disclose all of my financial and personal circumstances if I’m making a claim for benefits?</div>
-                <div class="faq-answer">A. Our advisors are here to help you as best they can, however, failure to disclose personal and financial information to DWP and HMRC could result in prosecution under The Social Security Act 2001.</div>
-            </div>
-            
-        </div>
-    </section>
-   
-    <footer class="footer-section">
-        <!-- <div class="footer-logo">
-            <img src="images/white-logo.png" alt="Footer Logo">
-        </div> -->
-    
-        <hr class="footer-divider">
-    
-        <div class="footer-grid">
-            <!-- Column 1: Reach Us -->
-            <div class="footer-column"> 
-                <h4>Reach us</h4> 
-                <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p> 
-                <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
-                <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span></p> 
-               <p style="display: flex; align-items: center;">
-    <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
-    <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
-        enquiries@advicemidwales.org.uk
-    </a>
-</p>
+    <h2 class="about-title" style="margin-top: 50px;" data-en="HOW WE CAN HELP YOU" data-cy="Sut Gallwn Ni Eich Helpu">HOW WE CAN HELP YOU</h2>
+    <p class="about-text" data-en="We provide a Generalist Advice Service for a wide variety of problems:" data-cy="Rydym yn darparu Gwasanaeth Cyngor Cyffredinol ar gyfer amrywiaeth eang o broblemau:">
+      We provide a Generalist Advice Service for a wide variety of problems:
+    </p>
+    <ul class="about-list">
+      <li data-en="Our Specialist Money Advice Caseworkers are members of the Institute of Money Advisers® and are Accredited Intermediaries for Debt Relief Orders (DROs)." data-cy="Mae ein Hachosweinyddion Cyngor Ariannol Arbenigol yn aelodau o’r Sefydliad Cynghorwyr Ariannol® ac yn Ganolwyr Achrededig ar gyfer Gorchmynion Rhyddhad Dyledion (DROs).">Our Specialist Money Advice Caseworkers are members of the Institute of Money Advisers® and are Accredited Intermediaries for Debt Relief Orders (DROs).</li>
 
-            </div>
-    
-    
-            <!-- Column 2: Company -->
-            <div class="footer-column">
-                <h4>Company</h4>
-                <p><a href="#">Home</a></p>
-                <p><a href="about.html">About Us</a></p>
-                <p><a href="services.html">Services</a></p>
-            </div>
-    
-            <!-- Column 3: Legal -->
-            <div class="footer-column">
-                <h4>Legal</h4>
-                <p><a href="https://www.advicemidwales.org.uk/privacy.php">Privacy Policy</a></p>
-                <p><a href="#">Terms & Services</a></p>
-                <p><a href="#">Terms of Use</a></p>
-            </div>
-    
-            <!-- Column 4: Newsletter -->
-            <div class="footer-column">
-                <h4>How We Help</h4>
-                <p>Free, confidential advice when you need it most — from benefits and housing to debt and employment.</p>
-            </div>
+      <li data-en="We hold three drop-in advice sessions each week, plus flexible pre-booked appointments, which means you can get help when you need it." data-cy="Rydym yn cynnal tair sesiwn cyngor galw heibio bob wythnos, ynghyd ag apwyntiadau hyblyg y gellir eu harchebu ymlaen llaw, sy’n golygu y gallwch gael cymorth pan fydd ei angen arnoch.">We hold three drop-in advice sessions each week, plus flexible pre-booked appointments, which means you can get help when you need it.</li>
+
+      <li data-en="We are the only advice service in Mid-Wales to offer home visits, and even hospital visits when possible." data-cy="Ni yw’r unig wasanaeth cyngor yng Nghanolbarth Cymru sy’n cynnig ymweliadau cartref, ac ymweliadau ysbyty pan fo hynny’n bosibl.">We are the only advice service in Mid-Wales to offer home visits, and even hospital visits when possible.</li>
+
+      <li data-en="We offer outreach services, including Tywyn Library." data-cy="Rydym yn cynnig gwasanaethau allgymorth, gan gynnwys Llyfrgell Tywyn.">We offer outreach services, including Tywyn Library.</li>
+
+      <li data-en="We are the only advice centre in the area to represent our clients at First Tier Tribunals." data-cy="Ni yw’r unig ganolfan gyngor yn yr ardal i gynrychioli ein cleientiaid mewn Tribiwnlysoedd Haen Gyntaf.">We are the only advice centre in the area to represent our clients at First Tier Tribunals.</li>
+
+      <li data-en="We are an alternative office of The DWP's Pension Service, meaning you can bring in any forms and documents The Pension Service has asked you to provide." data-cy="Rydym yn swyddfa amgen i Wasanaeth Pensiwn yr Adran Gwaith a Phensiynau (DWP), sy’n golygu y gallwch ddod ag unrhyw ffurflenni a dogfennau y mae’r Gwasanaeth Pensiwn wedi gofyn ichi eu darparu.">We are an alternative office of The DWP's Pension Service, meaning you can bring in any forms and documents The Pension Service has asked you to provide.</li>
+
+      <li data-en="We can provide emergency fuel vouchers in partnership with the Fuel Bank Foundation (subject to eligibility)." data-cy="Gallwn ddarparu tocynnau tanwydd brys mewn partneriaeth â’r Fuel Bank Foundation (yn amodol ar gymhwyster).">We can provide emergency fuel vouchers in partnership with the Fuel Bank Foundation (subject to eligibility).</li>
+
+      <li data-en="We work in partnership with the Bro Ddyfi Foodbank." data-cy="Rydym yn gweithio mewn partneriaeth â Banc Bwyd Bro Ddyfi.">We work in partnership with the Bro Ddyfi Foodbank.</li>
+
+      <li data-en="We provide volunteering and training opportunities." data-cy="Rydym yn darparu cyfleoedd gwirfoddoli a hyfforddi.">We provide volunteering and training opportunities.</li>
+    </ul>
+  </div>
+</section>
+<section class="faq-section">
+    <img src="images/advice-center.png" alt="Advice center consultation" class="faq-image">
+    <h3 style="text-transform: uppercase; color: #313131; margin-top: 30px; margin-bottom: -50px;"
+        data-en="FREQUENTLY ASKED QUESTIONS" data-cy="CWESTIYNAU A OFNYIR YN AML">
+        FREQUENTLY ASKED QUESTIONS
+    </h3>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. As I'm working during the week, can I see an adviser outside of drop-in hours?" data-cy="C: Gan fy mod yn gweithio yn ystod yr wythnos, a allaf weld cynghorydd y tu allan i oriau galw heibio?">Q. As I'm working during the week, can I see an adviser outside of drop-in hours?</div>
+            <div class="faq-answer" data-en="A. Yes. Please phone or email us and an adviser will make an appointment to see you at a time convenient to both." data-cy="A: Gallwch. Ffoniwch neu anfonwch e-bost atom, a bydd cynghorydd yn trefnu apwyntiad i’ch gweld ar adeg sy’n gyfleus i’r ddwy ochr.">A. Yes. Please phone or email us and an adviser will make an appointment to see you at a time convenient to both.</div>
         </div>
-    
-        <p class="footer-bottom">Registered Charity (No. 1111040)</p>
-    </footer>
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. I would prefer to speak to an adviser in Welsh if possible?" data-cy="C: Byddwn yn well gennyf siarad â chynghorydd yn Gymraeg os yw’n bosibl?">Q. I would prefer to speak to an adviser in Welsh if possible?</div>
+            <div class="faq-answer" data-en="A. Wherever possible we aim to provide a fully bilingual service." data-cy="A: Lle bo’n bosibl, ein nod yw darparu gwasanaeth cwbl ddwyieithog.">A. Wherever possible we aim to provide a fully bilingual service.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. I would like to apply for a Debt Relief Order, can you help?" data-cy="C: Hoffwn wneud cais am Orchymyn Rhyddhad Dyledion, a allwch chi helpu?">Q. I would like to apply for a Debt Relief Order, can you help?</div>
+            <div class="faq-answer" data-en="A. Absolutely, as well as discussing the other options of help available to you." data-cy="A: Wrth gwrs, a byddwn hefyd yn trafod yr opsiynau cymorth eraill sydd ar gael i chi.">A. Absolutely, as well as discussing the other options of help available to you.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. I have some forms that I need to fill in but I can't understand them. Can you help me?" data-cy="C: Mae gen i rai ffurflenni sydd angen eu llenwi ond nid wyf yn eu deall. A allwch chi helpu fi?">Q. I have some forms that I need to fill in but I can't understand them. Can you help me?</div>
+            <div class="faq-answer" data-en="A. Yes, we can indeed. We'll also explain them to you so you fully understand them." data-cy="A: Gallwn yn wir. Byddwn hefyd yn eu hegluro i chi fel eich bod yn eu deall yn llawn.">A. Yes, we can indeed. We'll also explain them to you so you fully understand them.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. I have a disability and find it difficult to leave my house. Can you make home visits?" data-cy="C: Mae gen i anabledd ac rwy’n ei chael hi’n anodd gadael fy nghartref. A allwch chi wneud ymweliadau cartref?">Q. I have a disability and find it difficult to leave my house. Can you make home visits?</div>
+            <div class="faq-answer" data-en="A. We can. We also make hospital visits when necessary." data-cy="A: Gallwn. Rydym hefyd yn gwneud ymweliadau i’r ysbyty pan fo angen.">A. We can. We also make hospital visits when necessary.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. I would like to apply for Personal Independence Payment (PIP) but don't know if I qualify, can you help?" data-cy="C: Hoffwn wneud cais am Daliad Annibyniaeth Personol (PIP) ond nid wyf yn siŵr a fyddaf yn gymwys; allwch chi fy helpu?">Q. I would like to apply for Personal Independence Payment (PIP) but don't know if I qualify, can you help?</div>
+            <div class="faq-answer" data-en="A. Absolutely, and if you have mobility issues then please just give us a call." data-cy="A. Yn bendant! Ac os oes gennych chi broblemau symudedd, ffoniwch ni.">A. Absolutely, and if you have mobility issues then please just give us a call.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. We live in a small town and I don't want everyone to know my business." data-cy="C. Rydyn ni’n byw mewn tref fach, ac nid wyf eisiau i bawb wybod ein busnes.">Q. We live in a small town and I don't want everyone to know my business.</div>
+            <div class="faq-answer" data-en="A. Our service is strictly confidential and our Confidentiality Statement is available to all members of the public." data-cy="A. Mae ein gwasanaeth yn hollol gyfrinachol a gallwch fod yn sicr, oni bai eich bod yn dweud fel arall, ni fydd neb - dim hyd yn oed aelodau o’ch teulu - yn gwybod eich bod wedi cysylltu â ni.">A. Our service is strictly confidential and our Confidentiality Statement is available to all members of the public.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. I have a problem with my neighbour and need your advice. What happens if he comes to you wanting advice as well?" data-cy="C. Mae gen i broblem gyda’m cymydog ac angen eich cyngor. Beth fyddai’n digwydd pe bai yntau yn dod atoch am gyngor hefyd?">Q. I have a problem with my neighbour and need your advice. What happens if he comes to you wanting advice as well?</div>
+            <div class="faq-answer" data-en="A. We can only advise and/or represent one party in a dispute and that is the person who came to us first." data-cy="A. Ni allwn gynghori a/neu gynrychioli ond un yn unig mewn unrhyw anghydfod, sef y person ddaeth atom yn gyntaf.">A. We can only advise and/or represent one party in a dispute and that is the person who came to us first.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" data-en="Q. Do I have to declare and disclose all of my financial and personal circumstances if I’m making a claim for benefits?" data-cy="C. A yw’r cyngor a roddwch i mi yn gyfreithiol-rwym?">Q. Do I have to declare and disclose all of my financial and personal circumstances if I’m making a claim for benefits?</div>
+            <div class="faq-answer" data-en="A. Our advisors are here to help you as best they can, however, failure to disclose personal and financial information to DWP and HMRC could result in prosecution under The Social Security Act 2001." data-cy="A. Dydyn ni ddim yn gyfreithwyr, felly nid yw’r cyngor a roddwn yn gyfreithiol-rwym. Ond mae ein cynghorwyr i gyd wedi’u hyfforddi mewn eiriolaeth, felly gallwch fod yn berffaith dawel eich meddwl y byddwch yn y dwylo gorau posibl.">A. Our advisors are here to help you as best they can, however, failure to disclose personal and financial information to DWP and HMRC could result in prosecution under The Social Security Act 2001.</div>
+        </div>
+    </div>
+</section>
+
+       <footer class="footer-section">
+    <hr class="footer-divider">
+
+    <div class="footer-grid">
+        <!-- Column 1: Reach Us -->
+        <div class="footer-column">
+            <h4 data-en="Reach Us" data-cy="Cysylltwch â Ni">Reach Us</h4>
+            <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p>
+            <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
+                <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span>
+            </p>
+            <p style="display: flex; align-items: center;">
+                <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
+                <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
+                    enquiries@advicemidwales.org.uk
+                </a>
+            </p>
+        </div>
+
+        <!-- Column 2: Company -->
+        <div class="footer-column">
+            <h4 data-en="Company" data-cy="Cwmni">Company</h4>
+            <p><a href="#" data-en="Home" data-cy="Cartref">Home</a></p>
+            <p><a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a></p>
+            <p><a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a></p>
+            <p><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></p>
+            <p><a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></p>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div class="footer-column">
+            <h4 data-en="Legal" data-cy="Cyfreithiol">Legal</h4>
+            <p><a href="https://www.advicemidwales.org.uk/privacy.php" data-en="Privacy Policy" data-cy="Polisi Preifatrwydd">Privacy Policy</a></p>
+            <p><a href="#" data-en="Terms & Services" data-cy="Telerau a Gwasanaethau">Terms & Services</a></p>
+            <p><a href="#" data-en="Terms of Use" data-cy="Telerau Defnyddio">Terms of Use</a></p>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-column">
+            <h4 data-en="Join Our Newsletter" data-cy="Ymunwch â’n Cylchlythyr">Join Our Newsletter</h4>
+            <p data-en="Join our newsletter for latest news update" data-cy="Ymunwch â’n cylchlythyr i gael y newyddion diweddaraf">Join our newsletter for latest news update</p>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Email">
+                <button type="submit" data-en="Subscribe" data-cy="Tanysgrifio">Subscribe</button>
+            </form>
+            <p class="newsletter-hint" data-en="Registered Charity No. 1111040" data-cy="Rhif Elusen Gofrestredig: 1111040">Registered Charity No. 1111040</p>
+        </div>
+    </div>
+</footer>
     
     
     <script>
@@ -290,7 +288,111 @@ questions.forEach(question => {
 document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
+function switchToWelsh() {
+    document.body.classList.add('welsh-active');
 
+    // Update navigation text to Welsh
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+        link.textContent = link.getAttribute('data-cy');
+    });
+
+    // Update button text
+    document.getElementById('welsh-btn').textContent = 'CYMRAEG';
+    document.getElementById('english-btn').textContent = 'SAESNEG';
+
+    // About Services Section
+    document.querySelectorAll('.about-title').forEach(title => {
+        title.textContent = title.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.about-text').forEach(text => {
+        text.textContent = text.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.about-list li').forEach(item => {
+        item.textContent = item.getAttribute('data-cy');
+    });
+
+    // FAQ Section
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.textContent = question.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+        answer.textContent = answer.getAttribute('data-cy');
+    });
+    const faqHeading = document.querySelector('.faq-section h3');
+    if (faqHeading) faqHeading.textContent = faqHeading.getAttribute('data-cy');
+
+    // Footer Section
+    document.querySelectorAll('.footer-column h4').forEach(el => {
+        el.textContent = el.getAttribute('data-cy');
+    });
+    document.querySelectorAll('.footer-column a, .footer-column p, .newsletter-form button, .newsletter-hint').forEach(el => {
+        if (el.hasAttribute('data-cy')) {
+            el.textContent = el.getAttribute('data-cy');
+        }
+    });
+}
+
+function switchToEnglish() {
+    document.body.classList.remove('welsh-active');
+
+    // Update navigation text to English
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+        link.textContent = link.getAttribute('data-en');
+    });
+
+    // Update button text
+    document.getElementById('welsh-btn').textContent = 'WELSH';
+    document.getElementById('english-btn').textContent = 'ENGLISH';
+
+    // About Services Section
+    document.querySelectorAll('.about-title').forEach(title => {
+        title.textContent = title.getAttribute('data-en');
+    });
+    document.querySelectorAll('.about-text').forEach(text => {
+        text.textContent = text.getAttribute('data-en');
+    });
+    document.querySelectorAll('.about-list li').forEach(item => {
+        item.textContent = item.getAttribute('data-en');
+    });
+
+    // FAQ Section
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.textContent = question.getAttribute('data-en');
+    });
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+        answer.textContent = answer.getAttribute('data-en');
+    });
+    const faqHeading = document.querySelector('.faq-section h3');
+    if (faqHeading) faqHeading.textContent = faqHeading.getAttribute('data-en');
+
+    // Footer Section
+    document.querySelectorAll('.footer-column h4').forEach(el => {
+        el.textContent = el.getAttribute('data-en');
+    });
+    document.querySelectorAll('.footer-column a, .footer-column p, .newsletter-form button, .newsletter-hint').forEach(el => {
+        if (el.hasAttribute('data-en')) {
+            el.textContent = el.getAttribute('data-en');
+        }
+    });
+}
+
+function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+    
+    navMenu.classList.toggle('active');
+    
+    if (navMenu.classList.contains('active')) {
+        menuOpen.style.display = 'none';
+        menuClose.style.display = 'inline';
+    } else {
+        menuOpen.style.display = 'inline';
+        menuClose.style.display = 'none';
+    }
+}
             </script>
 </body>
 </html>

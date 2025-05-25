@@ -12,27 +12,24 @@ body {
 }
 
 /* HEADER CONTAINER */
-
 .container {
-    max-width: 1400px; /* even wider */
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 80px; /* more padding pushes everything right */
+    padding: 10px 80px;
     height: 120px;
     overflow: visible;
 }
 
-
 .logo img {
-    height: 195px;
-    width: 220px;
-    transform: scale(0.65); /* slightly bigger */
-    transform-origin: left; /* anchor to left */
-    margin-left: -30px; /* only a little move left */
+    height: 220px;
+    width: 240px;
+    transform: scale(0.72);
+    transform-origin: left;
+    margin-left: -10px;
 }
-
 
 /* NAVIGATION */
 nav {
@@ -60,9 +57,13 @@ nav ul li a {
     padding: 10px 5px;
 }
 
+nav ul li a.active {
+    color: #007F9E;
+    font-weight: bold;
+}
 
 nav ul li a:hover {
-    color: #4CAF50;
+    color: #009A7A;
 }
 
 /* Mobile Menu Toggle */
@@ -81,7 +82,8 @@ nav ul li a:hover {
     display: flex;
     gap: 12px;
     margin-left: auto;
-    margin-right: 0; /* make sure buttons touch the right edge */
+    margin-right: 0;
+    
 }
 
 .btn {
@@ -90,46 +92,52 @@ nav ul li a:hover {
     font-weight: bold;
     border: 2px solid;
     transition: all 0.3s;
+    min-width: 90px;
+    text-align: center;
 }
 
-.volunteer {
+/* Default state - English active */
+#welsh-btn {
     color: #009A7A;
     border-color: #009A7A;
+    background: transparent;
 }
 
-.volunteer:hover {
-    background-color: #007365; /* Darker teal */
+#welsh-btn:hover {
+    background-color: #007365;
     color: white;
 }
 
-.advice {
+#english-btn {
     background: linear-gradient(to bottom, #009A7A, #007F9E);
     color: white;
     border-color: #008D8A;
-
 }
 
-.advice:hover {
+#english-btn:hover {
     background-color: #008D8A;
 }
 
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 30px 20px;
+/* Welsh active state */
+.welsh-active #welsh-btn {
+    background: linear-gradient(to bottom, #009A7A, #007F9E);
+    color: white;
+    border-color: #008D8A;
 }
 
-.hero h1 {
-    font-size: 28px;
-    color: #121111;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-weight: 600;
-    line-height: 52px;
-    text-align: center;
-    margin-left: -380px;
-    margin-top: -20px;
+.welsh-active #welsh-btn:hover {
+    background-color: #008D8A;
+}
+
+.welsh-active #english-btn {
+    color: #009A7A;
+    border-color: #009A7A;
+    background: transparent;
+}
+
+.welsh-active #english-btn:hover {
+    background-color: #007365;
+    color: white;
 }
 
 .image-section img {
@@ -138,11 +146,10 @@ nav ul li a:hover {
     object-fit: cover; /* Maintains aspect ratio, avoids squashing */
     display: block;
 }
-.hero .container1{
-height: 10px;
-margin-left: 90px;
+/* Welsh mode - smaller font size for navigation */
+.welsh-active nav ul li a {
+    font-size: 16px;
 }
-
 /* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
     .container {
@@ -156,7 +163,7 @@ margin-left: 90px;
     order: 1;
     margin-top: -20px;
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 0;
     align-self: flex-start;
 }
 
@@ -203,11 +210,13 @@ margin-left: 90px;
         opacity: 0;
     }
     
-    nav ul.active {
-        height: 250px;
-        padding: 10px 0;
-        opacity: 1;
-    }
+  nav ul.active {
+    height: auto;
+    padding: 5px 0;
+    opacity: 1;
+    line-height: 1.2; /* reduces spacing between nav links */
+}
+
     
     nav ul li {
         margin: 15px 0;
@@ -235,8 +244,6 @@ margin-left: 90px;
         word-spacing: 2px;
     }
 }
-
-
 /* SERVICES SECTION */
 .services {
     padding: 100px 0 80px;
