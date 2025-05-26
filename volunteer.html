@@ -406,19 +406,19 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
 function switchToWelsh() {
+    localStorage.setItem('language', 'cy');
     document.body.classList.add('welsh-active');
 
-    // Update navigation text to Welsh
-    const navLinks = document.querySelectorAll('#nav-menu a');
-    navLinks.forEach(link => {
+    // Navigation
+    document.querySelectorAll('#nav-menu a').forEach(link => {
         link.textContent = link.getAttribute('data-cy');
     });
 
-    // Update button text
+    // Buttons
     document.getElementById('welsh-btn').textContent = 'CYMRAEG';
     document.getElementById('english-btn').textContent = 'SAESNEG';
 
-    // Volunteer Steps Section
+    // Volunteer Steps
     const volunteerTitle = document.querySelector('.volunteer-steps-title');
     if (volunteerTitle) volunteerTitle.textContent = volunteerTitle.getAttribute('data-cy');
 
@@ -433,7 +433,7 @@ function switchToWelsh() {
         p.textContent = p.getAttribute('data-cy');
     });
 
-    // Volunteer Benefits Section
+    // Volunteer Benefits
     const benefitsTitle = document.querySelector('.volunteer-benefits-title');
     if (benefitsTitle) benefitsTitle.textContent = benefitsTitle.getAttribute('data-cy');
 
@@ -445,7 +445,7 @@ function switchToWelsh() {
         p.textContent = p.getAttribute('data-cy');
     });
 
-    // Volunteer Form Section
+    // Volunteer Form
     const formTitle = document.querySelector('.volunteer-form-title');
     if (formTitle) formTitle.textContent = formTitle.getAttribute('data-cy');
 
@@ -455,7 +455,7 @@ function switchToWelsh() {
     const formButton = document.querySelector('.volunteer-form-button');
     if (formButton) formButton.textContent = formButton.getAttribute('data-cy');
 
-    // Testimonials Section
+    // Testimonials
     const testimonialsTitle = document.querySelector('.testimonials-title');
     if (testimonialsTitle) testimonialsTitle.textContent = testimonialsTitle.getAttribute('data-cy');
 
@@ -463,10 +463,11 @@ function switchToWelsh() {
         p.textContent = p.getAttribute('data-cy');
     });
 
-    // Footer Section
+    // Footer
     document.querySelectorAll('.footer-column h4').forEach(el => {
         el.textContent = el.getAttribute('data-cy');
     });
+
     document.querySelectorAll('.footer-column a, .footer-column p, .newsletter-form button, .newsletter-hint').forEach(el => {
         if (el.hasAttribute('data-cy')) {
             el.textContent = el.getAttribute('data-cy');
@@ -475,19 +476,19 @@ function switchToWelsh() {
 }
 
 function switchToEnglish() {
+    localStorage.setItem('language', 'en');
     document.body.classList.remove('welsh-active');
 
-    // Update navigation text to English
-    const navLinks = document.querySelectorAll('#nav-menu a');
-    navLinks.forEach(link => {
+    // Navigation
+    document.querySelectorAll('#nav-menu a').forEach(link => {
         link.textContent = link.getAttribute('data-en');
     });
 
-    // Update button text
+    // Buttons
     document.getElementById('welsh-btn').textContent = 'WELSH';
     document.getElementById('english-btn').textContent = 'ENGLISH';
 
-    // Volunteer Steps Section
+    // Volunteer Steps
     const volunteerTitle = document.querySelector('.volunteer-steps-title');
     if (volunteerTitle) volunteerTitle.textContent = volunteerTitle.getAttribute('data-en');
 
@@ -502,7 +503,7 @@ function switchToEnglish() {
         p.textContent = p.getAttribute('data-en');
     });
 
-    // Volunteer Benefits Section
+    // Volunteer Benefits
     const benefitsTitle = document.querySelector('.volunteer-benefits-title');
     if (benefitsTitle) benefitsTitle.textContent = benefitsTitle.getAttribute('data-en');
 
@@ -514,7 +515,7 @@ function switchToEnglish() {
         p.textContent = p.getAttribute('data-en');
     });
 
-    // Volunteer Form Section
+    // Volunteer Form
     const formTitle = document.querySelector('.volunteer-form-title');
     if (formTitle) formTitle.textContent = formTitle.getAttribute('data-en');
 
@@ -524,7 +525,7 @@ function switchToEnglish() {
     const formButton = document.querySelector('.volunteer-form-button');
     if (formButton) formButton.textContent = formButton.getAttribute('data-en');
 
-    // Testimonials Section
+    // Testimonials
     const testimonialsTitle = document.querySelector('.testimonials-title');
     if (testimonialsTitle) testimonialsTitle.textContent = testimonialsTitle.getAttribute('data-en');
 
@@ -532,10 +533,11 @@ function switchToEnglish() {
         p.textContent = p.getAttribute('data-en');
     });
 
-    // Footer Section
+    // Footer
     document.querySelectorAll('.footer-column h4').forEach(el => {
         el.textContent = el.getAttribute('data-en');
     });
+
     document.querySelectorAll('.footer-column a, .footer-column p, .newsletter-form button, .newsletter-hint').forEach(el => {
         if (el.hasAttribute('data-en')) {
             el.textContent = el.getAttribute('data-en');
@@ -543,6 +545,15 @@ function switchToEnglish() {
     });
 }
 
+// On page load, apply saved language
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('language');
+    if (savedLang === 'cy') {
+        switchToWelsh();
+    } else {
+        switchToEnglish(); // fallback to English
+    }
+});
 
 function toggleMenu() {
     const navMenu = document.querySelector('nav ul');

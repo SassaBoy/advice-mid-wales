@@ -248,15 +248,15 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
 function switchToWelsh() {
+    localStorage.setItem('language', 'cy');
     document.body.classList.add('welsh-active');
     
-    // Update navigation text to Welsh
-    const navLinks = document.querySelectorAll('#nav-menu a');
-    navLinks.forEach(link => {
+    // Navigation text
+    document.querySelectorAll('#nav-menu a').forEach(link => {
         link.textContent = link.getAttribute('data-cy');
     });
-    
-    // Update button text
+
+    // Button text
     document.getElementById('welsh-btn').textContent = 'CYMRAEG';
     document.getElementById('english-btn').textContent = 'SAESNEG';
 
@@ -282,7 +282,7 @@ function switchToWelsh() {
         }
     });
 
-    // Footer Section
+    // Footer
     document.querySelectorAll('.footer-column h4').forEach(el => {
         el.textContent = el.getAttribute('data-cy');
     });
@@ -294,15 +294,15 @@ function switchToWelsh() {
 }
 
 function switchToEnglish() {
+    localStorage.setItem('language', 'en');
     document.body.classList.remove('welsh-active');
     
-    // Update navigation text to English
-    const navLinks = document.querySelectorAll('#nav-menu a');
-    navLinks.forEach(link => {
+    // Navigation text
+    document.querySelectorAll('#nav-menu a').forEach(link => {
         link.textContent = link.getAttribute('data-en');
     });
-    
-    // Update button text
+
+    // Button text
     document.getElementById('welsh-btn').textContent = 'WELSH';
     document.getElementById('english-btn').textContent = 'ENGLISH';
 
@@ -328,7 +328,7 @@ function switchToEnglish() {
         }
     });
 
-    // Footer Section
+    // Footer
     document.querySelectorAll('.footer-column h4').forEach(el => {
         el.textContent = el.getAttribute('data-en');
     });
@@ -338,6 +338,17 @@ function switchToEnglish() {
         }
     });
 }
+
+// Load saved language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('language');
+    if (savedLang === 'cy') {
+        switchToWelsh();
+    } else {
+        switchToEnglish(); // default
+    }
+});
+
 
 function toggleMenu() {
     const navMenu = document.querySelector('nav ul');

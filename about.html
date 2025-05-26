@@ -367,8 +367,8 @@ questions.forEach(question => {
 document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
-
 function switchToWelsh() {
+    localStorage.setItem('language', 'cy');
     document.body.classList.add('welsh-active');
 
     // Update navigation text to Welsh
@@ -429,6 +429,7 @@ function switchToWelsh() {
 }
 
 function switchToEnglish() {
+    localStorage.setItem('language', 'en');
     document.body.classList.remove('welsh-active');
 
     // Update navigation text to English
@@ -487,6 +488,16 @@ function switchToEnglish() {
         p.textContent = p.getAttribute('data-en');
     });
 }
+
+// Load saved language preference on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('language');
+    if (savedLang === 'cy') {
+        switchToWelsh();
+    } else {
+        switchToEnglish();
+    }
+});
 
 
 function toggleMenu() {

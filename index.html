@@ -488,6 +488,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 });
 function switchToWelsh() {
+    localStorage.setItem('language', 'cy');
     document.body.classList.add('welsh-active');
 
     // Navigation
@@ -544,7 +545,7 @@ function switchToWelsh() {
         el.textContent = el.getAttribute('data-cy');
     });
     document.querySelectorAll('.donation-ways li').forEach(el => {
-        el.innerHTML = el.getAttribute('data-cy'); // includes <strong>
+        el.innerHTML = el.getAttribute('data-cy');
     });
     const thanks = document.querySelector('.donation-thanks');
     if (thanks) thanks.textContent = thanks.getAttribute('data-cy');
@@ -597,6 +598,7 @@ function switchToWelsh() {
 }
 
 function switchToEnglish() {
+    localStorage.setItem('language', 'en');
     document.body.classList.remove('welsh-active');
 
     // Navigation
@@ -704,6 +706,16 @@ function switchToEnglish() {
     const subscribeBtn = document.querySelector('.newsletter-form button');
     if (subscribeBtn) subscribeBtn.textContent = subscribeBtn.getAttribute('data-en');
 }
+
+// Apply language preference on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('language');
+    if (savedLang === 'cy') {
+        switchToWelsh();
+    } else {
+        switchToEnglish(); // Default to English
+    }
+});
 
 function toggleMenu() {
     const navMenu = document.querySelector('nav ul');
