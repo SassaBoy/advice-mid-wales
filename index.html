@@ -150,7 +150,7 @@
      data-cy="Fe'n lleolir ym Machynlleth ac yn cynnig sesiynau galw heibio hyblyg, apwyntiadau a gwasanaethau allgymorth yn Nhŷwyn ac Aberystwyth. Cysylltwch â ni heddiw i ddechrau.">
      We’re based in Machynlleth and provide flexible drop-in sessions, appointments and outreach services in Tywyn And Aberystwyth. Contact us today to get started.
   </p>
-  <a href="#" class="info-link"
+  <a href="about.html" class="info-link"
      data-en="CLICK TO FIND OUT MORE"
      data-cy="Cliciwch i ddarganfod mwy"
      style="margin-top: 30px; margin-bottom: 20px;">
@@ -267,23 +267,19 @@
 
   <div class="donation-background"></div>
 
-  <div class="donation-card">
-    <h3 class="donation-title" data-en="Make a Donation" data-cy="Gwnewch Rhodd">MAKE A DONATION</h3>
-    <p class="donation-subtext" data-en="I wish to make a donation of" data-cy="Hoffwn wneud rhodd o">I wish to make a donation of</p>
-
-    <div class="donation-amount">£15.00</div>
-
-    <div class="donation-toggle">
-      <span data-en="monthly donation" data-cy="Rhodd Misol">monthly donation</span>
-      <input type="range" min="0" max="1" step="1">
-      <span data-en="one-off donation" data-cy="Rhodd Un-tro">one-off donation</span>
+<div class="donation-card">     
+    <h3 class="donation-title" data-en="Make a Donation" data-cy="Gwnewch Rhodd">MAKE A DONATION</h3>     
+    <p class="donation-subtext" data-en="I wish to make a donation to" data-cy="Hoffwn wneud rhodd i">I wish to make a donation to</p>      
+     
+    <div class="organization-box">
+       <div class="organization-name">Advice Midwales</div>
     </div>
-
-    <button class="donate-btn" 
-            data-en="Donate Now" 
-            data-cy="Rhoddwch Nawr"
-            onclick="window.location.href='https://donate.justgiving.com/charity/advicemidwales/donation-amount'">DONATE NOW</button>
-  </div>
+      
+    <button class="donate-btn"              
+            data-en="Donate Now"              
+            data-cy="Rhoddwch Nawr"             
+            onclick="window.location.href='https://www.justgiving.com/advicemidwales'">DONATE NOW</button>   
+</div>  
 </section>
 <section class="join-team">
     <h2 class="section-title" style="color: #383838;" 
@@ -391,37 +387,43 @@ Diolch eto, Advice Mid Wales – rydych chi’n syml wych!”
             <img src="images/partners.png" alt="Partner Logo">
         </div>
     </section>
-<footer class="footer-section"> 
+<footer class="footer-section">
     <hr class="footer-divider">
+    
+    <!-- Navigation Links -->
+    <div class="footer-navigation">
+        <a href="#" data-en="Home" data-cy="Cartref">Home</a>
+        <a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a>
+        <a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a>
+        <a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a>
+        <a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a>
+        <a href="https://www.advicemidwales.org.uk/privacy.php" target="_blank" rel="noopener noreferrer">
+  Privacy Policy
+</a>
 
-    <div class="footer-grid reduced-columns">
-        <!-- Column 1: Reach Us -->
-        <div class="footer-column">
-            <h4 data-en="Reach Us" data-cy="Cysylltwch â Ni">Reach Us</h4>
-            <p><img src="images/phone-icon2.png" alt="Phone" class="footer-icon"> 01654 700192</p>
-            <p><img src="images/location-icon.png" alt="Location" class="footer-icon"> The Care Centre, Forge Road,<br>
-                <span style="padding-left: 28px;">Machynlleth Powys SY20 8EQ</span>
-            </p>
-            <p style="display: flex; align-items: center;">
-                <img src="images/email-icon.png" alt="Email" class="footer-icon" style="margin-right: 8px;">
-                <a href="mailto:enquiries@advicemidwales.org.uk" style="color: white; text-decoration: none;">
-                    enquiries@advicemidwales.org.uk
-                </a>
-            </p>
+    </div>
+    
+    <!-- Contact Information -->
+    <div class="footer-contact">
+        <div class="footer-contact-item">
+            <img src="images/location-icon.png" alt="Location">
+            <span>The Care Centre, Forge Road, Machynlleth Powys SY20 8EQ</span>
         </div>
-
-        <!-- Column 2: Company -->
-        <div class="footer-column">
-            <h4 data-en="Company" data-cy="Cwmni">Company</h4>
-            <p><a href="#" data-en="Home" data-cy="Cartref">Home</a></p>
-            <p><a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a></p>
-            <p><a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a></p>
-            <p><a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a></p>
-            <p><a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a></p>
+        <div class="footer-contact-item">
+            <img src="images/phone-icon2.png" alt="Phone">
+            <span>01654 700192</span>
+        </div>
+        <div class="footer-contact-item">
+            <img src="images/email-icon.png" alt="Email">
+            <a href="mailto:enquiries@advicemidwales.org.uk">enquiries@advicemidwales.org.uk</a>
         </div>
     </div>
+    
+    <!-- Registration Info -->
+    <div class="footer-bottom">
+        Registered Charity No. 1111040
+    </div>
 </footer>
-
     
     
     <script>
@@ -451,18 +453,27 @@ Diolch eto, Advice Mid Wales – rydych chi’n syml wych!”
 // Smooth scrolling for all links
 document.querySelectorAll('a[href^="#"], a[href]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+
+        // Skip external links
+        if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+            return; // Let browser handle the link normally
+        }
+
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(href);
+
         if (target) {
             window.scrollTo({
                 top: target.offsetTop,
                 behavior: "smooth"
             });
         } else {
-            window.location.href = this.getAttribute("href");
+            window.location.href = href;
         }
     });
 });
+
 
 // Instantly show page content without fade or flash
 document.addEventListener("DOMContentLoaded", function() {
