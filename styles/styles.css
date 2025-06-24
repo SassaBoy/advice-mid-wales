@@ -728,11 +728,13 @@ nav ul li a:hover {
     margin-bottom: 10px; 
 }  
 
-.donation-subtext {     
-    font-size: 14px;     
-    color: #555;     
-    margin-bottom: 10px; 
-}  
+.donation-subtext {
+    font-size: 14px;
+    color: #555;
+    margin-top: 80px;
+    margin-bottom: -60px;
+}
+
 
 .organization-box {     
     border: 2px solid #009A7A;     
