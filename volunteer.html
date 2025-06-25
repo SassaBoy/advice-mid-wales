@@ -208,7 +208,7 @@
                 Thank you for making a positive impact!
             </p>
            <div class="volunteer-form-button-container">
-    <a href="/path/to/your-form.docx"
+    <a href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZ__syA2HBUQzIzVzE3TDdUTFZYMVlSSENTRTBHOUxRSy4u&route=shorturl"
        download
        class="volunteer-form-button"
        data-en="Download Form"
@@ -408,6 +408,11 @@ function switchToWelsh() {
     document.querySelectorAll('#nav-menu a').forEach(link => {
         link.textContent = link.getAttribute('data-cy');
     });
+document.querySelectorAll('.footer-navigation a').forEach(link => {
+    if (link.hasAttribute('data-cy')) {
+        link.textContent = link.getAttribute('data-cy');
+    }
+});
 
     // Buttons
     document.getElementById('welsh-btn').textContent = 'CYMRAEG';
@@ -478,6 +483,12 @@ function switchToEnglish() {
     document.querySelectorAll('#nav-menu a').forEach(link => {
         link.textContent = link.getAttribute('data-en');
     });
+
+    document.querySelectorAll('.footer-navigation a').forEach(link => {
+    if (link.hasAttribute('data-en')) {
+        link.textContent = link.getAttribute('data-en');
+    }
+});
 
     // Buttons
     document.getElementById('welsh-btn').textContent = 'WELSH';

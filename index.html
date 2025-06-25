@@ -272,7 +272,8 @@
     <p class="donation-subtext" data-en="I wish to make a donation to" data-cy="Hoffwn wneud rhodd i">I wish to make a donation to</p>      
      
     <div class="organization-box">
-       <div class="organization-name">Advice Midwales</div>
+      <div class="organization-name" data-en="Advice Mid Wales" data-cy="Cyngor Canolbarth Cymru">Advice Mid Wales</div>
+
     </div>
       
     <button class="donate-btn"              
@@ -391,16 +392,15 @@ Diolch eto, Advice Mid Wales – rydych chi’n syml wych!”
     <hr class="footer-divider">
     
     <!-- Navigation Links -->
-    <div class="footer-navigation">
-        <a href="#" data-en="Home" data-cy="Cartref">Home</a>
-        <a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a>
-        <a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a>
-        <a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a>
-        <a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a>
-        <a href="https://www.advicemidwales.org.uk/privacy.php" target="_blank" rel="noopener noreferrer">
-  Privacy Policy
-</a>
-
+   <div class="footer-navigation">
+    <a href="#" data-en="Home" data-cy="Cartref">Home</a>
+    <a href="services.html" data-en="Services" data-cy="Gwasanaethau">Services</a>
+    <a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a>
+    <a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a>
+    <a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a>
+    <a href="https://www.advicemidwales.org.uk/privacy.php" target="_blank" rel="noopener noreferrer"
+       data-en="Privacy Policy" data-cy="Polisi Preifatrwydd">Privacy Policy</a>
+</div>
     </div>
     
     <!-- Contact Information -->
@@ -487,6 +487,16 @@ function switchToWelsh() {
     document.querySelectorAll('#nav-menu a').forEach(link => {
         link.textContent = link.getAttribute('data-cy');
     });
+document.querySelectorAll('.footer-navigation a').forEach(link => {
+    if (link.hasAttribute('data-cy')) {
+        link.textContent = link.getAttribute('data-cy');
+    }
+});
+
+const orgName = document.querySelector('.organization-name');
+if (orgName && orgName.hasAttribute('data-cy')) {
+    orgName.textContent = orgName.getAttribute('data-cy');
+}
 
     // Buttons
     document.getElementById('welsh-btn').textContent = 'CYMRAEG';
@@ -597,6 +607,15 @@ function switchToEnglish() {
     document.querySelectorAll('#nav-menu a').forEach(link => {
         link.textContent = link.getAttribute('data-en');
     });
+document.querySelectorAll('.footer-navigation a').forEach(link => {
+    if (link.hasAttribute('data-en')) {
+        link.textContent = link.getAttribute('data-en');
+    }
+});
+const orgName = document.querySelector('.organization-name');
+if (orgName && orgName.hasAttribute('data-en')) {
+    orgName.textContent = orgName.getAttribute('data-en');
+}
 
     // Buttons
     document.getElementById('welsh-btn').textContent = 'WELSH';

@@ -1736,3 +1736,8 @@ nav ul li a:hover {
                 font-size: 28px;
             }
         }
+
+        .lang-cy .contact-hours-box p {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
