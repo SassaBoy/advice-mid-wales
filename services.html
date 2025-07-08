@@ -171,8 +171,8 @@
     <a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a>
     <a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a>
     <a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a>
-    <a href="https://www.advicemidwales.org.uk/privacy.php" target="_blank" rel="noopener noreferrer"
-       data-en="Privacy Policy" data-cy="Polisi Preifatrwydd">Privacy Policy</a>
+     <a href="images/policy.pdf" target="_blank" rel="noopener noreferrer"
+   data-en="Privacy Policy" data-cy="Polisi Preifatrwydd">Privacy Policy</a>
 </div>
 
 
@@ -231,7 +231,7 @@ document.querySelectorAll('a[href^="#"], a[href]').forEach(anchor => {
         const href = this.getAttribute("href");
 
         // Skip external links
-        if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+      if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:") || href.endsWith(".pdf")) {
             return; // Let browser handle the link normally
         }
 
