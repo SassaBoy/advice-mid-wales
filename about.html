@@ -260,8 +260,9 @@
     <a href="about.html" data-en="About Us" data-cy="Amdanom Ni">About Us</a>
     <a href="contact-us.html" data-en="Contact Us" data-cy="Cysylltwch â Ni">Contact Us</a>
     <a href="volunteer.html" data-en="Volunteer" data-cy="Gwirfoddoli">Volunteer</a>
-     <a href="images/policy.pdf" target="_blank" rel="noopener noreferrer"
+    <a id="privacy-policy-link" href="images/policy.pdf" target="_blank" rel="noopener noreferrer"
    data-en="Privacy Policy" data-cy="Polisi Preifatrwydd">Privacy Policy</a>
+
 </div>
 
 
@@ -439,6 +440,9 @@ document.querySelectorAll('.footer-navigation a').forEach(link => {
     document.querySelectorAll('.difference-text').forEach(p => {
         p.textContent = p.getAttribute('data-cy');
     });
+
+    updatePrivacyPolicyLink('cy');
+
 }
 
 function switchToEnglish() {
@@ -505,6 +509,8 @@ document.querySelectorAll('.footer-navigation a').forEach(link => {
     document.querySelectorAll('.difference-text').forEach(p => {
         p.textContent = p.getAttribute('data-en');
     });
+    updatePrivacyPolicyLink('en');
+
 }
 
 // Load saved language preference on page load
@@ -532,6 +538,11 @@ function toggleMenu() {
         menuOpen.style.display = 'inline';
         menuClose.style.display = 'none';
     }
+}
+
+function updatePrivacyPolicyLink(lang) {
+    const link = document.getElementById('privacy-policy-link');
+    link.href = lang === 'cy' ? 'images/policy-cy.pdf' : 'images/policy.pdf';
 }
 
         </script>
